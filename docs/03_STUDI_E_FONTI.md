@@ -208,3 +208,20 @@ Fonti **primarie verificate** e avvertenze nel [documento 13](13_DIFFUSIONE_IDEN
 - **Zhou et al. (ACM Computing Surveys 2025)** https://doi.org/10.1145/3736575 — exchangeability e limiti in caso di distribution shift.
 
 Nuovo problema esplicito: **source attribution calibrata con astensione e candidati assenti**. Non confondere `NETINF predicted edge`, `hyperlink`, `source citation` e `real causal copy`. La letteratura delle reti fornisce *metodi* ma non sostituisce il gold truth editoriale. Lo studio ulteriore su *Structure and Dynamics of Information Pathways in Online Media* è **P** e resta da verificare prima di riassumerne risultati.
+
+## M. Ricognizione 14 — active provenance, informazione e politiche di acquisizione (2026-11-01)
+
+Fonti **primarie consultate direttamente**; limiti e ipotesi nel [documento 14](14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md). Sono risultati degli autori, **non** benchmark f3tcher:
+- **FIRE (Xie et al., NAACL 2025)** https://aclanthology.org/2025.findings-naacl.158/ ; codice degli autori https://github.com/mbzuai-nlp/fire — iterative fact-checking, decisione search/STOP, riduzioni di costo riportate **7,6x LLM / 16,5x ricerca** nel proprio confronto, non genealogia Web garantita.
+- **Chen et al. (NAACL 2024), Complex Claim Verification with Evidence Retrieved in the Wild** https://aclanthology.org/2024.naacl-long.196/ — recupero/decomposizione di evidenze pubblicate *prima* del claim, attenzione a temporal leakage.
+- **AVeriTeC (NeurIPS 2023)** https://fever.ai/dataset/averitec.html — **4568 claim** con question-answer evidence/justifications, inclusi insufficient/conflicting; fact-checking ≠ causal source lineage.
+- **Aronsson, Rahbar, Chehreghani (IJCAI 2026)** https://ijcai.org/proceedings/2026/860 — survey di active feature acquisition, POMDP e STOP, costi e limiti di myopic vs non-myopic.
+- **Golovin/Krause (JAIR 2011)** https://ocs.aaai.org/Library/JAIR/Vol42/jair42-012.php — garanzie greedy solo se adaptive submodularity e ipotesi del teorema rispettate.
+- **Sloman/Cavagnaro/Broomell (Behavior Research Methods 2024)** https://link.springer.com/article/10.3758/s13428-024-02410-7 — prior scorretto può **amplificare scelta di modello errato** in adaptive design; EIG non è verità.
+- **Zhong et al. (SIAM/ASA, goal-oriented experimental design)** https://doi.org/10.1137/24M1649344 — information gain sulla quantity of interest anziché solo parametri; il paper non è un algoritmo di crawling.
+- **Prinster et al. (ICML 2024)** https://proceedings.mlr.press/v235/prinster24a.html — active learning induce shift, garanzie conformal in casi particolari; caso più generale dichiarato impraticabile.
+- **Gibbs/Candès (JMLR 2024)** https://jmlr.org/beta/papers/v25/22-1218.html — online conformal per distribution shifts, applicabilità condizionata.
+- **Madhow et al. (L4DC 2025)** https://proceedings.mlr.press/v283/madhow25a.html — offline evaluation con log raccolti adattivamente, non semplice replay IID.
+- **Cief/Kveton/Kompan (AAAI 2025)** https://ojs.aaai.org/index.php/AAAI/article/view/33765 — cross-validating off-policy evaluation, senza che ciò elimini automaticamente confondenti e mancanza di supporto.
+
+**Pista nuova:** *falsification-aware active acquisition* = selezionare evidenze lecite capaci anche di smentire ipotesi esistenti, non solo ridurre incertezza interna al modello. È una **ipotesi di ricerca**, non una tecnologia scelta, né una claim di novità mondiale.
