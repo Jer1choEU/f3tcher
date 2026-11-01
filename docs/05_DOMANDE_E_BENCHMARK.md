@@ -104,3 +104,13 @@ La [ricognizione 09](09_COMPLETEZZA_LOCALE_E_PROVE.md) aggiunge ipotesi di confr
 ## Ricognizione 10: test di consistenza con baseline/versioni (ancora teorici)
 
 La [ricognizione 10](10_INVENTARI_E_GARANZIE.md) propone **sei ipotesi da testare su fonti controllate**, non benchmark già eseguiti: audit di copie contro manifest e checksum, conteggio OAI-PMH variabile con paginazione, tombstone `no/transient/persistent`, finestra di recupero dei delta e bytes associati a DOI scaduti, aggiornamento API durante paginazione, e false completezza dedotta da prove Merkle di inclusione. Metriche: falsi claim, omissioni, bytes corrotti, recovery horizon, errori di cancellazione, falsi storici completi, costo e astensione giustificata. Distinguere compatibilità da autorizzazione a raccogliere. Includere assenza di ground truth nel reporting.
+
+## Ricognizione 11 — falsi testimoni e lineage delle affermazioni (NON sperimentati)
+
+[Nuove ipotesi e fonti](11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md). Testbed futuro, **non eseguito**, con produttore reale noto, mirror e aggregatori della stessa API, osservatori autonomi, copia mista/transitiva, due estrattori dipendenti dallo stesso OCR, manifest firmato ma parziale e registro append-only con fork:
+- Confrontare la baseline «numero di URL confermanti» con una valutazione *claim-specific* delle dipendenze, senza imporre un algoritmo scelto.
+- Rilevare **false independence**, **false copy attribution**, **missing lineage**, **equivocation** e falso claim di completezza su dataset firmato ma incompleto.
+- Distinguere **firma valida**, **checkpoint con quorum**, **copertura rispetto a inventario esterno**, **non-inclusione entro un insieme** e **correttezza fattuale**; ogni affermazione di successo ha un denominatore e un tempo.
+- Misurare *astensione giustificata* quando l'origine o le dipendenze sono ignote, oltre a costo/richiamate vere. Duplicazione del contenuto non equivale a corroborazione indipendente.
+
+**Nessun benchmark di f3tcher, nessuna soglia di rilascio approvata, nessun comportamento richiesto al software futuro.**
