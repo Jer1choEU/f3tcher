@@ -148,3 +148,14 @@ Le pagine primarie e i limiti sono descritti in [10_INVENTARI_E_GARANZIE.md](10_
 | RFC 9162 (CT) | https://www.rfc-editor.org/rfc/rfc9162.html | Prove Merkle di inclusione/consistenza append-only, non completezza del mondo; RFC sperimentale |
 
 **Non sono dipendenze scelte e non sono state eseguite acquisizioni live da f3tcher.** Verificare licenze/condizioni di ciascuna fonte prima dei futuri test.
+
+## Ricognizione 11 — standard e riferimenti sulla provenienza, senza integrazioni
+
+La [ricognizione 11](11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md) introduce riferimenti aggiuntivi da confrontare **senza adottarli**:
+- **W3C PROV-O / PROV Constraints** https://www.w3.org/TR/prov-o/ ; https://www.w3.org/TR/prov-constraints/ — modello di Entity/Activity/Agent e vincoli per validità del lineage.
+- **TUF (The Update Framework)** https://theupdateframework.org/docs/metadata/ — metadata firmati a ruoli (root, targets, snapshot, timestamp), anti-rollback e scadenza; applicabile solo quando dati e relazioni di trust sono disponibili.
+- **C2SP witness** https://c2sp.org/tlog-witness@v1.1.0 e **trust policy** https://c2sp.org/tlog-policy — co-firme dei checkpoint e quorum, non attestazione delle notizie registrate.
+- **SCITT / RFC 9943** https://www.rfc-editor.org/rfc/rfc9943 e **COSE Receipts / RFC 9942** https://www.rfc-editor.org/rfc/rfc9942 — statements firmati e prove sulla struttura dati; differenza esplicita fra inclusione, consistenza e verità.
+- **Data provenance formale** https://web.cs.ucdavis.edu/~green/papers/pods07.pdf — annotazioni semiring *come teoria candidata*, non vincolo per la struttura dati di f3tcher.
+
+Questi riferimenti non dimostrano il vantaggio di una soluzione rispetto a baseline più semplici, e non è stato implementato alcun componente.
