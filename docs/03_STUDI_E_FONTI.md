@@ -111,3 +111,20 @@ Dettagli, limiti e ipotesi nel [documento 07](07_RICOGNIZIONE_2026-11-01.md). Fo
 - **Garnett et al. (ICML 2012), Bayesian Optimal Active Search and Surveying** — https://publications.ri.cmu.edu/bayesian-optimal-active-search-and-surveying ; ricerca di positivi rari vs stima prevalenza.
 
 Ricontrollati sull'abstract primario, ma **non replicati**: https://arxiv.org/abs/2610.13321 (host-aware); https://arxiv.org/abs/2602.24262 (Web–Knowledge–Web); https://arxiv.org/abs/2607.13636 (core/shell). Per questi tre, l'etichetta P della sezione B resta valida per **risultati dettagliati, codice e trasferibilità**, mentre titolo/abstract sono verificati.
+
+## G. Ricognizione 08: esempi empirici, limiti e fonti rare (2026-11-01)
+
+Dettagli e gradi di evidenza: [08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md). Riferimenti verificati nella documentazione originale:
+
+- **FAIR Signposting Adopters** https://signposting.org/adopters/ — elenco implementazioni dichiarate (es. Dataverse/DSpace/InvenioRDM/Zenodo), con esempio di header Biblio Ghent. Nessuna risorsa live verificata con richiesta nostra.
+- **Apples-to-Apples FAIR Signposting** https://w3id.org/a2a-fair-metrics/ — casi di conformità di Link/Linkset (benchmark esistente, **mai eseguito da f3tcher**); quadro https://s11.no/2024/signposting-report/ ; guida di implementazione 2025 https://zenodo.org/records/15064493 .
+- **Arazzo Ecosystem** https://usearazzo.com/ecosystem/ — curazione di vendor, aggiornata 2026-10-02; dichiara prevalenza dei tool su 1.0.1 vs spec 1.1.0. Esempio dichiarato da provider https://connectbyjbrh.com/developers/arazzo-workflows/ ; non convalida universale né benchmark.
+- **Microsoft Graph delta** https://learn.microsoft.com/en-us/graph/delta-query-overview e https://learn.microsoft.com/en-us/graph/api/listitem-delta?view=graph-rest-1.0 — duplicati, riordino, ritardi, gap non tracciati, token 410; lo stato finale non corrisponde a tutte le variazioni intermedie.
+- **Zendesk Offset Pagination Limitations** https://developer.zendesk.com/documentation/api-basics/pagination/understanding-the-limitations-of-offset-pagination/ — record duplicati/saltati in liste mutate durante la scansione.
+- **Debezium PostgreSQL CDC** https://debezium.io/documentation/reference/stable/connectors/postgresql.html — snapshot e capture log insieme; modello di riferimento **non trasferibile senza CDC** a API pubbliche.
+- **Brown et al. 2025, Big Data & Society** https://journals.sagepub.com/doi/10.1177/20539517251381686 — framing/sampling, accessibilità e non-random missingness.
+- **Hagar & Bandy 2025, ICWSM** https://ojs.aaai.org/index.php/ICWSM/article/view/35948 — dati su 96 snapshot Common Crawl e sulle inclusioni/filtizzazioni dei corpora; lo studio non misura la copertura di f3tcher.
+- **Ostendorff 2026, ACL Anthology** https://aclanthology.org/2026.wac-1.7/ — pubblicazione confermata per filone host-aware (era in P in B); il rendimento per pretraining non è un criterio universale.
+- **Cothey 2004, JASIST** https://onlinelibrary.wiley.com/doi/10.1002/asi.20078 — bias intrinseci delle politiche di crawling.
+
+**Nota di stato:** queste sono fonti consultate e risultati riportati dagli autori, non esperimenti replicati o decisioni sul futuro motore.
