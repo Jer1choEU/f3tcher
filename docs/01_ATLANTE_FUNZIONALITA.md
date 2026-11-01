@@ -134,3 +134,13 @@ Vedi [12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](12_GENEALOGIE_BENCHMARK_E_ABSTENT
 - Registrare lineage temporale/versioni (NewsEdits) senza moltiplicare artificialmente fonti autonome.
 - Considerare la derivazione anche come rischio di **licence laundering**: verifica origine/condizioni e separazione accesso, conservazione, elaborazione, distribuzione.
 Nessun algoritmo o formato scelto, nessun benchmark eseguito.
+
+## O. Ricognizione 13 — sorgenti possibili e indagine attiva della provenienza (ipotesi)
+
+Vedi [13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md](13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md). Nessun requisito adottato:
+- Misurare *diffusione* da cluster di frasi, hyperlink e timestamp (MemeTracker/NETINF); **non** trattare grafo di archi inferiti da un algoritmo come ground truth reale.
+- Modelli di origini multiple/alternative: fonte diretta, fonte comune ignota, catena parziale, stessa notizia indipendente.
+- Conservare un **insieme di candidati compatibili** dove appropriato; astensione quando l'originale non è osservato o la direzione è indecidibile.
+- Considerare *risk-coverage* e calibrazione, verificando ipotesi e drift: le garanzie conformal non sono trasferibili automaticamente alla rete Web.
+- **Active provenance investigation (H):** cercare la prossima prova lecita che discrimini fra genealogie, rispetto a puro crawling per volume; attenzione a fonti rare, costi e feedback loops.
+- Considerare timestamp falsi/retrodatati, ritardi di indicizzazione, revisioni e intermediari mancanti, come variabili del test e non rumore da ignorare.
