@@ -22,6 +22,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/05_DOMANDE_E_BENCHMARK.md](docs/05_DOMANDE_E_BENCHMARK.md) | Ipotesi scientifiche, prove comparabili e metriche |
 | [docs/06_RIPRESA_NUOVA_CHAT.md](docs/06_RIPRESA_NUOVA_CHAT.md) | Istruzioni operative e prompt di ripartenza per nuove conversazioni |
 | [docs/07_RICOGNIZIONE_2026-11-01.md](docs/07_RICOGNIZIONE_2026-11-01.md) | Nuove fonti verificate e ipotesi: Arazzo, FAIR Signposting/Linkset, OData Delta, ODRL, Active Search, BagIt/OCFL |
+| [docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md) | Adozione verificata documentalmente, limiti dei delta, pagination, fonti rare e ipotesi di ricerca senza benchmark |
 
 ## Avvertenze di metodo
 
