@@ -5,7 +5,7 @@
 ## Procedura per una nuova chat
 
 1. Collegarsi all'account GitHub **`Jer1choEU`** (attenzione: non **`EUJer1cho`**) e aprire **https://github.com/Jer1choEU/f3tcher**.
-2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md`). Non basarsi soltanto su precedenti risposte di chat.
+2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md`). Non basarsi soltanto su precedenti risposte di chat.
 3. Se il repository è cambiato, verificare commit/stato corrente prima di riassumere.
 4. Riprendere la **fase di ricerca**, non implementare né formalizzare una proposta definitiva, salvo nuova richiesta dell'utente.
 5. Se viene chiesto di continuare la ricerca, cercare fonti primarie accademiche, standard, repository, esperienze indipendenti e test comparabili; aggiornare i documenti con risultati verificati, distinguendoli da piste.
@@ -16,7 +16,7 @@
 
 > Riprendiamo la ricerca sul progetto f3tcher: https://github.com/Jer1choEU/f3tcher . Usa il mio account GitHub **Jer1choEU**, NON EUJer1cho.
 >
-> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10 e 11, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
+> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11 e 12, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
 >
 > Obiettivo: costruire in futuro un **unico motore universale** per la massima acquisizione lecita di informazioni digitali da web, API, feed, archivi, documenti, dataset, flussi di eventi e altre fonti. Deve scegliere autonomamente i metodi migliori, **senza profili selezionabili**, massimizzando completezza, profondità storica, affidabilità, freschezza, provenienza e interoperabilità. Non voglio violare alcuna legge: **nessun bypass di 403, login, paywall, CAPTCHA, rate limit o altri divieti**; non interpretare la semplice accessibilità pubblica come autorizzazione universale.
 >
@@ -60,6 +60,10 @@ La [ricognizione 10](10_INVENTARI_E_GARANZIE.md) identifica esempi concreti di *
 ## Aggiornamento: indipendenza delle evidenze e attestazioni (2026-11-01)
 
 Leggere [11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md](11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md): studio PVLDB 2009/2010 su copying e co-copying/transitività; W3C PROV-O/PROV Constraints e database provenance; TUF (firme, versione, scadenza), C2SP witness di log, nuovi **RFC 9942/9943 (2026)** su COSE receipts e SCITT. Distinzione chiave: **fonti indipendenti sul piano fattuale** ≠ **testimoni indipendenti della consistenza del registro** ≠ **più firme dello stesso manifest**. Una proof-of-non-inclusion vale per l'insieme impegnato, non per l'universo. Nessun test, stack o implementazione f3tcher. Prossima ricerca: identificabilità delle genealogie, dataset con ground truth delle copie, qualità del lineage a livello di affermazione e condizioni di uso/liceità.
+
+## Aggiornamento: genealogie ricostruibili e astensione (2026-11-01)
+
+Leggere [12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md): corpus **METER** (reale, giornali e agenzia, accesso/licenza da verificare), **COUNTER** (600 coppie urdu, CC BY-NC-SA e uso ricerca/accademia), **USTRC** (2.684 coppie brevi urdu), **PAN-PC-11** (plagio simulato), **PAN 2025** (span di riutilizzo parafrasato da LLM), **PAN 2026** (recupero di almeno due sorgenti in testo sintetico, accesso riservato a ricerca, niente redistribuzione), **NewsEdits** (versioni dello stesso articolo), **FakeWiki/DataDignity** (hard negatives di supporto fattuale), **MAVIS** (attribuzione multimodale), **Nature Data Provenance 2024** (audit di licenze e lineage). Non confondere similarity, reuse, supporto, derivazione causale o titolarità dei diritti; misurare la **capacità di dire origine ignota**. Nessuna prova o implementazione f3tcher. Prossime verifiche: ground truth di intermediari/co-copying, bias e identificabilità, split per fonte/epoca, permessi effettivi dei corpora.
 
 ## Sintesi dei punti di partenza più promettenti
 
