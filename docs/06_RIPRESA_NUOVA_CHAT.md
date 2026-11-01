@@ -5,7 +5,7 @@
 ## Procedura per una nuova chat
 
 1. Collegarsi all'account GitHub **`Jer1choEU`** (attenzione: non **`EUJer1cho`**) e aprire **https://github.com/Jer1choEU/f3tcher**.
-2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md`). Non basarsi soltanto su precedenti risposte di chat.
+2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md`). Non basarsi soltanto su precedenti risposte di chat.
 3. Se il repository è cambiato, verificare commit/stato corrente prima di riassumere.
 4. Riprendere la **fase di ricerca**, non implementare né formalizzare una proposta definitiva, salvo nuova richiesta dell'utente.
 5. Se viene chiesto di continuare la ricerca, cercare fonti primarie accademiche, standard, repository, esperienze indipendenti e test comparabili; aggiornare i documenti con risultati verificati, distinguendoli da piste.
@@ -16,7 +16,7 @@
 
 > Riprendiamo la ricerca sul progetto f3tcher: https://github.com/Jer1choEU/f3tcher . Usa il mio account GitHub **Jer1choEU**, NON EUJer1cho.
 >
-> **Prima leggi il README e tutti i file in `docs/`**, inclusa la ricognizione 07, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
+> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07 e 08, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
 >
 > Obiettivo: costruire in futuro un **unico motore universale** per la massima acquisizione lecita di informazioni digitali da web, API, feed, archivi, documenti, dataset, flussi di eventi e altre fonti. Deve scegliere autonomamente i metodi migliori, **senza profili selezionabili**, massimizzando completezza, profondità storica, affidabilità, freschezza, provenienza e interoperabilità. Non voglio violare alcuna legge: **nessun bypass di 403, login, paywall, CAPTCHA, rate limit o altri divieti**; non interpretare la semplice accessibilità pubblica come autorizzazione universale.
 >
@@ -43,6 +43,10 @@
 ## Aggiornamento della nuova ricognizione (2026-11-01)
 
 Nuove piste salvate nel [documento 07](07_RICOGNIZIONE_2026-11-01.md): Arazzo 1.1.0, FAIR Signposting/Linkset RFC 9264, OData Delta, W3C ODRL, teoria Active Search/Surveying, BagIt/OCFL. Gli abstract dei lavori host-aware, Web–Knowledge–Web e core/shell sono stati verificati, ma non replicati. Nessuna scelta architetturale e nessun test f3tcher. Ripartire verificando l'adozione reale di queste interfacce e le loro condizioni di uso, non iniziando il codice.
+
+## Ulteriore aggiornamento: adozione, consistenza, long tail (2026-11-01)
+
+È disponibile [08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md), che verifica documentalmente la presenza di FAIR Signposting in repository reali e del benchmark Apples-to-Apples, distingue l'ecosistema Arazzo disponibile dalle adozioni dei provider, documenta le limitazioni concrete di Microsoft Graph Delta/paginazione offset e i bias di campionamento/long tail. Introduce soltanto ipotesi di *debito di discovery, sincronizzazione e verifica delle evidenze* da misurare: **non** sono architettura, requisiti o test f3tcher. Leggere il documento prima della nuova ricerca.
 
 ## Sintesi dei punti di partenza più promettenti
 
