@@ -118,3 +118,7 @@ Licenze permissive (MIT/BSD/Apache) possono semplificare l'integrazione; AGPL ri
 | BagIt RFC 8493 + OCFL | https://www.rfc-editor.org/info/rfc8493/ ; https://ocfl.io/ | Integrità pacchetti e versioni archivistiche, complementi a WARC/WACZ |
 
 Prove, limiti e ulteriori fonti in [07_RICOGNIZIONE_2026-11-01.md](07_RICOGNIZIONE_2026-11-01.md).
+
+## Riscontri pratici della seconda ricognizione (2026-11-01)
+
+Vedi [08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md): **FAIR Signposting** non è soltanto specifica (implementazioni dichiarate su Dataverse/DSpace/InvenioRDM/Zenodo, test pubblicati A2A); l'ecosistema **Arazzo** contiene validator/runner e workflow di esempio, ma una curazione aggiornata a ottobre 2026 indica forte presenza di tooling per 1.0.1 rispetto a 1.1.0; **Microsoft Graph Delta** e **Zendesk offset** documentano limiti reali della sincronizzazione; **Debezium** è una baseline per snapshot+CDC soltanto dove il fornitore concede accesso al log. **Nessuna libreria è stata scelta, installata o provata.**
