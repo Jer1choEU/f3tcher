@@ -31,6 +31,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md](docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md) | Ricerca iterativa delle prove, FIRE, AFA/POMDP, rischio del prior errato, feedback e valutazione off-policy |
 | [docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md) | Scoperta e acquisizione multiprotocollo: DCAT/DCAT-AP, STAC, OGC, IIIF, CKAN, WebSub, crawler e agenti |
 | [docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md](docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md) | OpenAIRE, DataCite, arXiv, Europe PMC, Normattiva, Cellar, Europarl, Eurostat/Istat SDMX e ActivityPub/ATProto |
+| [docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md](docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md) | Brevetti EPO, archivi ENA/NCBI, Europeana/EBU/WebVTT, METS/PREMIS/E-ARK/BagIt e acquisizione di oggetti composti |
 
 ## Avvertenze di metodo
 
