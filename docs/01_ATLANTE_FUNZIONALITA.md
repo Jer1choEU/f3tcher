@@ -112,3 +112,13 @@ Vedi [10_INVENTARI_E_GARANZIE.md](10_INVENTARI_E_GARANZIE.md). Ipotesi di studio
 - Studiare «evidence aging»: dichiarazioni di completezza con identità di fonte/versione/tempo, non certificati eterni.
 - Prove di inclusione e consistenza di Merkle log (RFC 9162) `!=` prova di non esistenza di record fuori dal log.
 Nessun profilo selezionabile e nessuno stack deciso.
+
+## M. Ricognizione 11 — dipendenza delle evidenze e autenticità, senza decisioni architetturali
+
+Dettagli: [11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md](11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md). **Piste non implementate**:
+- Distinguere fonte originaria, ripubblicazione, mirror, aggregatore, copia transitiva, co-copia e osservazione autonoma per *specifica affermazione/versione* (non assegnare un'etichetta definitiva a un intero dominio).
+- Conservare anche le fonti dipendenti: deduplicare i bytes non significa eliminare la traccia delle ripubblicazioni e delle eventuali aggiunte originali.
+- PROV-O / lineage per affermazioni e valori derivati; validità del grafo non equivale a verità della fonte.
+- Distinguere garanzie: hash integrità, firma autenticità, TUF version/freshness, transparency checkpoint consistency, COSE inclusion/non-inclusion in uno specifico insieme, e corroborazione fattuale indipendente.
+- Una proof-of-non-inclusion non dimostra assenza nel mondo; una firma valida su manifest incompleto non dimostra che il publisher abbia elencato tutto.
+- Ipotesi di *dependency-aware evidence accounting*: confrontare qualità/costi con conteggio URL e semplice near-dup; non imporre uno score unico né agenti di «verità» auto-certificata.
