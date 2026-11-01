@@ -123,7 +123,7 @@ Dettagli e gradi di evidenza: [08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](08_ADOZIO
 - **Zendesk Offset Pagination Limitations** https://developer.zendesk.com/documentation/api-basics/pagination/understanding-the-limitations-of-offset-pagination/ — record duplicati/saltati in liste mutate durante la scansione.
 - **Debezium PostgreSQL CDC** https://debezium.io/documentation/reference/stable/connectors/postgresql.html — snapshot e capture log insieme; modello di riferimento **non trasferibile senza CDC** a API pubbliche.
 - **Brown et al. 2025, Big Data & Society** https://journals.sagepub.com/doi/10.1177/20539517251381686 — framing/sampling, accessibilità e non-random missingness.
-- **Hagar & Bandy 2025, ICWSM** https://ojs.aaai.org/index.php/ICWSM/article/view/35948 — dati su 96 snapshot Common Crawl e sulle inclusioni/filtizzazioni dei corpora; lo studio non misura la copertura di f3tcher.
+- **Hagar & Bandy 2025, ICWSM** https://ojs.aaai.org/index.php/ICWSM/article/view/35948 — dati su 96 snapshot Common Crawl e sulle inclusioni e filtraggio dei corpora; lo studio non misura la copertura di f3tcher.
 - **Ostendorff 2026, ACL Anthology** https://aclanthology.org/2026.wac-1.7/ — pubblicazione confermata per filone host-aware (era in P in B); il rendimento per pretraining non è un criterio universale.
 - **Cothey 2004, JASIST** https://onlinelibrary.wiley.com/doi/10.1002/asi.20078 — bias intrinseci delle politiche di crawling.
 
