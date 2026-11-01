@@ -5,7 +5,7 @@
 ## Procedura per una nuova chat
 
 1. Collegarsi all'account GitHub **`Jer1choEU`** (attenzione: non **`EUJer1cho`**) e aprire **https://github.com/Jer1choEU/f3tcher**.
-2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md`). Non basarsi soltanto su precedenti risposte di chat.
+2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md` e `docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md`). Non basarsi soltanto su precedenti risposte di chat.
 3. Se il repository è cambiato, verificare commit/stato corrente prima di riassumere.
 4. Riprendere la **fase di ricerca**, non implementare né formalizzare una proposta definitiva, salvo nuova richiesta dell'utente.
 5. Se viene chiesto di continuare la ricerca, cercare fonti primarie accademiche, standard, repository, esperienze indipendenti e test comparabili; aggiornare i documenti con risultati verificati, distinguendoli da piste.
@@ -16,7 +16,7 @@
 
 > Riprendiamo la ricerca sul progetto f3tcher: https://github.com/Jer1choEU/f3tcher . Usa il mio account GitHub **Jer1choEU**, NON EUJer1cho.
 >
-> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11 e 12, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
+> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11, 12 e 13, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
 >
 > Obiettivo: costruire in futuro un **unico motore universale** per la massima acquisizione lecita di informazioni digitali da web, API, feed, archivi, documenti, dataset, flussi di eventi e altre fonti. Deve scegliere autonomamente i metodi migliori, **senza profili selezionabili**, massimizzando completezza, profondità storica, affidabilità, freschezza, provenienza e interoperabilità. Non voglio violare alcuna legge: **nessun bypass di 403, login, paywall, CAPTCHA, rate limit o altri divieti**; non interpretare la semplice accessibilità pubblica come autorizzazione universale.
 >
@@ -64,6 +64,10 @@ Leggere [11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md](11_INDIPENDENZA_FONTI_E_ATTEST
 ## Aggiornamento: genealogie ricostruibili e astensione (2026-11-01)
 
 Leggere [12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md): corpus **METER** (reale, giornali e agenzia, accesso/licenza da verificare), **COUNTER** (600 coppie urdu, CC BY-NC-SA e uso ricerca/accademia), **USTRC** (2.684 coppie brevi urdu), **PAN-PC-11** (plagio simulato), **PAN 2025** (span di riutilizzo parafrasato da LLM), **PAN 2026** (recupero di almeno due sorgenti in testo sintetico, accesso riservato a ricerca, niente redistribuzione), **NewsEdits** (versioni dello stesso articolo), **FakeWiki/DataDignity** (hard negatives di supporto fattuale), **MAVIS** (attribuzione multimodale), **Nature Data Provenance 2024** (audit di licenze e lineage). Non confondere similarity, reuse, supporto, derivazione causale o titolarità dei diritti; misurare la **capacità di dire origine ignota**. Nessuna prova o implementazione f3tcher. Prossime verifiche: ground truth di intermediari/co-copying, bias e identificabilità, split per fonte/epoca, permessi effettivi dei corpora.
+
+## Aggiornamento ricognizione 13: cascades, identificabilità, rischio/astensione (2026-11-01)
+
+Leggere [13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md](13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md): **NETINF Stanford** (rete di diffusione *inferita*, non gold truth), **MemeTracker** (96,6M documenti con timestamp/frasi/hyperlink, non genealogie certe), NIFTY (clustering mutazioni), Farajtabar et al. 2015 (origine da tracce incomplete), Zhu/Ying 2016 (possibilità/impossibilità nei modelli studiati), Dawkins/Li/Xu 2021 (insiemi di sorgenti con copertura condizionata alle ipotesi), selective prediction e conformal risk control (NeurIPS/ICML/ICLR/ACM CS). La conclusione non è una scelta algoritmica ma un **problema di ricerca**: riconoscere origini non identificabili, candidati mancanti, timestamp incerti; calibrazione e abstention da validare su dati appropriati. Le etichette NETINF NON sono ground truth indipendente. Nuova pista: *active provenance investigation* selezionare verifiche ulteriori consentite quando le origini sono ambigue. **Nessun codice/test/stack deciso.**
 
 ## Sintesi dei punti di partenza più promettenti
 
