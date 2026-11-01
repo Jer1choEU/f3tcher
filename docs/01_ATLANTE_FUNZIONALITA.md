@@ -101,3 +101,14 @@ Vedi [07_RICOGNIZIONE_2026-11-01.md](07_RICOGNIZIONE_2026-11-01.md) per fonti, c
 ## K. Ricognizione scientifica 09 — limiti delle dichiarazioni di completezza
 
 Vedi [09_COMPLETEZZA_LOCALE_E_PROVE.md](09_COMPLETEZZA_LOCALE_E_PROVE.md). **Ipotesi, non requisiti**: distinguere (1) completezza relativa a una query e un inventario versionato, (2) stima di una popolazione non osservata con ipotesi identificative, (3) completezza temporale/stato corrente vs storico di eventi, (4) omissioni nelle estrazioni di liste e campi, (5) tracciabilità e diritti. Non inferire il 100% della realtà da un inventario ufficiale o da uno schema valido; watermark locali non sono garanzia assoluta di assenza di eventi tardivi. Studiare dichiarazioni limitate, verificabili e falsificabili di completezza, con esito **non stimabile/ignoto** quando mancano basi adeguate. Per i documenti, validità JSON e correttezza/recall dei campi sono metriche differenti.
+
+## L. Ricognizione 10: capacità e garanzie della fonte (piste, non requisiti)
+
+Vedi [10_INVENTARI_E_GARANZIE.md](10_INVENTARI_E_GARANZIE.md). Ipotesi di studio:
+- Fonte pubblica con manifest ed esito di esportazione, conteggio approssimativo, finestra delta, DOI citabile e inventario validabile sono **classi di evidenza differenti**.
+- Riconoscere la differenza fra disponibilità dei dati, durata dei token/delta, disponibilità dei bytes e versioni conservate: recupero da gap **possibile, solo full-snapshot, impossibile o non noto**.
+- Valutare recupero di delete da OAI-PMH `no/transient/persistent`; nessuna promessa di cronologia completa quando mancano i tombstone.
+- Integrità degli artefatti rispetto a manifest `!=` veridicità del manifest o completezza dell'universo di documenti.
+- Studiare «evidence aging»: dichiarazioni di completezza con identità di fonte/versione/tempo, non certificati eterni.
+- Prove di inclusione e consistenza di Merkle log (RFC 9162) `!=` prova di non esistenza di record fuori dal log.
+Nessun profilo selezionabile e nessuno stack deciso.
