@@ -132,3 +132,19 @@ Vedi [09_COMPLETEZZA_LOCALE_E_PROVE.md](09_COMPLETEZZA_LOCALE_E_PROVE.md).
 - **Apache Flink / watermarks** https://nightlies.apache.org/flink/flink-docs-master/docs/learn-flink/streaming_analytics/ : semantica event time, late arrivals e compromesso latenza/completezza, non promessa di completamento assoluto.
 - **Debezium incremental snapshots / collision windows** https://github.com/debezium/debezium-design-documents/blob/main/DDD-8.md : modello di riferimento per fonti con accesso autorizzato al transaction log; non trasferibile a ogni web API.
 - **W3C SHACL** https://www.w3.org/TR/shacl/ e **DQV** https://www.w3.org/TR/vocab-dqv/ : espressione di vincoli/misure qualità, non prova di copertura web.
+
+## Ricognizione 10 — fonti reali e sistemi da confrontare, nessuno adottato
+
+Le pagine primarie e i limiti sono descritti in [10_INVENTARI_E_GARANZIE.md](10_INVENTARI_E_GARANZIE.md).
+
+| Sorgente / tecnologia | Riferimento | Fenomeno da studiare, senza assumere garanzie inesistenti |
+|---|---|---|
+| Wikimedia dump monitoring | https://meta.wikimedia.org/wiki/Data_dumps/Monitoring | Stati per job, manifest, dimensioni, MD5/SHA1 dove disponibili; prova di recupero solo per i file dichiarati |
+| Crossref public data + REST | https://www.crossref.org/documentation/retrieve-metadata/bulk-downloads/ | Dump annuale pubblico, snapshot mensile Metadata Plus, filtri/cursor e reindicizzazione |
+| OpenAlex changefiles | https://developers.openalex.org/download/changefiles | Snapshot gratuito trimestrale, delta giornalieri premium e retention 60 giorni |
+| GBIF downloads + DOI | https://www.gbif.org/citation-guidelines | Citabilità e filtri/versioni di download, senza confondere DOI con bytes disponibili per sempre |
+| OAI-PMH 2.0 | https://www.openarchives.org/OAI/openarchivesprotocol.html | `resumptionToken`, `completeListSize` stimabile e supporto delete dichiarato `no/transient/persistent` |
+| ResourceSync | https://www.openarchives.org/rs/1.1/resourcesync_highlighted | Resource List/Dump + Change List/Dump + audit, se il provider pubblica tali capacità |
+| RFC 9162 (CT) | https://www.rfc-editor.org/rfc/rfc9162.html | Prove Merkle di inclusione/consistenza append-only, non completezza del mondo; RFC sperimentale |
+
+**Non sono dipendenze scelte e non sono state eseguite acquisizioni live da f3tcher.** Verificare licenze/condizioni di ciascuna fonte prima dei futuri test.
