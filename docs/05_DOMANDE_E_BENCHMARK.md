@@ -88,3 +88,7 @@ Ogni prova dovrebbe fissare: stesso budget, stessi limiti di host, stessa fonte/
 - “Ricerca peer-reviewed” ≠ risultato universale.
 - “Benchmark forte” ≠ deployment sicuro o legale.
 - “Più dati” ≠ “più conoscenza”: valutare rilevanza, bias, proof e freshness.
+
+## Integrazione di ipotesi dalla ricognizione del 2026-11-01
+
+La [ricognizione 07](07_RICOGNIZIONE_2026-11-01.md) descrive **H1–H6**, tutte non testate: workflow Arazzo/OpenAPI vs nuova esplorazione, Linkset/FAIR Signposting vs link HTML, OData Delta vs scan+reconcile, interpretazione ODRL senza falsi allow, active search/surveying per fonti rare, BagIt/OCFL per integrità/versioni. Controllare denominatori, diritti, aggiornamenti concorrenti e falsi positivi. Questi confronti non sono una roadmap approvata e non autorizzano sviluppo.
