@@ -34,6 +34,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md](docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md) | Brevetti EPO, archivi ENA/NCBI, Europeana/EBU/WebVTT, METS/PREMIS/E-ARK/BagIt e acquisizione di oggetti composti |
 | [docs/18_SINTESI_COMPARATIVA_E_LACUNE.md](docs/18_SINTESI_COMPARATIVA_E_LACUNE.md) | **Sintesi comparativa 00–17:** sovrapposizioni, complementarità, limiti, otto confronti decisivi e criteri di conclusione della ricerca |
 | [docs/19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md](docs/19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md) | **Reality check su portali reali:** Copernicus STAC 2026 old/new (JSON letto), Rijksmuseum IIIF/OAI/LDES, RNDT GeoDCAT, Zenodo, UK CKAN, data.europa e Signposting; confini delle verifiche |
+| [docs/20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md](docs/20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md) | **Sorgenti difficili:** moduli di ricerca, deep web lecito, AJAX/SPA, liste dinamiche, paginazione, soft-200 e false acquisizioni complete |
 
 Per una vista aggiornata e senza duplicazioni della ricerca leggere **prima [la sintesi comparativa 18](docs/18_SINTESI_COMPARATIVA_E_LACUNE.md)**, poi le fonti e i registri dettagliati pertinenti.
 
