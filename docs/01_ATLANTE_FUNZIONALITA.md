@@ -122,3 +122,15 @@ Dettagli: [11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md](11_INDIPENDENZA_FONTI_E_ATTE
 - Distinguere garanzie: hash integrità, firma autenticità, TUF version/freshness, transparency checkpoint consistency, COSE inclusion/non-inclusion in uno specifico insieme, e corroborazione fattuale indipendente.
 - Una proof-of-non-inclusion non dimostra assenza nel mondo; una firma valida su manifest incompleto non dimostra che il publisher abbia elencato tutto.
 - Ipotesi di *dependency-aware evidence accounting*: confrontare qualità/costi con conteggio URL e semplice near-dup; non imporre uno score unico né agenti di «verità» auto-certificata.
+
+## N. Ricognizione 12 — genealogia fonte, versione e affermazione (piste)
+
+Vedi [12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md). **Non requisiti**:
+- Separare somiglianza/near-duplicate, riutilizzo di passaggi, revisione dello stesso articolo, citazione dichiarata, dipendenza causale dimostrata, conferma fattuale indipendente e licenza.
+- Conservare le aggiunte originali nei documenti **parzialmente derivati**; un dominio non è «copiatore» per tutti i fatti.
+- Ragionare su **multiple upstream sources** (PAN 2026), non solo coppie; non inventare antenati non osservati.
+- Usare hard negatives con stesso argomento ma fatti decisivi mancanti (FakeWiki) per verificare se una fonte *supporta* un claim.
+- **Astensione motivata** sulla genealogia quando i dati non discriminano tra copia diretta, fonte comune ignota e indipendenza.
+- Registrare lineage temporale/versioni (NewsEdits) senza moltiplicare artificialmente fonti autonome.
+- Considerare la derivazione anche come rischio di **licence laundering**: verifica origine/condizioni e separazione accesso, conservazione, elaborazione, distribuzione.
+Nessun algoritmo o formato scelto, nessun benchmark eseguito.
