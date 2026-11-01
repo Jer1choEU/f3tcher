@@ -203,3 +203,13 @@ Vedi [16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md](16
 - **Packaging**: Frictionless Data Package / Table Schema per schemi e più risorse, Formex e LegalDocML per struttura legale; non convertire tutto in plain text senza documentare perdite.
 
 Nessuna libreria, framework, runtime, plugin o standard interno selezionato. Le scelte dovranno essere dimostrate successivamente attraverso benchmark e compatibilità d'uso.
+
+## Ricognizione 17 — acquisitori settoriali, metadata e package formats (nessuna adozione)
+
+Approfondimento: [17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md](17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md).
+- **EPO OPS** https://www.epo.org/en/searching-for-patents/data/web-services/ops (XML/REST OAuth e fair use), **EPS** https://www.epo.org/en/searching-for-patents/data/web-services/publication-server (XML/TIFF/PDF/A), **DOCDB** https://www.epo.org/en/searching-for-patents/data/bulk-data-sets/docdb (bulk metadati e famiglia, no full text).
+- **ENA Portal/Browser** https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html (ricerca scientifica + artefatti raw), **NCBI E-utilities** https://eutilities.github.io/site/API_Key/usageandkey/ e **NCBI Datasets** https://www.ncbi.nlm.nih.gov/datasets/docs/v2/api/api-keys/ (quote e batch differenti).
+- **Europeana** https://www.europeana.eu/eu/apis (Search/Record/IIIF + OAI-PMH/SPARQL, metadata CC0 ma media soggetti a rights), **EBUCore** https://tech.ebu.ch/publications/tech3293?categoryFilter=presentations e **WebVTT** https://www.w3.org/TR/webvtt1/ (metadata e timecoded tracks).
+- **METS** https://loc.gov/standards/mets/METSOverview.v3_en.html ; **PREMIS 3.0** https://www.loc.gov/standards/premis/v3/ ; **E-ARK** https://digital-strategy.ec.europa.eu/en/policies/earchiving-specifications ; **BagIt RFC8493** https://www.rfc-editor.org/rfc/rfc8493.html . Metadata e pacchetti per struttura, diritti e checksum, non conferme di completezza universale.
+
+Tutte le tecnologie elencate sono oggetto di studio, **non stack o framework scelti**.
