@@ -218,3 +218,14 @@ Vedi [21_SCALABILITA_COSTI_E_ACQUISIZIONE_EFFICIENTE.md](21_SCALABILITA_COSTI_E_
 - Browser on demand vs browser-first e costo per **asset valido e realmente distinto**; quote cloud Browser Run ottobre 2026 sono separate dai permessi del sito.
 - Potenziale confronto `archive-first` Common Crawl/bulk vs live HTTP/API, con staleness, diritti e coverage caveat.
 - Long-tail fairness e condivisione cross-project di copie solo nel rispetto di permessi/retention/privacy.
+
+## X. Ricognizione 22 — decisione sul canale e validazione separata
+
+[Documento 22](22_ROUTING_ADATTIVO_SCELTA_METODO_E_VALIDAZIONE.md). Piste **non approvate**:
+- La scelta fra HTTP/browser è **già** automatizzata in Crawlee 3.x con detection/campioni e checker; differenziarsi solo sul rendering non sarebbe difendibile.
+- Separare concettualmente **source capability**, scelta canale fra API/catalog/archivi/HTTP/browser, ranking della frontier, parsing, refresh, validazione, astensione. Sono problemi distinti, non un «agente intelligente» unico già specificato.
+- Controllo fonte-scoped: HTTP e browser possono condividere la stessa omissione e sembrare equivalenti; necessarie evidenze esterne/denominatore quando disponibile, altrimenti «unknown».
+- Confrontare regole trasparenti, multi-route e bandit rispetto a AI; misurare *asset/record recall, tail coverage, false success, costo*, non score di task agent o qualità LLM.
+- Eseguire un checker che distingue zero risultati validi da shell non renderizzata e un blocco da bisogno di browser; una negazione **non** deve far partire workaround.
+- Non trasformare documenti/HTML/JSON in istruzioni agenti; prompt injection è rischio dimostrato in benchmark WASP/TRAP, vincoli di sicurezza prevalgono.
+- Doppio tentativo/ritentativo può avere side effect; il rollback di storage Crawlee v4 RC non garantisce idempotenza di operazioni esterne.
