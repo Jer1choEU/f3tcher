@@ -353,3 +353,18 @@ Dettagli, cautele e ipotesi nel [documento 20](20_SORGENTI_DIFFICILI_MODULI_STAT
 - **Senato, descrizione delle schede dei progetti di legge** https://www.senato.it/guida-al-sito/banche-dati/schede-dei-progetti-di-legge ; **testi** https://www.senato.it/guida-al-sito/banche-dati/testi-dei-disegni-di-legge ; **ultimi atti** https://www.senato.it/leggi-e-documenti/ultimi-atti-pubblicati — percorsi UI e perimetri diversi; **assenza di API non verificata**.
 
 L'uso di uno standard/provider per un ambito significa **documentazione di capacità** e non conformità, licenza, permesso di uso, benchmark o API universale.
+
+## T. Ricognizione 21 — scalabilità reale, protocolli di costo e recrawl (2026-11-02)
+
+[Documento di analisi, limiti e 10 ipotesi comparative](21_SCALABILITA_COSTI_E_ACQUISIZIONE_EFFICIENTE.md). **V-doc/V-spec/V-paper** documentati da publisher/autore; niente benchmark f3tcher.
+- **Scrapy AutoThrottle** https://docs.scrapy.org/en/master/topics/autothrottle.html — slots, latenza, target concurrency e rispetto `DOWNLOAD_DELAY`, per-host/domain concurrency; non accelera in presenza di non-200 molto rapidi.
+- **StormCrawler FetcherBolt** https://stormcrawler.apache.org/docs/latest/index.html — queue byHost/byDomain/byIP, default min-delay e thread, politeness e metriche di throughput. **AdaptiveScheduler** firma MD5 e intervalli dinamici, già implementato.
+- **IETF RFC 9309** https://www.rfc-editor.org/rfc/rfc9309.html — robots Allow/Disallow, caching ed error handling; robots NON è licenza; `Crawl-delay` non è parte del core normativo, pur essendo interpretato da crawler specifici.
+- **IETF RFC 6585** https://www.rfc-editor.org/rfc/rfc6585.html — `429 Too Many Requests`, Retry-After possibile. **RFC 9110** https://www.rfc-editor.org/rfc/rfc9110.html — Retry-After, 503, Range/If-Range/206 e limiti di ricomposizione.
+- **IETF RFC 9111** https://www.rfc-editor.org/rfc/rfc9111.html e guida MDN https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Conditional_requests — ETag/Last-Modified/304/Vary e caching condizionale, risparmio byte ma non completezza della collezione.
+- **Cho & García-Molina (ACM TODS 2003)** https://doi.org/10.1145/958942.958945 — modelli teorici refresh/freshness/age sotto condizioni, non regola universale per contenuti web dinamici.
+- **Google crawling infrastructure (2026)** https://developers.google.com/crawling/docs/crawl-budget — crawl capacity e demand separati; non ogni pagina crawled è indexed.
+- **Crawlee AutoscaledPool** https://crawlee.dev/js/api/3.16/core/class/AutoscaledPool ; Snapshotter https://crawlee.dev/js/api/core/class/Snapshotter ; v4 API shift https://crawlee.dev/js/docs/next/upgrading/upgrading-to-v4/autoscaling — CPU/RAM/event loop throttling lato client, non quote host.
+- **Cloudflare Browser Run** annuncio rinomina 15-04-2026 https://developers.cloudflare.com/changelog/post/2026-04-15-br-rename/ ; **limiti 14-10-2026** https://developers.cloudflare.com/browser-run/limits/ ; **pricing/metering** https://developers.cloudflare.com/browser-run/pricing/ : Paid default **200 browser concurrent**, 3 new/sec e 30 quick actions/sec; quote soggette a modifiche, non si applicano ai siti visitati.
+
+**Limite per tutto il filone:** quote dei provider e benchmark vendor non sono prestazioni di f3tcher; nessuna spesa, test, algoritmo o stack adottato.
