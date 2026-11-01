@@ -176,3 +176,14 @@ Vedi [15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](15_ACQUISIZIONE_UNIVER
 - Federazione: outbox ActivityPub pubbliche secondo ACL, ATProto CAR/firehose ma media blob distinti; gap rilevabili vs interi repo invisibili per filtraggio.
 - Formati: non trattare CSV/JSON come unità semantiche autosufficienti; usare descrizioni Data Package/Formex/Akoma Ntoso/SDMX quando disponibili e lecite.
 - Eventuale sistema unico seleziona strategie in modo interno, ma **nessun profilo/architettura/algoritmo deciso**.
+
+## S. Ricognizione 17 — oggetti digitali composti, non solo pagine
+
+[Fonti e ipotesi](17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md). **Possibili capacità future da valutare**, non requisiti:
+- EPO brevetti: identità pubblicazione vs famiglia, bibliografici vs full text, TIFF/PDF/A e condizioni REST/bulk con quote.
+- ENA/NCBI: accessioni e metadati vs sequenze/file FASTQ/FASTA/assemblaggi; quote diverse anche all'interno dello stesso ente.
+- Europeana: metadata CC0 != media open; IIIF, licenze per asset e file master/derivati, annotazioni.
+- EBUCore/WebVTT: programma/track/segment/timecode, senza confondere testo sottotitoli con intera informazione audiovisiva.
+- METS fileSec/structMap, PREMIS preservation events e diritti, E-ARK CSIP/SIP/AIP/DIP, BagIt complete vs valid; enumerare, verificare, registrare perimetro/diritti.
+- **Manifest safety**: fetch.txt e collegamenti nei cataloghi possono contenere URL/path ostili, non eseguire recuperi da network interni o fuori policy.
+- Non sommare come fonti indipendenti versioni/formati dello stesso documento. Non presumere dati conservati == dati distribuiti.
