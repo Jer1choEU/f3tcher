@@ -104,3 +104,17 @@
 Licenze permissive (MIT/BSD/Apache) possono semplificare l'integrazione; AGPL richiede un'analisi specifica in caso di software modificato offerto tramite rete. **Non assumere mai** che tutte le librerie, modelli, dataset, servizi e dipendenze di un progetto condividano la stessa licenza. Verificare SPDX e condizioni nella versione scelta; tenere distinto riuso di idee, adattamento del codice e dipendenza da servizio.
 
 **Nota:** nessun programma di cui sopra è stato testato o adottato in questa repo. Questo documento è un inventario per la fase di confronto.
+
+## Estensioni individuate nella ricognizione del 2026-11-01 (nessuna integrazione decisa)
+
+| Candidato verificato | URL | Idea da misurare e limite |
+|---|---|---|
+| OpenAPI Arazzo 1.1.0 | https://spec.openapis.org/arazzo/latest.html | Descrizione interoperabile di workflow API con dipendenze e criteri; non equivale a permesso di esecuzione |
+| UseArazzo | https://github.com/usearazzo | Runner/validator pre-1.0 da confrontare; nella matrice consultata l'AsyncAPI non è eseguibile |
+| RFC 9264 Linkset | https://www.rfc-editor.org/rfc/rfc9264.html | Inventari di link tipizzati, anche di terze parti; verificare affidabilità degli indici |
+| FAIR Signposting | https://signposting.org/FAIR/ | Scoprire risorse, metadati, ID e license tramite typed links; adozione da verificare |
+| OData Delta | https://oasis-tcs.github.io/odata-specs/odata-protocol/odata-protocol.html | Sync con cambiamenti e cancellazioni, token scaduti e recovery; supporto/versione del server da verificare |
+| W3C ODRL | https://www.w3.org/TR/odrl-model/ | Esprimere diritti e obblighi per risorsa; non sostituisce verifica giuridica |
+| BagIt RFC 8493 + OCFL | https://www.rfc-editor.org/info/rfc8493/ ; https://ocfl.io/ | Integrità pacchetti e versioni archivistiche, complementi a WARC/WACZ |
+
+Prove, limiti e ulteriori fonti in [07_RICOGNIZIONE_2026-11-01.md](07_RICOGNIZIONE_2026-11-01.md).
