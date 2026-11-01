@@ -1,11 +1,11 @@
 # 06 — Ripresa del progetto in una nuova chat
 
-**Questo è il punto di ingresso per recuperare il contesto.** Stato congelato al 2026-11-01; aggiornare a ogni nuova sessione di ricerca.
+**Questo è il punto di ingresso per recuperare il contesto.** Stato aggiornato al 2026-11-02; aggiornare a ogni nuova sessione di ricerca.
 
 ## Procedura per una nuova chat
 
 1. Collegarsi all'account GitHub **`Jer1choEU`** (attenzione: non **`EUJer1cho`**) e aprire **https://github.com/Jer1choEU/f3tcher**.
-2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md` e `docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md` e `docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md` e `docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md`). Non basarsi soltanto su precedenti risposte di chat.
+2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md` e `docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md` e `docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md` e `docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md` e `docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md`). Non basarsi soltanto su precedenti risposte di chat.
 3. Se il repository è cambiato, verificare commit/stato corrente prima di riassumere.
 4. Riprendere la **fase di ricerca**, non implementare né formalizzare una proposta definitiva, salvo nuova richiesta dell'utente.
 5. Se viene chiesto di continuare la ricerca, cercare fonti primarie accademiche, standard, repository, esperienze indipendenti e test comparabili; aggiornare i documenti con risultati verificati, distinguendoli da piste.
@@ -16,7 +16,7 @@
 
 > Riprendiamo la ricerca sul progetto f3tcher: https://github.com/Jer1choEU/f3tcher . Usa il mio account GitHub **Jer1choEU**, NON EUJer1cho.
 >
-> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11, 12, 13, 14 e 15, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
+> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11, 12, 13, 14, 15 e 16, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
 >
 > Obiettivo: costruire in futuro un **unico motore universale** per la massima acquisizione lecita di informazioni digitali da web, API, feed, archivi, documenti, dataset, flussi di eventi e altre fonti. Deve scegliere autonomamente i metodi migliori, **senza profili selezionabili**, massimizzando completezza, profondità storica, affidabilità, freschezza, provenienza e interoperabilità. Non voglio violare alcuna legge: **nessun bypass di 403, login, paywall, CAPTCHA, rate limit o altri divieti**; non interpretare la semplice accessibilità pubblica come autorizzazione universale.
 >
@@ -76,6 +76,15 @@ Consultare [14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md](14_ACTIVE_PROVENANCE_INFO
 ## Ricognizione 15: riequilibrio verso potenza e universalità acquisizione (2026-11-01)
 
 Documento obbligatorio di ripartenza: [15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md). Ricerca primaria su DCAT 3, DCAT-AP 3.0.1, STAC/Copernicus, OGC API Records, IIIF Change Discovery, CKAN, WebSub e Schema.org Dataset; crawler StormCrawler 3.7, Scrapy JOBDIR, Crawlee HTTP/browser e Browsertrix WARC/WACZ; formati Docling; paper ACL WebDART 2026, journal Abitov et al. 2026 (LLM setup costoso + estrazione deterministica: idea **già nota**), ICML VeriEnv (web sintetico per training), BaRA **P** per dettagli; systematic review web scraping 2026. Si tratta di **famiglie di canali utili da confrontare**, non integrazioni approvate. Idee da validare: catalog-first, browser on demand, asset discovery separata da parsing, cross-channel reconciliation e verifica omissioni/long tail. Prossime ricognizioni: protocolli federati, ricerca/archivi accademici, dati parlamentari/statistici, format speciali, universalità e scaling con benchmark. **Non iniziare codice, stack, benchmark o architettura fino a nuovo ordine utente.** 
+
+## Ricognizione 16: fonti scientifiche, normative, statistiche, federate (2026-11-02)
+
+Leggere [16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md](16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md). Fonti primarie:
+- **OpenAIRE Graph v3** (offset max 10k per query; cursor/bulk per grandi corpus), **DataCite API pubblica read-only** e member API separata, **arXiv OAI-PMH** (bulk metadata preferito, solo versione corrente nel feed), **Europe PMC** (metadata molto più ampi dei full text accessibili), **Crossref** (created/update/index non sono lo stesso orologio).
+- **Normattiva Open Data** (API OpenAPI e multivigenza; testi redazionali **non ufficiali**, Gazzetta prevale), **Gazzetta RSS** solo sommario/notifiche, **Cellar/EUR-Lex** lavoro/espressione/manifestazione per lingue e formati, **Europarl OpenData v2** (500 richieste/5 minuti su uno stesso endpoint), **Congress.gov v3** (API key), **Akoma Ntoso**.
+- **Eurostat** Catalogue/JSON-stat/SDMX3 con DSD versionabili ma **nessuna storia disponibile delle osservazioni precedenti**, **Istat/IstatData SDMX 5 query/minuto/IP con possibile blocco 1–2 giorni**; standard **SDMX 3.1**, Frictionless Data Package.
+- **ActivityPub** (outbox pubblico accessibile secondo permessi, inbox da non trattare come pubblico) e **AT Protocol** (CAR+firehose+blob separati; un relay che omette un intero repo può sfuggire alla verifica di sequenza).
+- 10 futuri confronti proposti, **nessun benchmark o implementazione f3tcher**. Ricerca seguente: sorgenti brevettuali/biologiche/audiovisive, archivi METS/PREMIS/E-ARK e test di adozione reale, senza definire il motore prima di aver comparato opzioni.
 
 ## Sintesi dei punti di partenza più promettenti
 
