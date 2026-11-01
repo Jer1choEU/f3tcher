@@ -86,3 +86,14 @@
 7. **Self-improving but test-driven**: niente "AI che si migliora" senza benchmark, ablation e regression test.
 
 **Priorità nella ricerca:** indagare soprattutto capacità che aumentano *documenti e dati corretti recuperati* o riducono omissioni; non inseguire novità esclusivamente estetiche.
+
+## J. Nuova ricognizione verificata (2026-11-01): estensioni da studiare, non requisiti
+
+Vedi [07_RICOGNIZIONE_2026-11-01.md](07_RICOGNIZIONE_2026-11-01.md) per fonti, caveat ed esperimenti:
+
+- **Procedure API pubblicate:** riconoscere Arazzo (workflow con dipendenze e criteri di riuscita), non solo OpenAPI/AsyncAPI; ogni operazione resta soggetta ad autorizzazione, sandbox e limitazione degli effetti.
+- **Discovery tipizzata:** seguire Linkset RFC 9264 e FAIR Signposting per collegare landing page, file, licenza, metadata e identificatori; attenzione a collegamenti di terzi e disponibilità reale.
+- **Replica riconciliabile:** studiare semantica OData Delta per tombstone, cursori scaduti e verifica dello stato finale; non attribuire garanzie di consistenza ai sistemi che non le offrono.
+- **Diritti leggibili da macchina:** ODRL come *input* di un registro allow/deny/review, senza inferenze di liceità automatiche da un singolo campo.
+- **Obiettivi di acquisizione distinti:** active search di risorse rare e active surveying della prevalenza; valutare compromessi con equità verso fonti periferiche.
+- **Fixity/versioni:** BagIt e OCFL come possibili complementi di WARC/WACZ, senza confondere conservazione con diritto di conservare o copertura.
