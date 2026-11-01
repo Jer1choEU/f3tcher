@@ -66,3 +66,15 @@ La piattaforma di esecuzione non è scelta. Qualsiasi proposta Cloudflare Worker
 ## Ricognizione 12 — licenze dei benchmark e upstream informativi (2026-11-01)
 
 I corpora proposti in [12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md) sono solo **candidati di ricerca**: COUNTER e USTRC dichiarano licenza **CC BY-NC-SA** (COUNTER con ulteriore avvertenza dell'autore su uso di testi giornalistici ricerca/accademia), mentre PAN 2025 e 2026 dichiarano contenuti protetti **solo ricerca e senza redistribuzione**; accesso/test richiede le condizioni effettive degli organizzatori. NewsEdits usa dati precedentemente raccolti da soggetti con licenze e autorizzazioni specifiche; **non assumere** che licenza del codice == permessi illimitati dei testi. METER è confermato come lavoro scientifico, ma la licenza/fornitura del corpus testuale resta da verificare. L'audit Longpre et al. 2024 (Nature Machine Intelligence, https://www.nature.com/articles/s42256-024-00878-8) mostra perché la licenza dichiarata da un aggregatore non sempre corrisponde a quella della fonte originale. Nessun corpus è stato scaricato in questa ricognizione.
+
+## Ricognizione 16 — confini specifici dei nuovi canali (2026-11-02)
+
+La [ricognizione 16](16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md) verifica specifiche ufficiali che impongono attenzione:
+- **Istat** dichiara **5 query/minuto per IP** per SDMX, con possibile blocco da **1 a 2 giorni** oltre il limite: neanche a titolo di benchmark eseguire test di limite su produzione.
+- **Parlamento europeo** OpenData v2 documenta **500 richieste in 5 minuti sullo stesso endpoint**; verificare ulteriori regole per asset/publisher.
+- **Congress.gov** richiede una chiave API legittimamente registrata; mai ottenere o simulare credenziali altrui.
+- **DataCite** separa public read API e Member API per scritture; non usare operazioni mutative o sistemi autenticati in esplorazioni non autorizzate.
+- **Normattiva** avverte del carattere non ufficiale/redazionale dei testi e delle condizioni di riproduzione: non confondere disponibilità pubblica con possibilità di riutilizzo illimitato.
+- **Europe PMC / arXiv**: metadata indicizzabili possono riguardare articoli con diritti sul full text più restrittivi; gli endpoint per metadata non autorizzano prelievi di file coperti.
+- **ActivityPub**: inbox e dati filtrati dalle ACL non sono pubblici solo perché un profilo è federato; **AT Protocol**: onorare cancellazioni, migrazioni e deactivation, non creare indiscriminatamente archivi statici dei contenuti.
+- In qualsiasi caso mantenere il blocco contro bypass di HTTP 403, autenticazione, CAPTCHA, paywall e limiti di rate/uso. Nessuna richiesta massiva o interazione con endpoint reali effettuata in questa ricognizione.
