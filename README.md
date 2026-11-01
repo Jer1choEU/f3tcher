@@ -25,6 +25,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md) | Adozione verificata documentalmente, limiti dei delta, pagination, fonti rare e ipotesi di ricerca senza benchmark |
 | [docs/09_COMPLETEZZA_LOCALE_E_PROVE.md](docs/09_COMPLETEZZA_LOCALE_E_PROVE.md) | Completezza verificabile per interrogazione/perimetro, limiti capture-recapture, watermark e due benchmark ExtractBench distinti |
 | [docs/10_INVENTARI_E_GARANZIE.md](docs/10_INVENTARI_E_GARANZIE.md) | Inventari e checksum reali (Wikimedia), bulk/delta/retention (Crossref, OpenAlex, GBIF), OAI-PMH, ResourceSync e limiti delle prove crittografiche |
+| [docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md](docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md) | Dipendenze/copia fra fonti, provenance, TUF, witness, SCITT e prove crittografiche circoscritte |
 
 ## Avvertenze di metodo
 
