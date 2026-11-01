@@ -154,3 +154,15 @@ Vedi [14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md](14_ACTIVE_PROVENANCE_INFORMATIO
 - Non dichiarare automaticamente garanzie greedy (adaptive submodularity), conformal (selection-induced shift) né causalità comprovata dall'aumento di confidenza.
 - Una politica che sceglie cosa esplorare cambia ciò che è osservato: il benchmark deve tenere conto dei **controfattuali mancanti/off-policy support**, non valutare soltanto i successi passati.
 - Baseline pratiche da confrontare: k fisso, ranking semantico, diversità, random lecito, FIRE-like, EIG myopic/lookahead, senza dichiarare già vincente una strategia.
+
+## Q. Ricognizione 15 — acquisizione universale prima di scraping generico
+
+Vedi [15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md). **Ipotesi, non specifica approvata**:
+- Scoprire dataset, distribuzioni, asset, servizi e versioni da **cataloghi machine-readable dichiarati**: DCAT/DCAT-AP, STAC, OGC, CKAN, IIIF.
+- Distinguere **notifications/push** (WebSub) e inventario completo: un evento push non dimostra che non ci siano gap.
+- Capire quando una pagina **HTTP statica/SSR** è sufficiente, quando serve browser interattivo e quando un dato va recuperato via API pubblicata; non rendere il browser obbligatorio e non introdurre profili selezionabili.
+- Riconciliare più vie **in parallelo concettuale**: dataset landing page, CSV/XLS, IIIF manifest, feed, archivi, metadati RDF; conteggiare *asset unici verificati*, non URL.
+- Non confondere doc scaricato, doc processato e estrazione completa di tabelle, pagine, formule e media.
+- Studiare *LLM expensive setup → deterministic repeated harvest* senza rivendicarne l'invenzione; confronto con baseline semplici e failure silenziose quando cambia sito.
+- Crawler streaming/distribuiti e polite rate limiting: throughput vincolato dal publisher prima ancora che dal calcolo; monitorare l'eventuale starvation delle fonti rare.
+- Usare ambienti sintetici/verificabili per test futuri, mai probing invasivo di sorgenti reali.
