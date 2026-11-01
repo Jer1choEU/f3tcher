@@ -207,3 +207,14 @@ Vedi [18_SINTESI_COMPARATIVA_E_LACUNE.md](18_SINTESI_COMPARATIVA_E_LACUNE.md). I
 - Layout semantico e script/selector drift: WebLists/SCRIBES già studiano *LLM setup + deterministic reuse*, va misurato record/field recall e costo, non solo output JSON valido.
 - Identità di record vs canonical SEO: versioni/parametri e resource graph non collassabili ciecamente.
 - Studi futuri solo su testbed autorizzato e con gold inventory, indipendenza delle fonti e registrazione diritti; nessuna configurazione o tecnologia adottata.
+
+## W. Ricognizione 21 — efficienza verificabile, tre vincoli indipendenti
+
+Vedi [21_SCALABILITA_COSTI_E_ACQUISIZIONE_EFFICIENTE.md](21_SCALABILITA_COSTI_E_ACQUISIZIONE_EFFICIENTE.md). **Piste non approvate**:
+- Separare capacità lecita della **fonte** (quota/robots/Retry-After/403), risorse lato **crawler/cloud** (CPU/RAM/concorrenza browser/costi), e guadagno **informativo** (asset nuovi/verificati/versioni/perdita).
+- HTTP 304 / ETag / Vary / conditional requests e Range/206 quando la fonte supporta: evita byte, ma `304 HTML` non prova invariabilità di dati JS collegati, `206` non è file completo.
+- Throttling per host/domain/IP (StormCrawler) e per latenza (Scrapy) vs autoscaling client (Crawlee) **sono capacità diverse**, ciascuna già esistente; nessun incremento parallelo per aggirare provider limits.
+- Revisit adattivo e controllo freshness, **mai** inferire storico completo o assenza di eventi persi da immutabilità apparente di una pagina.
+- Browser on demand vs browser-first e costo per **asset valido e realmente distinto**; quote cloud Browser Run ottobre 2026 sono separate dai permessi del sito.
+- Potenziale confronto `archive-first` Common Crawl/bulk vs live HTTP/API, con staleness, diritti e coverage caveat.
+- Long-tail fairness e condivisione cross-project di copie solo nel rispetto di permessi/retention/privacy.
