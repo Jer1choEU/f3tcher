@@ -225,3 +225,31 @@ Fonti **primarie consultate direttamente**; limiti e ipotesi nel [documento 14](
 - **Cief/Kveton/Kompan (AAAI 2025)** https://ojs.aaai.org/index.php/AAAI/article/view/33765 — cross-validating off-policy evaluation, senza che ciò elimini automaticamente confondenti e mancanza di supporto.
 
 **Pista nuova:** *falsification-aware active acquisition* = selezionare evidenze lecite capaci anche di smentire ipotesi esistenti, non solo ridurre incertezza interna al modello. È una **ipotesi di ricerca**, non una tecnologia scelta, né una claim di novità mondiale.
+
+## N. Ricognizione 15 — acquisizione universale multiprotocollo (2026-11-01)
+
+[Studio e gradi evidenza](15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md). **V-spec/V-doc/V-paper** = controllato presso fonte primaria; non dimostrato su istanze f3tcher.
+
+**Cataloghi e discovery verticale**
+- W3C **DCAT 3** https://www.w3.org/TR/vocab-dcat/ (Recommendation 22-08-2024): Catalog, Dataset, Distribution, DataService, dataset series e versioning.
+- EC **DCAT-AP 3.0.1** https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/release/301 (2025): cataloghi pubblici UE, metadata multilanguage/series e SHACL; conformità del singolo publisher da verificare.
+- **STAC** https://stacspec.org/en/about/stac-spec/ ; esempio publisher **Copernicus Data Space** https://documentation.dataspace.copernicus.eu/APIs/STAC.html : Collection, Item, Asset e API search/filters; estensioni non universali.
+- **OGC API — Records Part 1** https://www.ogc.org/standards/ogcapi-records/ ; https://ogcapi.ogc.org/records/ : ricerca metadati spaziali; Facets/CRUD/Harvest in draft.
+- **IIIF Change Discovery 1.0** https://iiif.io/api/discovery/ ; https://iiif.io/api/ ; https://guides.iiif.io/guide_for_implementers/ : flussi Create/Update/Delete e metadata di archivi di immagini/documenti; Content Search è altra API.
+- **CKAN API** https://docs.ckan.org/en/latest/api/ : package_list/search/show e resource + datastore; API espone azioni mutative, vietato usarle senza permesso.
+- **WebSub**, W3C Recommendation aggiornata 02-06-2026 https://www.w3.org/TR/websub/ : hub/topics/push, nessuna garanzia implicita di storico completo.
+- **Schema.org Dataset guidelines** https://developers.google.com/search/docs/appearance/structured-data/dataset : structured data, sitemap, sameAs/canonical, solo segnali di discovery.
+
+**Motori e cattura**
+- **Apache StormCrawler 3.7** https://stormcrawler.apache.org/docs/latest/index.html ; https://stormcrawler.apache.org/ : frontend di crawling continuo con politeness per host, sitemap/feed, parser Tika, possibile Playwright; provider docs, non benchmark.
+- **Scrapy JOBDIR** https://doc.scrapy.org/en/latest/topics/jobs.html : persistenza e resume su arresto pulito, rischio corruzione con crash e incompatibilità di versioni.
+- **Crawlee** https://crawlee.dev/js/docs/quick-start : Cheerio HTTP e Playwright/Puppeteer browser, queue; browser non automaticamente migliore.
+- **Browsertrix** https://crawler.docs.browsertrix.com/ ; https://crawler.docs.browsertrix.com/user-guide/outputs/ : Puppeteer/CDP, QA replay, WARC/WACZ, AGPL del repo https://github.com/webrecorder/browsertrix-crawler ; replay != completezza.
+- **Docling Supported Formats** https://docling.ai/formats/ : parser multimodale, supporto dichiarato != correttezza del risultato.
+
+**Ricerca scientifica**
+- **WebDART**, Findings ACL 2026, https://aclanthology.org/2026.findings-acl.568/ : navigation/extraction/execution re-planning; +13,7 punti percentuali su WebChoreArena **degli autori**, non recall di acquisizione.
+- **BaRA**, preprint arXiv 2607.00007, https://arxiv.org/abs/2607.00007 : link discovery e artefatti, **P per testo integrale** (solo abstract d'indice accessibile).
+- **Abitov/Dakhnovich/Moskvin 2026** https://jisp.spbstu.ru/en/article/2026.28.7/ : setup LLM costoso + raccolta deterministica su web dinamico; F1=0,89 riportato dagli autori sul loro dataset; non originale di f3tcher.
+- **VeriEnv**, ICML 2026 https://proceedings.mlr.press/v306/chae26a.html : training su ambienti web simulati/verificabili, non crawler universal.
+- **Review di web scraping**, Data & Knowledge Engineering 2026 https://doi.org/10.1016/j.datak.2026.102598 : abstract/review, testo integrale non analizzato.
