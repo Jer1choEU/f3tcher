@@ -5,7 +5,7 @@
 ## Procedura per una nuova chat
 
 1. Collegarsi all'account GitHub **`Jer1choEU`** (attenzione: non **`EUJer1cho`**) e aprire **https://github.com/Jer1choEU/f3tcher**.
-2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md` e `docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md`). Non basarsi soltanto su precedenti risposte di chat.
+2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md` e `docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md` e `docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md`). Non basarsi soltanto su precedenti risposte di chat.
 3. Se il repository è cambiato, verificare commit/stato corrente prima di riassumere.
 4. Riprendere la **fase di ricerca**, non implementare né formalizzare una proposta definitiva, salvo nuova richiesta dell'utente.
 5. Se viene chiesto di continuare la ricerca, cercare fonti primarie accademiche, standard, repository, esperienze indipendenti e test comparabili; aggiornare i documenti con risultati verificati, distinguendoli da piste.
@@ -16,7 +16,7 @@
 
 > Riprendiamo la ricerca sul progetto f3tcher: https://github.com/Jer1choEU/f3tcher . Usa il mio account GitHub **Jer1choEU**, NON EUJer1cho.
 >
-> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11, 12 e 13, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
+> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11, 12, 13 e 14, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
 >
 > Obiettivo: costruire in futuro un **unico motore universale** per la massima acquisizione lecita di informazioni digitali da web, API, feed, archivi, documenti, dataset, flussi di eventi e altre fonti. Deve scegliere autonomamente i metodi migliori, **senza profili selezionabili**, massimizzando completezza, profondità storica, affidabilità, freschezza, provenienza e interoperabilità. Non voglio violare alcuna legge: **nessun bypass di 403, login, paywall, CAPTCHA, rate limit o altri divieti**; non interpretare la semplice accessibilità pubblica come autorizzazione universale.
 >
@@ -68,6 +68,10 @@ Leggere [12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](12_GENEALOGIE_BENCHMARK_E_ABST
 ## Aggiornamento ricognizione 13: cascades, identificabilità, rischio/astensione (2026-11-01)
 
 Leggere [13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md](13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md): **NETINF Stanford** (rete di diffusione *inferita*, non gold truth), **MemeTracker** (96,6M documenti con timestamp/frasi/hyperlink, non genealogie certe), NIFTY (clustering mutazioni), Farajtabar et al. 2015 (origine da tracce incomplete), Zhu/Ying 2016 (possibilità/impossibilità nei modelli studiati), Dawkins/Li/Xu 2021 (insiemi di sorgenti con copertura condizionata alle ipotesi), selective prediction e conformal risk control (NeurIPS/ICML/ICLR/ACM CS). La conclusione non è una scelta algoritmica ma un **problema di ricerca**: riconoscere origini non identificabili, candidati mancanti, timestamp incerti; calibrazione e abstention da validare su dati appropriati. Le etichette NETINF NON sono ground truth indipendente. Nuova pista: *active provenance investigation* selezionare verifiche ulteriori consentite quando le origini sono ambigue. **Nessun codice/test/stack deciso.**
+
+## Aggiornamento ricognizione 14: ricerca attiva e falsificazione (2026-11-01)
+
+Consultare [14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md](14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md). Fonti primarie 2024-26: **FIRE (NAACL 2025)** mostra già search/verification/STOP (risultati di costo degli autori non trasferibili al progetto); **AFA Survey IJCAI 2026** descrive scelta sequenziale cost-aware/POMDP, myopic/nonmyopic; **AVeriTeC** è corpus claim/evidence, non causal lineage; **Sloman 2024** avverte che un prior sbagliato può far convergere adaptive design sul modello errato; **Golovin/Krause** danno garanzie greedy solo sotto adaptive submodularity; **Prinster 2024** tratta adattamento conformal a shift indotti dall'agente; **Madhow 2025** studia off-policy evaluation su log raccolti adattivamente. Nuova pista: **falsification-aware active acquisition** — scegliere prove lecite che possano smentire origini sospette e scoprire upstream assenti, oltre a confermarle. **Dieci esperimenti proposti ma mai eseguiti** (false STOP, complementarity, policy bias, rare sources, latency, costs). Nessuna architettura, algoritmo, tool o licenza scelti. Prossimo studio: benchmark reale di decisioni di ricerca e identifiability senza overclaim, poi come valutare confronti adattivi controfattuali.
 
 ## Sintesi dei punti di partenza più promettenti
 
