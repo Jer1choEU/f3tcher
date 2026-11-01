@@ -5,7 +5,7 @@
 ## Procedura per una nuova chat
 
 1. Collegarsi all'account GitHub **`Jer1choEU`** (attenzione: non **`EUJer1cho`**) e aprire **https://github.com/Jer1choEU/f3tcher**.
-2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md` e `docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md` e `docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md` e `docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md` e `docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md` e `docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md` e `docs/18_SINTESI_COMPARATIVA_E_LACUNE.md` e `docs/19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md`). Non basarsi soltanto su precedenti risposte di chat.
+2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md` e `docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md` e `docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md` e `docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md` e `docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md` e `docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md` e `docs/18_SINTESI_COMPARATIVA_E_LACUNE.md` e `docs/19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md` e `docs/20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md`). Non basarsi soltanto su precedenti risposte di chat.
 3. Se il repository è cambiato, verificare commit/stato corrente prima di riassumere.
 4. Riprendere la **fase di ricerca**, non implementare né formalizzare una proposta definitiva, salvo nuova richiesta dell'utente.
 5. Se viene chiesto di continuare la ricerca, cercare fonti primarie accademiche, standard, repository, esperienze indipendenti e test comparabili; aggiornare i documenti con risultati verificati, distinguendoli da piste.
@@ -16,7 +16,7 @@
 
 > Riprendiamo la ricerca sul progetto f3tcher: https://github.com/Jer1choEU/f3tcher . Usa il mio account GitHub **Jer1choEU**, NON EUJer1cho.
 >
-> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18 e 19, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
+> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 e 20, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
 >
 > Obiettivo: costruire in futuro un **unico motore universale** per la massima acquisizione lecita di informazioni digitali da web, API, feed, archivi, documenti, dataset, flussi di eventi e altre fonti. Deve scegliere autonomamente i metodi migliori, **senza profili selezionabili**, massimizzando completezza, profondità storica, affidabilità, freschezza, provenienza e interoperabilità. Non voglio violare alcuna legge: **nessun bypass di 403, login, paywall, CAPTCHA, rate limit o altri divieti**; non interpretare la semplice accessibilità pubblica come autorizzazione universale.
 >
@@ -103,6 +103,19 @@ Nessun benchmark f3tcher, nessun codice, nessuno stack/algoritmo/servizio scelto
 ## Ricognizione 19: reality check di protocolli su portali reali (2026-11-02)
 
 **Leggere il documento [19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md](19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md)** dopo la sintesi 18. Campione **intenzionale NON rappresentativo**: Copernicus STAC vecchio/nuovo (due root JSON effettivamente lette, `stac_version=1.0.0` vs `1.1.0`); **16-10-2026** annuncio SFEOS nuovo e decommission vecchio **12-01-2027**, nuovo backend: burst 10/s, 60/min/IP anonimo e 240/min autenticato. Rijksmuseum OAI-PMH, IIIF Change Discovery e LDES/TREE **documentati** con `LatestVersionSubset amount=1` (nessuno storico completo); cambio EDM XML nel giugno 2026, OAI museo esclude biblioteca/archivi. Zenodo OAI-PMH documentato, metadata CC0 != file diritti/licenza. Data.gov.uk CKAN documentato, **curated collections assenti dall'API**. RNDT Italia GeoDCAT-AP con trasformazione ISO19139 e REST, collegamento dati.gov.it. data.europa.eu harvesting multiprotocollo e MQA che **non misura qualità/completezza del dato**; 2025 Open Data Maturity score non è percentuale dataset conformi. FAIR Signposting adozioni **dichiarate** nel registro, non census. Risposte OAI XML/IIIF JSON-LD non renderizzabili dallo strumento = **U sconosciuto**, NON bug del server: solo Copernicus JSON è stato letto direttamente. Nessun crawl, benchmark, percentuale di adozione o codice f3tcher. Prossima ricerca: metodologia di verifica anche su non-adopter e migrazioni/crosswalk, non nuovi stack.
+
+## Ricognizione 20 — Sorgenti difficili, form e stati dinamici (2026-11-02)
+
+**Da leggere:** [20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md](20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md). Ricerca documentale (NESSUN crawling/test):
+- **Google's Deep-Web Crawl (PVLDB 2008)** surfacing di form HTML; esistenza della ricerca NON autorizza crawling indiscriminato dei moduli.
+- **Barrio & Gravano (2017)**: query più redditizie vs query diversificate cambiano efficienza e qualità del campione, rischio fonti rare.
+- **Crawljax (ACM TWEB 2012)**: grafi di stati del DOM + eventi, non copertura certificata di tutti gli stati.
+- **Browsertrix behaviors** (autoscroll/autofetch/autoclick e timeout), **Playwright** sconsiglia networkidle come condizione di readiness nei test e `locator.all()` su liste dinamiche.
+- **Google Search Central**: paginazione/infinite scroll senza href/URL stabile crea invisibilità per crawler; **soft 404/HTTP 200** e canonical come segnale SEO, non equivalenza di versioni.
+- **WebLists (2025)** 200 task e risultati degli autori (BardeenAgent 66% recall vs web agents 31%, search LLM 3%); **SCRIBES (2025)** RL per script riusabili su tabelle/list; **Kustenkov et al. (2025)** 13.120 pagine di liste news russe. NON sono benchmark f3tcher.
+- **Senato italiano** come esempio istituzionale di ricerca documentata attraverso schede iter, testi, emendamenti, ultimi PDF: **NON dichiarare che non abbia API** o che una query UI autorizzi raccolta massiva.
+- 9 test futuri teorici: HTTP/browser escalation, state explosion, form query bias, paging moving target, readiness, virtual lists, selector drift, soft200, legal stops.
+- Distinguere risultato **non trovato** da **non accessibile** e **non verificabile**, URL count da record/asset/version count. Prossima indagine: scalabilità e costi per *informazione verificata*, non richieste/s. Resta un solo motore con selezione automatica, senza profili utenti e nessun codice/architettura approvati.
 
 ## Sintesi dei punti di partenza più promettenti
 
