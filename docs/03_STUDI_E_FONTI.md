@@ -144,3 +144,16 @@ Dettagli e gradi di evidenza: [08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](08_ADOZIO
 - **SHACL W3C** https://www.w3.org/TR/shacl/ e **DQV** https://www.w3.org/TR/vocab-dqv/ — conformance e qualità, non completezza popolazione.
 - **ExtractBench 1 (Ferguson et al., febbraio 2026)** https://arxiv.org/abs/2602.12247 ; codice https://github.com/ContextualAI/extract-bench — 35 PDF/12.867 campi.
 - **ExtractBench 2 (Zhang et al., luglio 2026)** https://arxiv.org/abs/2607.29677 ; codice https://github.com/run-llama/ExtractBench — 370 documenti/4.869 pagine; rubriche completezza liste/grounding/costo. **Non unire le due classifiche.**
+
+## I. Ricognizione 10 — inventari, retention, stato dei dump e limiti delle prove (2026-11-01)
+
+[Analisi integrale](10_INVENTARI_E_GARANZIE.md). Fonti **primarie controllate documentalmente**, nessun endpoint testato o benchmark f3tcher:
+- Wikimedia Meta-Wiki, [Data dumps/Monitoring](https://meta.wikimedia.org/wiki/Data_dumps/Monitoring): `dumpstatus.json`, `report.json`, stato per job, file, dimensione e checksum opzionali; non dimostra completezza assoluta dei contenuti Wikimedia. Materiale aggiuntivo da riverificare: https://wikitech.wikimedia.org/wiki/MediaWiki_Content_File_Exports .
+- Crossref, [Public data files and snapshots](https://www.crossref.org/documentation/retrieve-metadata/bulk-downloads/) e [REST API tips](https://www.crossref.org/documentation/retrieve-metadata/rest-api/tips-for-using-the-crossref-rest-api/): bulk annuale pubblico; snapshot mensili premium; filtri `created/update/index`; possibili differenze durante reindex/paginazione.
+- OpenAlex, [Download Changefiles](https://developers.openalex.org/download/changefiles): snapshot pubblico trimestrale; mensile e changefile giornalieri premium; ultimi **60 giorni** disponibili, upsert per id; **non** promettere delete/history completi.
+- GBIF, [Citation guidelines](https://www.gbif.org/citation-guidelines), [FAQ](https://www.gbif.org/faq) e [Occurrence API](https://techdocs.gbif.org/en/openapi/v1/occurrence): DOI e metadati di download; file potenzialmente eliminati dopo sei mesi, DOI non implica bytes permanenti.
+- ResourceSync 1.1, [Framework Specification](https://www.openarchives.org/rs/1.1/resourcesync_highlighted): Resource List/Dump, Change List/Dump, intervalli, delete, audit; durata delle liste di modifica non imposta in generale.
+- OAI-PMH 2.0, [protocollo](https://www.openarchives.org/OAI/openarchivesprotocol.html) e [repository guidelines](https://www.openarchives.org/OAI/2.0/guidelines-repository.htm): `completeListSize` facoltativo/anche stimato, `resumptionToken` e comportamento a fonte in mutazione, `deletedRecord=no|transient|persistent`.
+- RFC 9162, [Certificate Transparency v2](https://www.rfc-editor.org/rfc/rfc9162.html): inclusion/consistency proofs di un log, **non** censimento del mondo; RFC sperimentale, attenzione a viste incoerenti.
+
+**Nuova distinzione:** «referenziabile», «i byte sono disponibili», «integro rispetto a manifest», «copia dello stato corrente» e «storia degli eventi completa» non sono sinonimi. Le cinque famiglie di test nel documento 10 sono **ipotesi**; nessuna prova f3tcher eseguita.
