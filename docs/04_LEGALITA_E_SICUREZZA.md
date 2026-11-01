@@ -1,0 +1,64 @@
+# 04 — Legalità, sicurezza, accessi e licenze
+
+**Stato:** principi di cautela e filoni di verifica, **non parere legale**. L'utente richiede il massimo delle tecniche lecite; “non è uscito 403” **non** autorizza automaticamente scraping, redistribuzione o conservazione.
+
+## Principio operativo
+
+> Ottenere quante più informazioni possibili **attraverso canali tecnicamente e giuridicamente consentiti**. Non aggirare autenticazione, blocchi di accesso, barriere tecniche, paywall o sistemi di protezione. Se un percorso non è accessibile, valutare API pubbliche, open data, licenze o autorizzazioni alternative e archivi utilizzabili legalmente.
+
+**Distinguere quattro aspetti**: (1) risposta tecnica del server, (2) autorizzazione a ottenere i dati, (3) diritto a copiarli/analizzarli/conservarli, (4) diritto a fornirli ai progetti utilizzatori. Non sono equivalenti.
+
+## Risposte HTTP e comportamenti da valutare
+
+| Segnale | Comportamento di sicurezza orientativo |
+|---|---|
+| 2xx | Non equivale a licenza; estrarre soltanto nell'ambito ammesso |
+| 304 | Usare copia validata già disponibile; non affermare nuova acquisizione |
+| 401 | Nessun bypass. Credenziali soltanto se legittimamente autorizzate |
+| 403 | **Fermare quel percorso e registrare il divieto**; niente bypass con camouflage, proxy/identità aggiranti, token altrui, o endpoints di controllo |
+| 404/410 | Registrare indisponibilità, stato storico e possibili alternative lecite |
+| 429 | Rispettare Retry-After/rallentare, non rotazione elusiva per aggirare i limiti |
+| 5xx/timeouts | Retry limitati, backoff e circuit breaker |
+| CAPTCHA / login / paywall / divieto esplicito | Non superare senza autorizzazione, contratto o intervento appropriato |
+
+N.B. Non tutte le barriere sono espresse come 403: es. login wall HTTP 200, rate limit, restrizioni contrattuali, esclusioni da robots, riserve copyright, dati personali.
+
+## Normativa e standard da riesaminare prima della produzione
+
+1. **UE Direttiva (UE) 2019/790 art. 4**: eccezione TDM per opere legittimamente accessibili, salvo riserva espressa in modo appropriato, anche leggibile da macchina per contenuti online. Testo: https://www.legislation.gov.uk/eudr/2019/790/article/4
+2. **Italia legge 633/1941, art. 70-quater**, introdotto dal D.Lgs. 177/2021: TDM su contenuti cui si ha legittimamente accesso ove l'utilizzo non sia espressamente riservato; copie del comma 1 conservate **solo per il tempo necessario** ai fini TDM; requisiti di sicurezza. Fonte: https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=21G00192&atto.dataPubblicazioneGazzetta=2021-11-27
+3. **RFC 9309 robots.txt:** https://www.rfc-editor.org/rfc/rfc9309.html; lo standard dice che un crawler conforme **deve** rispettare le regole parseable quando scarica con successo un robots valido. robots.txt non è sistema di autenticazione e da solo non decide il titolo giuridico; **non è una ragione per ignorarlo**.
+4. **GDPR**, regolamento (UE) 2016/679: dati personali anche pubblicamente accessibili possono richiedere base giuridica, minimizzazione, limiti di conservazione e gestione degli interessati. Fonte: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+5. Protezione delle banche dati, licenze open data/API, termini contrattuali e diritto d'autore: possono applicarsi separatamente a copia, archiviazione e redistribuzione.
+6. Per licenze software e modelli AI: MIT/BSD/Apache differiscono da GPL/AGPL; AGPL può imporre obblighi di sorgente nel caso di versioni modificate rese disponibili attraverso rete. Verificare il repository/versione concreta e tutte le dipendenze.
+7. Norme e condizioni **dipendono da giurisdizione, fonte, finalità e soggetto utilizzatore**: necessaria verifica legale specifica per deployment/uso reale; non trattare questa nota come semaforo automatico.
+
+## Idee per un motore automatico di conformità (ricerca, non implementato)
+
+- Registrare per fonte e, ove necessario, per risorsa: provenance, permission basis, robots policy, termini d'uso, licenza, riserva TDM, credenziali consentite, area geografica, finalità, retention e ambito di redistribuzione.
+- Policy decidibile e auditabile: **allow / deny / review** con motivazione e timestamp. Default conservativo su ambiguità giuridiche; permettere riesame, non aggiramento.
+- Credenziali per tenant/progetto, mai condivise senza autorizzazione; protocolli autenticati solo dietro mandato valido.
+- Separare metadata discovery (es. titolo e URL) da copia/archiviazione del contenuto integrale; licenze distinte possono richiedere trattamenti diversi.
+- Retention per fonte e classe di dato; cancellazione e invalidazione delle cache su richiesta legittima o scadenza.
+- Privacy by design, minimizzazione, audit log protetti, controlli accesso per output e per progetti destinatari.
+
+## Sicurezza di rete, esecuzione e AI
+
+- **SSRF e DNS rebinding**: proteggere ambienti interni e indirizzi link-local/loopback/privati/cloud metadata, revalidare DNS, bloccare redirect verso destinazioni proibite.
+- Browser e parser in esecutori isolati (container/sandbox), minimi privilegi, limiti CPU/RAM/processi e di uscita rete; niente shell diretta da una pagina o da un modello.
+- Contenuti scaricati, HTML, PDF, YAML, markdown e risposte delle API sono **input non fidati**: non eseguirne istruzioni/prompts; attacchi di prompt injection.
+- Segreti in secret manager, evitare log/URL non necessari contenenti token; cifratura e segregazione dei dati.
+- Identità e user-agent trasparenti quando appropriato, contatto operativo, policy di rate limiting, backpressure e stop immediato su accesso negato.
+- Nessun programma di “browser stealth/anti-bot bypass” da considerare automaticamente lecito: per f3tcher il target è **efficienza su percorsi permessi**, non elusione delle protezioni.
+- Test di funzionalità con **siti controllati/esplicitamente autorizzati**, incluso comportamento 401/403/429 e CAPTCHA simulati.
+
+## Attenzione a costi e limiti infrastrutturali
+
+La piattaforma di esecuzione non è scelta. Qualsiasi proposta Cloudflare Workers / Browser Run / Turso / R2 / container va verificata su limiti di RAM, CPU, browser, storage, costi, regioni, conformità e controllo dei dati. Separare componenti che richiedono browser pesanti/OCR da request handlers leggeri, se i benchmark lo giustificano.
+
+## Prossimi controlli necessari
+
+1. Matrice giuridica per tipo di fonte e finalità (es. notizie, archivi, portali governativi, dati personali, piattaforme social).
+2. Verifica licenze e condizioni dei componenti scelti **prima** di importare codice, modelli o dataset.
+3. Regole di gestione delle risorse negate, dei reclami e della cancellazione.
+4. Threat model e test di sicurezza prima di esporre un'acquisizione arbitrary-URL.
