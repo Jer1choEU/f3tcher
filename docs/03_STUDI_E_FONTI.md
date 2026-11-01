@@ -368,3 +368,17 @@ L'uso di uno standard/provider per un ambito significa **documentazione di capac
 - **Cloudflare Browser Run** annuncio rinomina 15-04-2026 https://developers.cloudflare.com/changelog/post/2026-04-15-br-rename/ ; **limiti 14-10-2026** https://developers.cloudflare.com/browser-run/limits/ ; **pricing/metering** https://developers.cloudflare.com/browser-run/pricing/ : Paid default **200 browser concurrent**, 3 new/sec e 30 quick actions/sec; quote soggette a modifiche, non si applicano ai siti visitati.
 
 **Limite per tutto il filone:** quote dei provider e benchmark vendor non sono prestazioni di f3tcher; nessuna spesa, test, algoritmo o stack adottato.
+
+## U. Ricognizione 22 — routing autonomo e validazione dei risultati (2026-11-02)
+
+[Documento dettagliato 22](22_ROUTING_ADATTIVO_SCELTA_METODO_E_VALIDAZIONE.md). **V-doc** fonte ufficiale / **V-paper** editore; nessuna riproduzione empirica f3tcher.
+- **Crawlee `AdaptivePlaywrightCrawler` 3.18**, https://crawlee.dev/js/api/playwright-crawler/interface/AdaptivePlaywrightCrawlerOptions : `renderingTypePredictor`, `renderingTypeDetectionRatio` default 0.1, `resultChecker` e `resultComparator` (inconclusive), `shouldPropagateError`; `retryOnBlocked` è documentato ma **NON compatibile** con no-bypass dell'utente. **RenderingTypePredictor** https://crawlee.dev/js/api/playwright-crawler/class/RenderingTypePredictor. **4.0 RC**, documentazione dettagliata https://crawlee.dev/js/docs/next/guides/adaptive-crawling — sample comparatore, transazioni storage, warning doppia esecuzione handler, risultanti vuoti validi e rischio di false escalation: distinguere RC/stabile.
+- **Scrapy + Playwright**, https://scrapy-playwright.readthedocs.io/en/latest/reference/meta.html — `Request.meta.playwright` sceglie browser per richiesta; non same learned policy out of the box.
+- **Zhang et al. (VLDB Journal 2025)** https://link.springer.com/article/10.1007/s00778-025-00936-6 — due ottimizzatori adattivi semplici, in alcuni casi più efficaci di RL query optimizers, no generalizzazione provata a crawler.
+- **Query Mesh / adaptive query routing 2013** https://www.sciencedirect.com/science/article/pii/S0022000012001468 ; **Eddies/SteMs ICDE 2003** https://research.ibm.com/publications/using-state-modules-for-adaptive-query-processing — routing multi-piano già noto, correttezza delicata.
+- **SB-CLASSIFIER (Gauquier et al. 2026)** https://arxiv.org/abs/2602.11874 — focused URL selection via sleeping bandits, non multi-channel selection.
+- **Poon et al. (AAAI 2026)** https://ojs.aaai.org/index.php/AAAI/article/view/39672 — contextual-bandit LLM selection e cost budget, caso diverso da source completeness.
+- **FrugalGPT (2023)** https://arxiv.org/abs/2305.05176 ; **RouteLLM (ICLR 2025)** https://proceedings.iclr.cc/paper_files/paper/2025/hash/5503a7c69d48a2f86fc00b3dc09de686-Abstract-Conference.html — cascades e learned routing per LLM, risultati di cost saving di autori su task NON crawling.
+- **WASP (NeurIPS 2025)** https://proceedings.neurips.cc/paper_files/paper/2025/hash/1c9818387f5dd0a0bc151214660f059d-Abstract-Datasets_and_Benchmarks_Track.html ; **TRAP (ICML 2026)** https://oxrml.com/research/its-a-trap/ — prompt injection web agent su testbed, contenuti pagina sono input non affidabili.
+
+**Limitazione critica:** HTTP+browser con risultati **identici ma parziali** può non essere riconosciuto da comparazione peer-to-peer. Presenza di un record/HTTP 200 non è source completeness; sono proposte di verifica future, non bug dimostrati nel software altrui.
