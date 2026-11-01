@@ -122,3 +122,13 @@ Prove, limiti e ulteriori fonti in [07_RICOGNIZIONE_2026-11-01.md](07_RICOGNIZIO
 ## Riscontri pratici della seconda ricognizione (2026-11-01)
 
 Vedi [08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md): **FAIR Signposting** non è soltanto specifica (implementazioni dichiarate su Dataverse/DSpace/InvenioRDM/Zenodo, test pubblicati A2A); l'ecosistema **Arazzo** contiene validator/runner e workflow di esempio, ma una curazione aggiornata a ottobre 2026 indica forte presenza di tooling per 1.0.1 rispetto a 1.1.0; **Microsoft Graph Delta** e **Zendesk offset** documentano limiti reali della sincronizzazione; **Debezium** è una baseline per snapshot+CDC soltanto dove il fornitore concede accesso al log. **Nessuna libreria è stata scelta, installata o provata.**
+
+## Ricognizione 09 — strumenti/benchmark con omonimia da evitare
+
+Vedi [09_COMPLETEZZA_LOCALE_E_PROVE.md](09_COMPLETEZZA_LOCALE_E_PROVE.md).
+
+- **ExtractBench (Ferguson et al., ContextualAI, febbraio 2026)** https://github.com/ContextualAI/extract-bench ; https://arxiv.org/abs/2602.12247 : 35 PDF, 5 schemi, 12.867 campi, metriche specifiche per campo; articoli/risultati non replicati.
+- **ExtractBench (Zhang et al., run-llama, luglio 2026)** https://github.com/run-llama/ExtractBench ; https://arxiv.org/abs/2607.29677 : 370 documenti, 4.869 pagine, estrazione di liste, grounding e costo; *non è lo stesso benchmark*.
+- **Apache Flink / watermarks** https://nightlies.apache.org/flink/flink-docs-master/docs/learn-flink/streaming_analytics/ : semantica event time, late arrivals e compromesso latenza/completezza, non promessa di completamento assoluto.
+- **Debezium incremental snapshots / collision windows** https://github.com/debezium/debezium-design-documents/blob/main/DDD-8.md : modello di riferimento per fonti con accesso autorizzato al transaction log; non trasferibile a ogni web API.
+- **W3C SHACL** https://www.w3.org/TR/shacl/ e **DQV** https://www.w3.org/TR/vocab-dqv/ : espressione di vincoli/misure qualità, non prova di copertura web.
