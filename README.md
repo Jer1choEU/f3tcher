@@ -21,6 +21,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/04_LEGALITA_E_SICUREZZA.md](docs/04_LEGALITA_E_SICUREZZA.md) | Confini legali, gestione accesso, sicurezza, riservatezza e licenze |
 | [docs/05_DOMANDE_E_BENCHMARK.md](docs/05_DOMANDE_E_BENCHMARK.md) | Ipotesi scientifiche, prove comparabili e metriche |
 | [docs/06_RIPRESA_NUOVA_CHAT.md](docs/06_RIPRESA_NUOVA_CHAT.md) | Istruzioni operative e prompt di ripartenza per nuove conversazioni |
+| [docs/07_RICOGNIZIONE_2026-11-01.md](docs/07_RICOGNIZIONE_2026-11-01.md) | Nuove fonti verificate e ipotesi: Arazzo, FAIR Signposting/Linkset, OData Delta, ODRL, Active Search, BagIt/OCFL |
 
 ## Avvertenze di metodo
 
@@ -29,5 +30,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 - **Verifica dei riferimenti.** Parte dei link è stata controllata direttamente su documentazione primaria il 2026-11-01; altri sono **piste emerse nelle chat precedenti da riverificare**. Il registro indica la distinzione.
 - **Niente specifiche definitive per ora.** La preferenza dell'utente è continuare a cercare e confrontare prima di fissare architettura, stack o roadmap di sviluppo.
 - **Quando riprendi:** leggi prima [docs/06_RIPRESA_NUOVA_CHAT.md](docs/06_RIPRESA_NUOVA_CHAT.md) e [docs/00_STATO_E_DECISIONI.md](docs/00_STATO_E_DECISIONI.md).
+
+Aggiornato con una nuova ricognizione di fonti primarie il **1 novembre 2026**, senza sviluppo o benchmark eseguiti.
 
 Creato come archivio della ricerca concordata fino al **1 novembre 2026**, non come promessa di originalità assoluta o fattibilità già dimostrata.
