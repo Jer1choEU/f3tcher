@@ -98,3 +98,16 @@ Per ogni nuova voce:
 6. Etichetta **V** dopo controllo diretto; altrimenti **P** e nessun claim forte.
 
 **Non utilizzare** percentuali di questa bibliografia come prestazioni di f3tcher; non affermare che un paper sia peer-reviewed solo sulla base di arXiv; verificare i paper prima di citarli come prova conclusiva.
+
+## F. Integrazione verifiche 2026-11-01: workflow, discovery tipizzata, sincronizzazione, policy (V)
+
+Dettagli, limiti e ipotesi nel [documento 07](07_RICOGNIZIONE_2026-11-01.md). Fonti primarie ricontrollate direttamente:
+
+- OpenAPI Initiative **Arazzo 1.1.0** — https://spec.openapis.org/arazzo/latest.html ; progetto ufficiale https://github.com/OAI/Arazzo-Specification ; toolkit da confrontare https://github.com/usearazzo (pre-1.0, AsyncAPI non eseguibile secondo tabella compatibilità vista).
+- **RFC 9264 Linkset** — https://www.rfc-editor.org/rfc/rfc9264.html ; **FAIR Signposting** — https://signposting.org/FAIR/ ; typed links per contenuti, metadati, identificativi e licenze.
+- **OData Delta** — https://oasis-tcs.github.io/odata-specs/odata-protocol/odata-protocol.html ; testo evolutivo 4.02, supporto e versione dei server da verificare.
+- **W3C ODRL 2.2** — https://www.w3.org/TR/odrl-model/ ; policies di permessi/divieti/doveri; non certificazione automatica di liceità.
+- **BagIt RFC 8493** — https://www.rfc-editor.org/info/rfc8493/ ; **OCFL** — https://ocfl.io/ ; integrità/versioni, non completezza web.
+- **Garnett et al. (ICML 2012), Bayesian Optimal Active Search and Surveying** — https://publications.ri.cmu.edu/bayesian-optimal-active-search-and-surveying ; ricerca di positivi rari vs stima prevalenza.
+
+Ricontrollati sull'abstract primario, ma **non replicati**: https://arxiv.org/abs/2610.13321 (host-aware); https://arxiv.org/abs/2602.24262 (Web–Knowledge–Web); https://arxiv.org/abs/2607.13636 (core/shell). Per questi tre, l'etichetta P della sezione B resta valida per **risultati dettagliati, codice e trasferibilità**, mentre titolo/abstract sono verificati.
