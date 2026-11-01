@@ -310,3 +310,15 @@ Leggere [16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md]
 - **BagIt RFC 8493** https://www.rfc-editor.org/rfc/rfc8493.html — *complete* vs *valid* con manifest e checksum, `fetch.txt` remoto opzionale e security consideration per path traversal; non prova della copertura esterna.
 
 **Research gap:** *compound-object acquisition*: un record indicizzato può non rappresentare tutti i componenti, le versioni, le tracce, i diritti o i bytes; resta un'ipotesi di benchmark e non una nuova architettura.
+
+## Q. Sintesi comparativa 18: nuove fonti primarie e distinzione dei benchmark (2026-11-02)
+
+La [sintesi 18](18_SINTESI_COMPARATIVA_E_LACUNE.md) collega tutte le ricognizioni 00–17 in una matrice di **sovrapposizioni, complementarità e lacune**. Le seguenti sono nuove **fonti primarie verificate documentalmente**; **nessuna prova f3tcher eseguita**.
+
+- **Stafeev & Pellegrino, USENIX Security 2024, *SoK: State of the Krawlers*** https://www.usenix.org/conference/usenixsecurity24/presentation/stafeev : Arachnarium e comparative su 9 web app reali, 2 benchmark, 10k siti CrUX; code/link/JS source coverage. Gli autori riportano che non emerge un crawler/configurazione universalmente migliore e che politiche random talvolta superano gli algoritmi studiati. Non è un teorema per ogni dominio.
+- **Common Crawl official**, https://www.commoncrawl.org/get-started ; **URL Index Parquet** https://www.commoncrawl.org/url-index ; **CDXJ** https://www.commoncrawl.org/cdxj-index : WARC raw responses, WAT metadata/links, WET plaintext; URL index per query massiva vs CDXJ per lookup di singole catture; l'archivio preesistente non è un censimento totale del Web.
+- **dlt Incremental**, https://dlthub.com/docs/general-usage/incremental-loading ; **advanced state** https://dlthub.com/docs/general-usage/incremental/advanced-state : full/append/merge, cursor, lag windows, SCD2, state e checkpoint integrati al load; baseline di sistemi già esistenti, non «novità assoluta f3tcher».
+- **Airbyte CDC**, https://docs.airbyte.com/platform/understanding-airbyte/cdc : snapshot + log position quando la sorgente fornisce accesso al change log; non applicare tali garanzie al web HTML.
+- **WCXB — Web Content Extraction Benchmark**, https://webcontentextraction.org/ : 2.008 pagine etichettate, 7 tipi di pagine, 1.613 domini (dati e ranking del curatore); verifica *main-content extraction*, **non** URL/asset recall. Da tenere distinto dai due *ExtractBench* sui documenti complessi.
+
+**Critica:** benchmark di scraping API/anti-bot che premiano solo 2xx/expected snippet o aggirano barriere non sono automaticamente rilevanti per l'operatività lecita di f3tcher. Non usare leaderboard come metriche comparabili senza standardizzare diritti, budget e denominatori.
