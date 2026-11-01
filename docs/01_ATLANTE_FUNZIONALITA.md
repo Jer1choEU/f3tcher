@@ -144,3 +144,13 @@ Vedi [13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md](13_DIFFUSIONE_IDENTIFICABI
 - Considerare *risk-coverage* e calibrazione, verificando ipotesi e drift: le garanzie conformal non sono trasferibili automaticamente alla rete Web.
 - **Active provenance investigation (H):** cercare la prossima prova lecita che discrimini fra genealogie, rispetto a puro crawling per volume; attenzione a fonti rare, costi e feedback loops.
 - Considerare timestamp falsi/retrodatati, ritardi di indicizzazione, revisioni e intermediari mancanti, come variabili del test e non rumore da ignorare.
+
+## P. Ricognizione 14 — valore probatorio della prossima acquisizione (ipotesi)
+
+Vedi [14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md](14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md). Idee **non approvate**:
+- Distinguere acquisto della prossima prova **rilevante**, **nuova**, **indipendente**, **disambiguante**, **lecita** e **a costo giustificato**: non sono sinonimi né necessariamente un punteggio unico.
+- Ricerca iterativa con STOP (FIRE), decisioni sequenziali cost-aware (AFA/POMDP), *expected information gain*, considerare informazioni complementari (lookahead) quando myopic fallisce.
+- Studiare il rischio che un *prior errato* faccia convergere più rapidamente verso la genealogia sbagliata; includere verifiche **falsificanti** e upstream assenti.
+- Non dichiarare automaticamente garanzie greedy (adaptive submodularity), conformal (selection-induced shift) né causalità comprovata dall'aumento di confidenza.
+- Una politica che sceglie cosa esplorare cambia ciò che è osservato: il benchmark deve tenere conto dei **controfattuali mancanti/off-policy support**, non valutare soltanto i successi passati.
+- Baseline pratiche da confrontare: k fisso, ranking semantico, diversità, random lecito, FIRE-like, EIG myopic/lookahead, senza dichiarare già vincente una strategia.
