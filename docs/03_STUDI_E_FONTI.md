@@ -382,3 +382,14 @@ L'uso di uno standard/provider per un ambito significa **documentazione di capac
 - **WASP (NeurIPS 2025)** https://proceedings.neurips.cc/paper_files/paper/2025/hash/1c9818387f5dd0a0bc151214660f059d-Abstract-Datasets_and_Benchmarks_Track.html ; **TRAP (ICML 2026)** https://oxrml.com/research/its-a-trap/ — prompt injection web agent su testbed, contenuti pagina sono input non affidabili.
 
 **Limitazione critica:** HTTP+browser con risultati **identici ma parziali** può non essere riconosciuto da comparazione peer-to-peer. Presenza di un record/HTTP 200 non è source completeness; sono proposte di verifica future, non bug dimostrati nel software altrui.
+
+## V. Sintesi scientifica finale 23 — fonti ricontrollate e stato evidenziale (2026-11-02)
+
+Documento di riferimento: [23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md](23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md). Fonti primarie consultate nuovamente durante il consolidamento; risultati esterni, **non** prove f3tcher:
+- **Crawlee AdaptivePlaywrightCrawler** https://crawlee.dev/js/api/playwright-crawler/interface/AdaptivePlaywrightCrawlerOptions — predictor, 10% detection default, checker/comparator; i confronti fra due estrazioni non misurano risorse non osservate da entrambe.
+- **USENIX Security 2024, SoK State of the Krawlers** https://www.usenix.org/conference/usenixsecurity24/presentation/stafeev — nessuna configurazione migliore su tutte le prove sperimentali degli autori; non teorema generale.
+- **W3C DCAT 3** https://www.w3.org/TR/vocab-dcat-3/ (Recommendation 22-08-2024) — dataset/distribution/data service/series/versioning, documentazione metadata non garanzia di piena disponibilità.
+- **IETF RFC 9309** https://www.rfc-editor.org/rfc/rfc9309.html — robots standard, esplicitamente non forma di autorizzazione.
+- **Copernicus STAC migrazione 16-10-2026** https://dataspace.copernicus.eu/news/2026-10-16-new-sfeos-stac-catalogue-endpoint — vecchio endpoint previsto sostituito 12-01-2027; date e quote dichiarate dal publisher.
+
+**Criterio di stop:** nuove fonti sono rilevanti solo se cambiano una delle ipotesi o degli esperimenti del documento 23. Ulteriore bibliografia ripetitiva non è una misura di progresso. Ricognizione bibliografica generale matura, validazione ancora assente.
