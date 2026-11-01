@@ -78,3 +78,14 @@ La [ricognizione 16](16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FED
 - **Europe PMC / arXiv**: metadata indicizzabili possono riguardare articoli con diritti sul full text più restrittivi; gli endpoint per metadata non autorizzano prelievi di file coperti.
 - **ActivityPub**: inbox e dati filtrati dalle ACL non sono pubblici solo perché un profilo è federato; **AT Protocol**: onorare cancellazioni, migrazioni e deactivation, non creare indiscriminatamente archivi statici dei contenuti.
 - In qualsiasi caso mantenere il blocco contro bypass di HTTP 403, autenticazione, CAPTCHA, paywall e limiti di rate/uso. Nessuna richiesta massiva o interazione con endpoint reali effettuata in questa ricognizione.
+
+## Ricognizione 17 — brevetti, biologia, media e sicurezza dei manifest (2026-11-02)
+
+[Fonti di ricerca](17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md):
+- EPO indirizza i robot verso REST **OPS/EPS**, non GUI Espacenet/Register. OPS richiede OAuth e condizioni fair-use (4 GB/settimana free; bulk REST max 100 docs); EPS 5 GB/7 giorni/IP; non aggirare quote con IP/proxy o account multipli.
+- ENA distingue API ricerca da repository di file scientifici; la disponibilità pubblica di un accession non conferisce accesso a materiale biomedico non pubblico o diritti illimitati. NCBI E-utilities (3/s senza key) e Datasets (5/s default) hanno quote separate.
+- Europeana indica metadata **CC0**, ma **media e relativi oggetti sono regolati dal rights statement per oggetto**: nessun riuso automatico da licenza metadata.
+- Package BagIt `fetch.txt` contiene URI esterne, che non devono essere eseguite fidandosi ciecamente: rischi SSRF, accessi a IP privati, path traversal, decompression bomb, file size incontrollata e metadata manipolati. RFC 8493 contiene avvertenze su path malevoli.
+- E-ARK DIP, PREMIS rights e METS rights possono dichiarare restrizioni diverse da quelle del catalogo; un pacchetto con metadata aperti non concede automaticamente accesso al contenuto AIP.
+
+Nessuna sorgente con accesso protetto o servizio robotico è stata interrogata in questa ricerca e nessun corpus è stato scaricato.
