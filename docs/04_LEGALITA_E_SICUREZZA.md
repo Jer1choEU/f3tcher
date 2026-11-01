@@ -62,3 +62,7 @@ La piattaforma di esecuzione non è scelta. Qualsiasi proposta Cloudflare Worker
 2. Verifica licenze e condizioni dei componenti scelti **prima** di importare codice, modelli o dataset.
 3. Regole di gestione delle risorse negate, dei reclami e della cancellazione.
 4. Threat model e test di sicurezza prima di esporre un'acquisizione arbitrary-URL.
+
+## Ricognizione 12 — licenze dei benchmark e upstream informativi (2026-11-01)
+
+I corpora proposti in [12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md) sono solo **candidati di ricerca**: COUNTER e USTRC dichiarano licenza **CC BY-NC-SA** (COUNTER con ulteriore avvertenza dell'autore su uso di testi giornalistici ricerca/accademia), mentre PAN 2025 e 2026 dichiarano contenuti protetti **solo ricerca e senza redistribuzione**; accesso/test richiede le condizioni effettive degli organizzatori. NewsEdits usa dati precedentemente raccolti da soggetti con licenze e autorizzazioni specifiche; **non assumere** che licenza del codice == permessi illimitati dei testi. METER è confermato come lavoro scientifico, ma la licenza/fornitura del corpus testuale resta da verificare. L'audit Longpre et al. 2024 (Nature Machine Intelligence, https://www.nature.com/articles/s42256-024-00878-8) mostra perché la licenza dichiarata da un aggregatore non sempre corrisponde a quella della fonte originale. Nessun corpus è stato scaricato in questa ricognizione.
