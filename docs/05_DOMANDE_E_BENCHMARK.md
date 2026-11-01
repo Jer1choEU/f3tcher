@@ -114,3 +114,7 @@ La [ricognizione 10](10_INVENTARI_E_GARANZIE.md) propone **sei ipotesi da testar
 - Misurare *astensione giustificata* quando l'origine o le dipendenze sono ignote, oltre a costo/richiamate vere. Duplicazione del contenuto non equivale a corroborazione indipendente.
 
 **Nessun benchmark di f3tcher, nessuna soglia di rilascio approvata, nessun comportamento richiesto al software futuro.**
+
+## Ricognizione 12 — test di identificabilità e astensione (solo ipotesi)
+
+Il [documento 12](12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md) propone benchmark comparabili **ancora da sviluppare/approvare**, senza esecuzione: source reuse (METER/COUNTER), passaggi parafrasati (PAN 2025), **retrieval da più sorgenti** (PAN 2026), versioni dello stesso documento (NewsEdits), hard negatives con supporto fattuale assente (FakeWiki), attribution multimodale (MAVIS), conflitto di licenze originali/mirror. Per ciascun confronto distinguere annotazione del **riuso** dalla reale genealogia **causale**, e fonte nota da «upstream missing». Misurare precision/recall anche per **non-derived** e **partially derived**, errore di orientamento della copia, false independence, groundedness, qualità dell'astensione, rischio/licenza e costo. Evitare train/test leak per medesima agenzia, sito, evento, famiglia di revisioni, fonte o epoca. I dataset con uso **solo ricerca** non autorizzano una futura integrazione nel motore. Nessun gate/soglia scelto.
