@@ -192,3 +192,14 @@ Consultare [15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](15_ACQUISIZIONE_
 - **Ricerca recente**: WebDART (ACL 2026), Abitov et al. 2026 (LLM setup + deterministic crawl, **già esiste**), VeriEnv (ICML 2026); BaRA *P* (abstract indicizzato); review D&KE 2026.
 
 La finalità della ricognizione è individuare possibili capacità utili al **singolo motore automatico**, non proporre selezioni di profili o un sistema costituito obbligatoriamente da tutti questi componenti. **Nessuna dipendenza scelta, installazione o test.**
+
+## Ricognizione 16 — tecnologie verticali e contesti di uso (nessuna adozione)
+
+Vedi [16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md](16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md).
+- **Scholarly acquisition**: OpenAIRE Graph v3 (search, cursor, bulk), DataCite (DOI metadata), arXiv (OAI-PMH metadata), Europe PMC (metadata vs OA full text), Crossref (clock created/update/index). I servizi sono *canali con coperture diverse*, non librerie obbligatorie.
+- **Legal acquisition**: Normattiva API/OpenAPI con multivigenza, Gazzetta feed per novità e fonte ufficiale, EUR-Lex/Cellar con Formex/SPARQL e differenti rappresentazioni, Europarl OpenAPI v2 con quote, Congress.gov API key, Akoma Ntoso XML.
+- **Statistics**: Eurostat Catalogue/SDMX 2.1/3.0/JSON-stat, IstatData SDMX con quota severa, SDMX 3.1 specifica, DSD e code list. Non confondere versioni del metadata con storia dei numeri.
+- **Federation**: ActivityPub outbox con ACL e paginazione; AT Protocol CAR/CBOR/firehose, revision chain e media blob separati. Non assumere accesso ai private inbox o completezza della rete.
+- **Packaging**: Frictionless Data Package / Table Schema per schemi e più risorse, Formex e LegalDocML per struttura legale; non convertire tutto in plain text senza documentare perdite.
+
+Nessuna libreria, framework, runtime, plugin o standard interno selezionato. Le scelte dovranno essere dimostrate successivamente attraverso benchmark e compatibilità d'uso.
