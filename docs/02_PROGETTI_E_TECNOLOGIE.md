@@ -179,3 +179,16 @@ Vedi [14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md](14_ACTIVE_PROVENANCE_INFORMATIO
 - **Off-policy evaluation con dati adattivi**, https://proceedings.mlr.press/v283/madhow25a.html : benchmark solo se le azioni controfattuali hanno supporto valutabile.
 
 La verifica dei paper è documentale; nessuna libreria o corpus scaricato/installato, nessuna licenza delle dipendenze del codice FIRE approvata.
+
+## Ricognizione 15 — confronto di capacità di acquisizione, NON scelte di stack
+
+Consultare [15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md) per fonti e limiti documentali.
+
+- **Catalog-first**: DCAT 3 / DCAT-AP 3.0.1, CKAN, STAC (esempio Copernicus), OGC API Records, IIIF Change Discovery, Schema.org Dataset/sitemap. Non tutti i provider espongono un inventory completo; alcune API sono mutative o richiedono permessi.
+- **Update-first**: WebSub hub/topics e IIIF change streams; la consegna push non certifica assenza di eventi mancanti.
+- **HTTP/browser trade-off**: Crawlee (Cheerio/Playwright/Puppeteer), Scrapy, Browsertrix con QA replay WARC/WACZ; la resa va misurata a parità di budget e di diritti.
+- **Continuous frontier**: Apache StormCrawler 3.7, politeness per host/dominio/IP, feed+sitemap e parse Tika; documentazione Apache, no benchmark di f3tcher.
+- **Formati**: Docling supporto documenti, tabelle, media con caveat per conversioni e accuratezza.
+- **Ricerca recente**: WebDART (ACL 2026), Abitov et al. 2026 (LLM setup + deterministic crawl, **già esiste**), VeriEnv (ICML 2026); BaRA *P* (abstract indicizzato); review D&KE 2026.
+
+La finalità della ricognizione è individuare possibili capacità utili al **singolo motore automatico**, non proporre selezioni di profili o un sistema costituito obbligatoriamente da tutti questi componenti. **Nessuna dipendenza scelta, installazione o test.**
