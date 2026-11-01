@@ -191,3 +191,20 @@ Consultazione diretta di **fonti primarie (V)**, niente dati scaricati o test f3
 - **W3C PROV-O qualified derivation**, https://www.w3.org/TR/prov-o/ : supporta dichiarazioni qualificate di derivazione, non prova automatica di copia.
 
 **Non** usare una classifica unica per METER, COUNTER, PAN, NewsEdits, DataDignity e MAVIS: target, gold truth, lingua, epoca e condizioni sono diversi.
+
+## L. Ricognizione 13 — genealogia da cascades e astensione (2026-11-01)
+
+Fonti **primarie verificate** e avvertenze nel [documento 13](13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md). Nessun algoritmo replicato o benchmark f3tcher.
+
+- **NETINF** (Gomez-Rodriguez, Leskovec, Krause, KDD 2010): https://snap.stanford.edu/netinf/ — codice, cascate e output di rete di diffusione **inferito**, non ground truth causale.
+- **MemeTracker**, SNAP https://snap.stanford.edu/data/memetracker9.html ; dati/formato https://snap.stanford.edu/memetracker/data.html — 96.608.034 documenti, 210.999.824 occorrenze frasi, 418.237.269 hyperlink; timestamp e link **non provano** copia.
+- **NIFTY** (Stanford) https://snap.stanford.edu/nifty/about.html — clustering incrementale delle varianti delle frasi, claims di prestazioni degli autori non verificati indipendentemente.
+- **Farajtabar et al. (AISTATS 2015)** https://proceedings.mlr.press/v38/farajtabar15.html — source inference da cascades parziali sotto modello.
+- **Zhu/Ying (IEEE INFOCOM 2016)** https://asu.elsevierpure.com/en/publications/information-source-detection-in-networks-possibility-and-impossib/ — zone di possibilità/impossibilità in un modello di diffusione; non prova per Web generico.
+- **Dawkins/Li/Xu (ICML 2021)** https://proceedings.mlr.press/v139/dawkins21a.html — insiemi di possibili origini e garanzia statistica nelle condizioni del paper.
+- **Feizi et al. (IEEE TNSE 2019)** https://dspace.mit.edu/entities/publication/d86ff728-02e6-40c1-9c7c-56b849241087 — Network Infusion, modelli di sorgente singola/multipla.
+- **Geifman/El-Yaniv (NeurIPS 2017)** https://papers.neurips.cc/paper_files/paper/2017/hash/4a8423d5e91fda00bb7e46540e2b0cf1-Abstract.html ; **SelectiveNet (ICML 2019)** https://proceedings.mlr.press/v97/geifman19a.html — risk-coverage con reject option.
+- **Angelopoulos et al. (ICLR 2024)** https://proceedings.iclr.cc/paper_files/paper/2024/hash/f3549ef9b5ff520a7e41ff3cc306ab2b-Abstract-Conference.html — conformal risk control; non garanzia di genealogia vera se upstream non osservato.
+- **Zhou et al. (ACM Computing Surveys 2025)** https://doi.org/10.1145/3736575 — exchangeability e limiti in caso di distribution shift.
+
+Nuovo problema esplicito: **source attribution calibrata con astensione e candidati assenti**. Non confondere `NETINF predicted edge`, `hyperlink`, `source citation` e `real causal copy`. La letteratura delle reti fornisce *metodi* ma non sostituisce il gold truth editoriale. Lo studio ulteriore su *Structure and Dynamics of Information Pathways in Online Media* è **P** e resta da verificare prima di riassumerne risultati.
