@@ -336,3 +336,20 @@ La [sintesi 18](18_SINTESI_COMPARATIVA_E_LACUNE.md) collega tutte le ricognizion
 - **Signposting directory** https://signposting.org/adopters/ : software/istituzioni Dataverse, DSpace, InvenioRDM, HAL, DRI, ecc., *adozione dichiarata* e non audit indipendente.
 
 **Ricaduta sulla ricerca:** protocollo nominale ≠ qualità di implementazione, copertura o history; lo stesso publisher espone più viste dei medesimi record; versioni e sunset contano. Nessun benchmark, codice o comparazione quantitativa valida di f3tcher.
+
+## S. Ricognizione 20 — form, AJAX, liste e false acquisizioni riuscite (2026-11-02)
+
+Dettagli, cautele e ipotesi nel [documento 20](20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md). **Fonti primarie**, paper con risultati **degli autori**, non test f3tcher:
+- **Madhavan et al. (PVLDB 2008), Google’s Deep-Web Crawl** https://www.vldb.org/pvldb/vol1/1454163.pdf ; resoconto autore https://jayantmadhavan.blogspot.com/2008/09/crawling-deep-web.html — form query surfacing, non recupero esaustivo/autorizzazione automatica.
+- **Barrio & Gravano (IP&M 2017), Sampling strategies for information extraction over the deep web** https://www.sciencedirect.com/science/article/pii/S0306457316306318 — priorità a query efficaci massimizza efficienza, diversità può migliorare qualità del campione.
+- **Mesbah, van Deursen, Lenselink (ACM TWEB 2012)** https://research.tudelft.nl/en/publications/crawling-ajax-based-web-applications-through-dynamic-analysis-of-/ ; codice https://github.com/crawljax/crawljax — AJAX DOM state-flow e azioni, non completezza automatica.
+- **Browsertrix Behavior docs** https://crawler.docs.browsertrix.com/user-guide/behaviors/ — autoscroll, autoclick (non default), autoload e timeout; un behavior terminato o a timeout non prova tutti gli asset.
+- **Playwright docs** https://playwright.dev/docs/api/class-page ; https://playwright.dev/docs/api/class-locator — `networkidle` sconsigliato in test, `locator.all()` instabile quando la lista cambia.
+- **Google Search Central pagination and infinite scroll** https://developers.google.com/search/docs/specialty/ecommerce/pagination-and-incremental-page-loading ; lazy load https://developers.google.com/search/docs/crawling-indexing/javascript/lazy-loading — href/URL differenziati e chunk stabili vs button JS; non prova che Google o altri crawler raggiungano tutto.
+- **Google HTTP status and soft 404** https://developers.google.com/crawling/docs/troubleshooting/http-status-codes — 2xx non equivale a contenuto valido; **canonical** https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls — indizio SEO, non identità dei dati.
+- **WebLists** https://arxiv.org/abs/2504.12682 (2025): 200 task e BardeenAgent, risultati autori 66% vs generic agents 31% e search 3%; non crawler universale.
+- **Kustenkov et al. (2025)** https://arxiv.org/abs/2502.14625 — 13.120 liste news in russo, record opzionali/multivalore.
+- **SCRIBES (2025)** https://arxiv.org/abs/2510.01832 — preprint RL per generare script di estrazione riusabili; prestazioni di task specifico non dimostrazione della completezza.
+- **Senato, descrizione delle schede dei progetti di legge** https://www.senato.it/guida-al-sito/banche-dati/schede-dei-progetti-di-legge ; **testi** https://www.senato.it/guida-al-sito/banche-dati/testi-dei-disegni-di-legge ; **ultimi atti** https://www.senato.it/leggi-e-documenti/ultimi-atti-pubblicati — percorsi UI e perimetri diversi; **assenza di API non verificata**.
+
+L'uso di uno standard/provider per un ambito significa **documentazione di capacità** e non conformità, licenza, permesso di uso, benchmark o API universale.
