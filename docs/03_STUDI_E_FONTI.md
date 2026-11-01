@@ -173,3 +173,21 @@ Dettagli, limiti e ipotesi in [11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md](11_INDIP
 - **RFC 9943 (2026), SCITT Architecture** https://www.rfc-editor.org/rfc/rfc9943 : statements firmati + receipts di un servizio trasparente; trasparenza non impedisce a un emittente disonesto di fare dichiarazioni false.
 
 Attenzione alla polisemia di **indipendenza**: fonti indipendenti come origine fattuale, verificatori indipendenti di un log e chiavi indipendenti per una firma sono proprietà differenti.
+
+## K. Ricognizione 12 — genealogie e benchmark di riutilizzo testuale (2026-11-01)
+
+Consultazione diretta di **fonti primarie (V)**, niente dati scaricati o test f3tcher. Per limiti e ipotesi leggere [12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md).
+
+- **METER**, Clough et al. 2002, ACL: https://doi.org/10.3115/1073083.1073110 ; descrizione corpus https://eprints.whiterose.ac.uk/id/eprint/78663/ . Testo di giornali vs UK Press Association, riuso e indipendenza annotati. **Diritti e accesso al corpus non verificati**.
+- **COUNTER**, Muhammad, Nawab, Rayson, Lancaster: https://ucrel.lancs.ac.uk/textreuse/counter.php ; https://research.lancaster-university.uk/en/datasets/corpus-of-urdu-news-text-reuse-counter/ ; 600 coppie, derivazione totale/parziale/assente; **CC BY-NC-SA 4.0 e restrizione dichiarata all'uso di ricerca/accademia**.
+- **USTRC**, Lancaster: https://ucrel.lancs.ac.uk/textreuse/ustrc.php ; 2.684 coppie brevi urdu, copie/parafrasi/indipendenti, **CC BY-NC-SA**.
+- **PAN-PC-11**, Webis/Zenodo: https://zenodo.org/records/3250095 ; https://webis.de/data/pan-pc-11.html ; ground truth di casi artificiali e simulati, usabilità per ricerca non licenza generica.
+- **PAN @ CLEF 2025**, https://pan.webis.de/clef25/pan25-web/generated-plagiarism-detection.html ; span di plagio con parafrasi LLM, copyright/research only/no redistribution.
+- **PAN @ CLEF 2026**, https://pan.webis.de/clef26/pan26-web/generated-plagiarism-detection.html ; retrieval di **multiple (min 2) fonti** usate per produrre documento generato, Recall@10/100, nDCG@10, TIRA, dati protetti **solo ricerca/no redistribuzione**.
+- **NewsEdits**, NAACL 2022: https://aclanthology.org/2022.naacl-main.10/ ; https://github.com/isi-nlp/NewsEdits ; 1,2M articoli/4,6M versioni (autori); versioning intra-articolo, non grafo di copia inter-editoriale.
+- **DataDignity / FakeWiki**, Microsoft Research 2026, https://www.microsoft.com/en-us/research/publication/datadignity-training-data-attribution-for-large-language-models/ ; https://arxiv.org/abs/2605.05687 (preprint): anti-documents sullo stesso tema ma senza fatto critico, corpus sintetico e task di attribuzione di LLM, non copia giornalistica.
+- **MAVIS**, AAAI 2026 https://ojs.aaai.org/index.php/AAAI/article/view/40585 ; source attribution multimodale a livello di fatto, non relazioni di derivazione dei siti.
+- **Longpre et al. (2024), Nature Machine Intelligence**, https://www.nature.com/articles/s42256-024-00878-8 : audit provenienza/licenze di 1.858 dataset; etichette di un mirror possono essere imprecise.
+- **W3C PROV-O qualified derivation**, https://www.w3.org/TR/prov-o/ : supporta dichiarazioni qualificate di derivazione, non prova automatica di copia.
+
+**Non** usare una classifica unica per METER, COUNTER, PAN, NewsEdits, DataDignity e MAVIS: target, gold truth, lingua, epoca e condizioni sono diversi.
