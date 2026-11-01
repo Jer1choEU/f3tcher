@@ -225,3 +225,14 @@ La [ricognizione 19](19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md) distingue ese
 ## Ricognizione 20 — soluzioni esistenti per portali senza catalogo standard evidente
 
 [Analisi e benchmark futuri](20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md): **Crawljax** https://github.com/crawljax/crawljax (state-flow graph DOM/eventi, sito JS), **Browsertrix behaviors** https://crawler.docs.browsertrix.com/user-guide/behaviors/ (autoscroll/autofetch/autoclick e timeout), **Playwright** https://playwright.dev/docs/api/class-page (non assumere che networkidle == ready, liste dinamiche), **Google Deep-Web Crawl** https://www.vldb.org/pvldb/vol1/1454163.pdf (form surfacing già studiato nel 2008), **WebLists/BardeenAgent** https://arxiv.org/abs/2504.12682 (200 task con incompletezza di estrazione, risultati autori), **SCRIBES** https://arxiv.org/abs/2510.01832 (script riusabili e RL, preprint), **multi-record news list corpus** https://arxiv.org/abs/2502.14625 (13.120 pagine, lingua russa), **Google Search Central pagination** https://developers.google.com/search/docs/specialty/ecommerce/pagination-and-incremental-page-loading . Si sovrappongono in *UI exploration*, *extractors* e *reusable scripts*, ma non sono intercambiabili né garanzia di copertura. Niente libreria scelta.
+
+## Ricognizione 21 — scalabilità: evitare doppioni fra throttling, autoscaling, caching
+
+[Fonti e confronti](21_SCALABILITA_COSTI_E_ACQUISIZIONE_EFFICIENTE.md).
+- **Scrapy AutoThrottle** https://docs.scrapy.org/en/master/topics/autothrottle.html adatta latenza per *download slot* e minimo per host; **StormCrawler** https://stormcrawler.apache.org/docs/latest/index.html usa code host/domain/IP, delays, thread e **AdaptiveScheduler** per intervalli di revisit. Strategie **esistenti**, non nuove.
+- **Crawlee AutoscaledPool** https://crawlee.dev/js/api/3.16/core/class/AutoscaledPool adatta CPU/RAM/event loop, non quota publisher; API evolvono in v4.
+- **Cloudflare Browser Run (ex Browser Rendering)** https://developers.cloudflare.com/browser-run/limits/ : limiti standard ottobre 2026 diversi da annuncio aprile https://developers.cloudflare.com/changelog/post/2026-04-15-br-rename/ . Il tempo browser ha metriche/costi propri https://developers.cloudflare.com/browser-run/pricing/; nessun cloud selezionato.
+- **HTTP caching** https://www.rfc-editor.org/rfc/rfc9111.html e **Range/If-Range** https://www.rfc-editor.org/rfc/rfc9110.html ottimizzano byte e resume, ma non riproducono record/versioni della sorgente automaticamente.
+- **Crawl budget** https://developers.google.com/crawling/docs/crawl-budget capacity + demand; **Cho/García-Molina (ACM 2003)** https://doi.org/10.1145/958942.958945 mostra i limiti di schedulare refresh ingenuamente per change frequency.
+
+Non scegliere oggi librerie o stack. Mappare invece il **guadagno di informazione verificata** sopra al costo CPU/browser/rete e ai limiti di fonte.
