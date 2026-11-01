@@ -253,3 +253,34 @@ Fonti **primarie consultate direttamente**; limiti e ipotesi nel [documento 14](
 - **Abitov/Dakhnovich/Moskvin 2026** https://jisp.spbstu.ru/en/article/2026.28.7/ : setup LLM costoso + raccolta deterministica su web dinamico; F1=0,89 riportato dagli autori sul loro dataset; non originale di f3tcher.
 - **VeriEnv**, ICML 2026 https://proceedings.mlr.press/v306/chae26a.html : training su ambienti web simulati/verificabili, non crawler universal.
 - **Review di web scraping**, Data & Knowledge Engineering 2026 https://doi.org/10.1016/j.datak.2026.102598 : abstract/review, testo integrale non analizzato.
+
+## O. Ricognizione 16 — acquisizione specialistica documentata (2026-11-02)
+
+Leggere [16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md](16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md). **V-doc** = documentazione primaria del provider, **V-spec** = standard ufficiale: nessuna implementazione né prova f3tcher.
+
+**Ricerca scientifica e identificatori**
+- OpenAIRE Graph API **v3**: https://graph.openaire.eu/docs/apis/graph-api/ — 5 entità, paging offset limitato a 10.000, alternative cursor/full Graph; non full text completo.
+- DataCite REST: https://support.datacite.org/docs/api ; https://support.datacite.org/docs/api-queries — public GET DOI metadata vs member write API autenticata; DOI non prova disponibilità file.
+- arXiv **bulk OAI-PMH**: https://github.com/arXiv/arxiv-docs/blob/develop/source/help/bulk_data.md ; https://github.com/arXiv/arxiv-docs/blob/develop/source/help/oa/index.md — nightly metadata e solo versione corrente nel feed, full text/terms distinti.
+- Europe PMC REST: https://dev.europepmc.org/RestfulWebService ; https://pmc.ncbi.nlm.nih.gov/articles/PMC4383902/ — ricerca metadata e subset OA full text/XML; accessibilità non uniforme.
+- Crossref REST: https://www.crossref.org/documentation/retrieve-metadata/rest-api/tips-for-using-the-crossref-rest-api/ — created/update/index cambiano cosa viene recuperato.
+
+**Normativa e politica istituzionale**
+- Normattiva: https://dati.normattiva.it/Il-progetto ; https://dati.normattiva.it/Come-scaricare-i-dati — API/OpenAPI, originale/multivigenza, **testi non ufficiali** e selezione redazionale.
+- Gazzetta Ufficiale RSS FAQ: https://www.gazzettaufficiale.it/caricaHtml?nomeTiles=faq — sommarî di nuova uscita, non storia consolidata.
+- Cellar/EUR-Lex SPARQL/REST: https://op.europa.eu/en/web/cellar/cellar-data/metadata/knowledge-graph ; https://eur-lex.europa.eu/content/help/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=en — work/expression/manifestation/item e Formex per più lingue/formati.
+- Parlamento europeo OpenData v2: https://data.europarl.europa.eu/en/developer-corner/opendata-api — feed per classe e limite 500 richieste/5 min per endpoint.
+- Congress.gov API v3: https://api.congress.gov/ ; https://www.loc.gov/apis/additional-apis/congress-dot-gov-api/ — bills/actions/amendments/text versions, API key necessaria.
+- OASIS Akoma Ntoso: https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part1-vocabulary/akn-core-v1.0-os-part1-vocabulary.html — vocabolario XML, non API.
+
+**Statistiche e formati**
+- Eurostat APIs: https://ec.europa.eu/eurostat/en/web/user-guides/data-browser/api-data-access/api-introduction ; https://ec.europa.eu/eurostat/en/web/user-guides/data-browser/api-data-access/api-faq — Catalogue, SDMX 3.0, JSON-stat; dati **senza storico delle osservazioni**, strutture versionabili.
+- Istat SDMX: https://www.istat.it/classificazioni-e-strumenti/web-services-sdmx/ — IstatData vs I.Stat, **5 query/minuto/IP** oltre cui blocco 1–2 giorni; preservare DSD, codelists e dimensioni.
+- SDMX 3.1 spec: https://sdmx.org/standards-2/ ; UN SDG DSD 1.26 (settembre 2026): https://unstats.un.org/sdgs/iaeg-sdgs/sdmx-working-group/
+- Frictionless Data Package + Table Schema: https://specs.frictionlessdata.io/guides/data-package/ ; https://specs.frictionlessdata.io/table-schema/ — schema/CSV dialect/risorse; file valido non prova dataset completo.
+
+**Federazione**
+- W3C ActivityPub: https://www.w3.org/TR/activitypub/ e ActivityStreams collections https://www.w3.org/TR/activitystreams-core/ — outbox visibile in base a permessi, inbox potenzialmente riservato.
+- AT Protocol Sync: https://atproto.com/specs/sync , repository https://atproto.com/specs/repository , blob https://atproto.com/specs/blob — CAR + firehose + signed commits, blob separati; **intero repository filtrato da relay non necessariamente rilevabile**.
+
+**Avvertenza metodologica:** record metadata ≠ file, DOI ≠ download, legge ≠ URL, dataflow/DSD ≠ serie storica di valori, sync del repo ≠ copertura completa dei blob. Non trattare la disponibilità di API come licenza automatica per raccolta massiva.
