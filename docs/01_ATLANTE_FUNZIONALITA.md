@@ -187,3 +187,7 @@ Vedi [15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](15_ACQUISIZIONE_UNIVER
 - METS fileSec/structMap, PREMIS preservation events e diritti, E-ARK CSIP/SIP/AIP/DIP, BagIt complete vs valid; enumerare, verificare, registrare perimetro/diritti.
 - **Manifest safety**: fetch.txt e collegamenti nei cataloghi possono contenere URL/path ostili, non eseguire recuperi da network interni o fuori policy.
 - Non sommare come fonti indipendenti versioni/formati dello stesso documento. Non presumere dati conservati == dati distribuiti.
+
+## T. Sintesi comparativa 18 — cosa conta e quali sovrapposizioni evitare (ricerca)
+
+Vedi [18_SINTESI_COMPARATIVA_E_LACUNE.md](18_SINTESI_COMPARATIVA_E_LACUNE.md). Il valore del futuro motore non è incorporare senza criterio tutti i crawler, tutte le API e tutti gli LLM: l'eventuale miglioramento andrà verificato rispetto alle baseline su **scoperta di asset unici, recupero di versioni/componenti, correttezza d'estrazione, sincronizzazione, costo, rare-source coverage, false completeness, rispetto diritti/politeness**. Priorità di studio **non approvate**: (1) quando usare API/bulk/catalogo/HTML/browser/archivio, (2) aggiunta marginale di ogni canale rispetto agli altri, (3) casi multi-file e semantica di campo/versione, (4) consistenza sotto mutazioni e quote, (5) benchmark trasversali con ground truth, (6) adozione reale e licenze. Usare score separati e astensione se manca il denominatore. Non disegnare oggi moduli o API f3tcher; un sistema senza profili selezionabili resta l'unico vincolo d'interfaccia.
