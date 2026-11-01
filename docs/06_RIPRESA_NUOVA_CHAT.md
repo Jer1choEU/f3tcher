@@ -5,7 +5,7 @@
 ## Procedura per una nuova chat
 
 1. Collegarsi all'account GitHub **`Jer1choEU`** (attenzione: non **`EUJer1cho`**) e aprire **https://github.com/Jer1choEU/f3tcher**.
-2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md` e `docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md` e `docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md` e `docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md` e `docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md` e `docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md`). Non basarsi soltanto su precedenti risposte di chat.
+2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md` e `docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md` e `docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md` e `docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md` e `docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md` e `docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md` e `docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md` e `docs/18_SINTESI_COMPARATIVA_E_LACUNE.md`). Non basarsi soltanto su precedenti risposte di chat.
 3. Se il repository è cambiato, verificare commit/stato corrente prima di riassumere.
 4. Riprendere la **fase di ricerca**, non implementare né formalizzare una proposta definitiva, salvo nuova richiesta dell'utente.
 5. Se viene chiesto di continuare la ricerca, cercare fonti primarie accademiche, standard, repository, esperienze indipendenti e test comparabili; aggiornare i documenti con risultati verificati, distinguendoli da piste.
@@ -16,7 +16,7 @@
 
 > Riprendiamo la ricerca sul progetto f3tcher: https://github.com/Jer1choEU/f3tcher . Usa il mio account GitHub **Jer1choEU**, NON EUJer1cho.
 >
-> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11, 12, 13, 14, 15, 16 e 17, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
+> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17 e 18, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
 >
 > Obiettivo: costruire in futuro un **unico motore universale** per la massima acquisizione lecita di informazioni digitali da web, API, feed, archivi, documenti, dataset, flussi di eventi e altre fonti. Deve scegliere autonomamente i metodi migliori, **senza profili selezionabili**, massimizzando completezza, profondità storica, affidabilità, freschezza, provenienza e interoperabilità. Non voglio violare alcuna legge: **nessun bypass di 403, login, paywall, CAPTCHA, rate limit o altri divieti**; non interpretare la semplice accessibilità pubblica come autorizzazione universale.
 >
@@ -89,6 +89,16 @@ Leggere [16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md]
 ## Ricognizione 17: acquisizione di oggetti digitali composti (2026-11-02)
 
 Leggere [17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md](17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md). **EPO**: OPS REST registrata/fair-use (4 GB/settimana free, bulk REST 100 docs), European Publication Server (5 GB per finestra mobile 7 giorni), DOCDB (metadata ST.36 senza full text, bulk licenziato); GUI Espacenet non da automatizzare. **ENA**: Portal/Browser API, metadata vs FASTQ/FASTA/raw files, 100k risultati default con limit=0 possibile e cautela ≤10 ricerche contemporanee. **NCBI**: E-utilities 3/s default e 10/s con key, Datasets 5/s default e 10/s con key, quote distinte. **Europeana**: Search/Record/IIIF/SPARQL/OAI, metadata CC0 ma **media con rights per oggetto**. **EBUCore** e **WebVTT** per tracce/segmenti temporali. **METS** file inventory e structMap; **PREMIS** Objects/Events/Rights/Agents; **E-ARK** CSIP/SIP/AIP/DIP; **BagIt RFC8493** complete vs valid e fetch.txt con rischio path traversal/SSRF. 12 futuri scenari di testbed **non eseguiti**. Prossima ricerca: confronto trasversale 01–17, possibili protocolli ancora mancanti e scelta delle domande che influenzano davvero l'acquisizione. Nessuna architettura, stack, profili o codice f3tcher.
+
+## Ricognizione 18: SINTESI COMPARATIVA della ricerca 00–17 (2026-11-02)
+
+**Prima lettura obbligatoria in futuro**: [18_SINTESI_COMPARATIVA_E_LACUNE.md](18_SINTESI_COMPARATIVA_E_LACUNE.md) per orientarsi fra decine di strumenti e protocolli **senza** ripercorrere tutta la ricerca in forma narrativa. Il file:
+- mette a confronto **12 capacità e candidati** per sovrapposizione, complementarità e garanzie inesistenti; dichiara esplicitamente che **non è una architettura**;
+- distingue crawler/browser, connettori ETL/CDC, cataloghi/protocolli, parser vs validatori, integrità vs verità e asset vs record;
+- aggiunge fonti primarie: **USENIX SoK State of the Krawlers (2024), Arachnarium**, Common Crawl WARC/WAT/WET e CDXJ/URL Index, dlt incremental/state, Airbyte CDC, Web Content Extraction Benchmark (WCXB);
+- descrive una **matrice qualitativa di priorità della ricerca**, otto ipotesi di confronto e condizioni misurabili per finire l'esplorazione, invece di percentuali soggettive;
+- nota che l'area di ricerca principale ancora debole è **adozione reale/interoperabilità dei protocolli, scelta del canale API/bulk/browser e costi+falsi negativi su sorgenti eterogenee**.
+Nessun benchmark f3tcher, nessun codice, nessuno stack/algoritmo/servizio scelto, nessuna «fase sviluppo» iniziata. Prossimi approfondimenti: *adoption reality-check* documentale, confronto operativo dei costi/casi, benchmark design solo su ambienti autorizzati e con esplicita scelta del cambio fase. Confermare in ogni risposta che f3tcher resta un **unico sistema automatico senza profili selezionabili**.
 
 ## Sintesi dei punti di partenza più promettenti
 
