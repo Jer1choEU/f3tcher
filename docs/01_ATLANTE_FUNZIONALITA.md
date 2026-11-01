@@ -166,3 +166,13 @@ Vedi [15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](15_ACQUISIZIONE_UNIVER
 - Studiare *LLM expensive setup → deterministic repeated harvest* senza rivendicarne l'invenzione; confronto con baseline semplici e failure silenziose quando cambia sito.
 - Crawler streaming/distribuiti e polite rate limiting: throughput vincolato dal publisher prima ancora che dal calcolo; monitorare l'eventuale starvation delle fonti rare.
 - Usare ambienti sintetici/verificabili per test futuri, mai probing invasivo di sorgenti reali.
+
+## R. Ricognizione 16 — acquisizione specialistica (solo capacità da indagare)
+
+[Dettagli e fonti primarie](16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md).
+- Ricerca scientifica: distinguere metadata, OA full text e allegati; identificatori DOI e arXiv-id non garantiscono le versioni/byte; cursor e bulk per oltre 10.000 risultati OpenAIRE.
+- Diritto: originale vs vigente/multivigente, fonte ufficiale vs redazionale, lingue e manifestazioni dei documenti UE, feed di novità vs archivio dell'atto; preservarli senza collassi.
+- Statistiche: dataflow + DSD + codelists + unità + flag + observation vintage; Eurostat **non mantiene la history dei valori delle API**; rispettare quota Istat (5 query/min/IP).
+- Federazione: outbox ActivityPub pubbliche secondo ACL, ATProto CAR/firehose ma media blob distinti; gap rilevabili vs interi repo invisibili per filtraggio.
+- Formati: non trattare CSV/JSON come unità semantiche autosufficienti; usare descrizioni Data Package/Formex/Akoma Ntoso/SDMX quando disponibili e lecite.
+- Eventuale sistema unico seleziona strategie in modo interno, ma **nessun profilo/architettura/algoritmo deciso**.
