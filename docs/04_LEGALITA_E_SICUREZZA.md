@@ -89,3 +89,7 @@ La [ricognizione 16](16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FED
 - E-ARK DIP, PREMIS rights e METS rights possono dichiarare restrizioni diverse da quelle del catalogo; un pacchetto con metadata aperti non concede automaticamente accesso al contenuto AIP.
 
 Nessuna sorgente con accesso protetto o servizio robotico è stata interrogata in questa ricerca e nessun corpus è stato scaricato.
+
+## Ricognizione 20 — confine fra consultazione UI e acquisizione automatizzata (2026-11-02)
+
+[Documento 20](20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md). Il lavoro su moduli di ricerca e siti dinamici NON autorizza sistematicamente enumerazioni di parametri, invii ripetuti di form, riproduzioni di endpoint interni scoperti dal JS, automazione di login, accessi a pagine protette o aggiramento di CAPTCHA/pagamenti/403/quote. La presenza di un modulo per un utente, HTTP 200 o URL in uno script non equivale a permesso per batch harvesting o redistribuzione. Browsertrix supporta `autoclick` e altre azioni: **la disponibilità tecnica non legittima l'attivazione indiscriminata**. Includere nei test soltanto mock/site controllati con azioni di lettura consentite e protezioni per link/URL che possano attivare mutazioni. Per i casi reali preferire fonti/portali ufficiali di bulk e canali di dati permessi, oppure segnalare in modo chiaro dati non acquisibili. Il Senato è stato consultato solo documentalmente, non acquisito via scraping.
