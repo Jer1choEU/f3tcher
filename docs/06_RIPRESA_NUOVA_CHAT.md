@@ -5,7 +5,7 @@
 ## Procedura per una nuova chat
 
 1. Collegarsi all'account GitHub **`Jer1choEU`** (attenzione: non **`EUJer1cho`**) e aprire **https://github.com/Jer1choEU/f3tcher**.
-2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md`). Non basarsi soltanto su precedenti risposte di chat.
+2. Leggere README e i file `docs/00_...` fino a `docs/05_...` e tutte le ricognizioni successive (attualmente `docs/07_RICOGNIZIONE_2026-11-01.md` e `docs/08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md` e `docs/09_COMPLETEZZA_LOCALE_E_PROVE.md` e `docs/10_INVENTARI_E_GARANZIE.md` e `docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md`). Non basarsi soltanto su precedenti risposte di chat.
 3. Se il repository è cambiato, verificare commit/stato corrente prima di riassumere.
 4. Riprendere la **fase di ricerca**, non implementare né formalizzare una proposta definitiva, salvo nuova richiesta dell'utente.
 5. Se viene chiesto di continuare la ricerca, cercare fonti primarie accademiche, standard, repository, esperienze indipendenti e test comparabili; aggiornare i documenti con risultati verificati, distinguendoli da piste.
@@ -16,7 +16,7 @@
 
 > Riprendiamo la ricerca sul progetto f3tcher: https://github.com/Jer1choEU/f3tcher . Usa il mio account GitHub **Jer1choEU**, NON EUJer1cho.
 >
-> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09 e 10, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
+> **Prima leggi il README e tutti i file in `docs/`**, incluse le ricognizioni 07, 08, 09, 10 e 11, in particolare `00_STATO_E_DECISIONI.md`, `01_ATLANTE_FUNZIONALITA.md`, `02_PROGETTI_E_TECNOLOGIE.md`, `03_STUDI_E_FONTI.md`, `04_LEGALITA_E_SICUREZZA.md` e `05_DOMANDE_E_BENCHMARK.md`.
 >
 > Obiettivo: costruire in futuro un **unico motore universale** per la massima acquisizione lecita di informazioni digitali da web, API, feed, archivi, documenti, dataset, flussi di eventi e altre fonti. Deve scegliere autonomamente i metodi migliori, **senza profili selezionabili**, massimizzando completezza, profondità storica, affidabilità, freschezza, provenienza e interoperabilità. Non voglio violare alcuna legge: **nessun bypass di 403, login, paywall, CAPTCHA, rate limit o altri divieti**; non interpretare la semplice accessibilità pubblica come autorizzazione universale.
 >
@@ -55,6 +55,11 @@ La [ricognizione 09](09_COMPLETEZZA_LOCALE_E_PROVE.md) trova basi formali per la
 ## Aggiornamento: inventari reali e limiti probatori (2026-11-01)
 
 La [ricognizione 10](10_INVENTARI_E_GARANZIE.md) identifica esempi concreti di **inventari e stati di esportazione** (Wikimedia), snapshot pubblici/riservati e aggiornamenti con rischio di reindex (Crossref), changefile a pagamento e retention di 60 giorni (OpenAlex), download con DOI che non garantiscono bytes perpetui (GBIF), audit e Change List dello standard ResourceSync, limiti specifici di `completeListSize` e `deletedRecord` in OAI-PMH, nonché ciò che una prova di inclusione Merkle (RFC 9162) **non** dimostra. Evidenza di origine/versione/perimetro ≠ garanzia universale; *research only*. Prossima ricerca: autentificazione dei manifest, indipendenza degli inventari, condizioni di recovery da gap e snapshot atomiche. Non avviare software né inventare benchmark.
+
+
+## Aggiornamento: indipendenza delle evidenze e attestazioni (2026-11-01)
+
+Leggere [11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md](11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md): studio PVLDB 2009/2010 su copying e co-copying/transitività; W3C PROV-O/PROV Constraints e database provenance; TUF (firme, versione, scadenza), C2SP witness di log, nuovi **RFC 9942/9943 (2026)** su COSE receipts e SCITT. Distinzione chiave: **fonti indipendenti sul piano fattuale** ≠ **testimoni indipendenti della consistenza del registro** ≠ **più firme dello stesso manifest**. Una proof-of-non-inclusion vale per l'insieme impegnato, non per l'universo. Nessun test, stack o implementazione f3tcher. Prossima ricerca: identificabilità delle genealogie, dataset con ground truth delle copie, qualità del lineage a livello di affermazione e condizioni di uso/liceità.
 
 ## Sintesi dei punti di partenza più promettenti
 
