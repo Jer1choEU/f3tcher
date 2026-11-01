@@ -32,6 +32,9 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md) | Scoperta e acquisizione multiprotocollo: DCAT/DCAT-AP, STAC, OGC, IIIF, CKAN, WebSub, crawler e agenti |
 | [docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md](docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md) | OpenAIRE, DataCite, arXiv, Europe PMC, Normattiva, Cellar, Europarl, Eurostat/Istat SDMX e ActivityPub/ATProto |
 | [docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md](docs/17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md) | Brevetti EPO, archivi ENA/NCBI, Europeana/EBU/WebVTT, METS/PREMIS/E-ARK/BagIt e acquisizione di oggetti composti |
+| [docs/18_SINTESI_COMPARATIVA_E_LACUNE.md](docs/18_SINTESI_COMPARATIVA_E_LACUNE.md) | **Sintesi comparativa 00–17:** sovrapposizioni, complementarità, limiti, otto confronti decisivi e criteri di conclusione della ricerca |
+
+Per una vista aggiornata e senza duplicazioni della ricerca leggere **prima [la sintesi comparativa 18](docs/18_SINTESI_COMPARATIVA_E_LACUNE.md)**, poi le fonti e i registri dettagliati pertinenti.
 
 ## Avvertenze di metodo
 
