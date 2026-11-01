@@ -29,6 +29,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md) | Corpus METER/COUNTER/USTRC/NewsEdits/PAN 2025-2026, provenienza multilivello, casi di incertezza e diritti |
 | [docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md](docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md) | Stanford NETINF/MemeTracker, inferenza delle origini da cascades, confidence sets, astensione calibrata, limiti e nuove ipotesi |
 | [docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md](docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md) | Ricerca iterativa delle prove, FIRE, AFA/POMDP, rischio del prior errato, feedback e valutazione off-policy |
+| [docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md) | Scoperta e acquisizione multiprotocollo: DCAT/DCAT-AP, STAC, OGC, IIIF, CKAN, WebSub, crawler e agenti |
 
 ## Avvertenze di metodo
 
