@@ -36,6 +36,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md](docs/19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md) | **Reality check su portali reali:** Copernicus STAC 2026 old/new (JSON letto), Rijksmuseum IIIF/OAI/LDES, RNDT GeoDCAT, Zenodo, UK CKAN, data.europa e Signposting; confini delle verifiche |
 | [docs/20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md](docs/20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md) | **Sorgenti difficili:** moduli di ricerca, deep web lecito, AJAX/SPA, liste dinamiche, paginazione, soft-200 e false acquisizioni complete |
 | [docs/21_SCALABILITA_COSTI_E_ACQUISIZIONE_EFFICIENTE.md](docs/21_SCALABILITA_COSTI_E_ACQUISIZIONE_EFFICIENTE.md) | **Efficienza e scala:** politeness per host/IP, Scrapy/StormCrawler, HTTP caching e Range, revisite, Crawlee, Browser Run, costi informativi e 10 confronti |
+| [docs/22_ROUTING_ADATTIVO_SCELTA_METODO_E_VALIDAZIONE.md](docs/22_ROUTING_ADATTIVO_SCELTA_METODO_E_VALIDAZIONE.md) | **Routing adattivo reale:** Crawlee AdaptivePlaywrightCrawler, regole vs ML, bandit, escalation, controlli sulle omissioni, sicurezza dell'agente |
 
 Per una vista aggiornata e senza duplicazioni della ricerca leggere **prima [la sintesi comparativa 18](docs/18_SINTESI_COMPARATIVA_E_LACUNE.md)**, poi le fonti e i registri dettagliati pertinenti.
 
