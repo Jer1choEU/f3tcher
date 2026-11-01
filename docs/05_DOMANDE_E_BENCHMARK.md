@@ -92,3 +92,7 @@ Ogni prova dovrebbe fissare: stesso budget, stessi limiti di host, stessa fonte/
 ## Integrazione di ipotesi dalla ricognizione del 2026-11-01
 
 La [ricognizione 07](07_RICOGNIZIONE_2026-11-01.md) descrive **H1–H6**, tutte non testate: workflow Arazzo/OpenAPI vs nuova esplorazione, Linkset/FAIR Signposting vs link HTML, OData Delta vs scan+reconcile, interpretazione ODRL senza falsi allow, active search/surveying per fonti rare, BagIt/OCFL per integrità/versioni. Controllare denominatori, diritti, aggiornamenti concorrenti e falsi positivi. Questi confronti non sono una roadmap approvata e non autorizzano sviluppo.
+
+## Aggiornamento della ricerca: adozione/consistenza/long tail (2026-11-01)
+
+L'[analisi 08](08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md) individua test di conformità già esistenti (**A2A FAIR Signposting**), avverte delle lacune dei delta token Microsoft Graph e della paginazione per offset (Zendesk), e propone confronti *da eseguire soltanto in una futura fase autorizzata*: unione delle interfacce discovery, workflow descritti vs inferiti, riconciliazione delta/cursor e fonti rare vs ottimizzazione di resa media. Distinguere **current-state consistency**, **complete event history**, **coverage of known sources** e **unknown population**: metriche differenti e non fungibili. Non è un benchmark eseguito da f3tcher.
