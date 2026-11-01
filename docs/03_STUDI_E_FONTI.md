@@ -35,7 +35,7 @@
 - *WebDS* (ICLR 2026): https://proceedings.iclr.cc/paper_files/paper/2026/hash/35686e5837762715a9b105c96cba43af-Abstract-Conference.html — benchmark data scraping realistico e difficile.
 - *Web Content Extraction Benchmark / WCXB* https://webcontentextraction.org/ — performance diverse per articoli, forum, prodotti, listati ecc.; risultati per categoria da riconfermare su versione dataset.
 - *What 1,114 Documents Reveal About Schema-Driven Extraction* (EMNLP 2026) — confermare title/url ACL; differenze forti fra categorie e real vs synthetic.
-- *ExtractBench* (luglio 2026) — ricercare su arXiv; misure di accuratezza, completezza, grounding e costo.
+- *ExtractBench* (luglio 2026) — ora **identificato come Zhang et al., run-llama**, https://arxiv.org/abs/2607.29677 ; distinto dall'omonimo Ferguson et al. (febbraio 2026), https://arxiv.org/abs/2602.12247 . Entrambi verificati nelle fonti primarie; vedere ricognizione 09.
 - *CycleIE* (ottobre 2026) — ricercare su arXiv; estrazione → verifica → riparazione iterativa.
 - *WebXSkill* (EMNLP 2026) — ricercare su ACL Anthology; procedure eseguibili e istruzioni contestuali.
 - *Are Online Skill and Memory Modules Always Worth Their Tokens?* (EMNLP 2026) — confrontare memoria con semplice utilizzo di maggiore budget.
@@ -128,3 +128,19 @@ Dettagli e gradi di evidenza: [08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](08_ADOZIO
 - **Cothey 2004, JASIST** https://onlinelibrary.wiley.com/doi/10.1002/asi.20078 — bias intrinseci delle politiche di crawling.
 
 **Nota di stato:** queste sono fonti consultate e risultati riportati dagli autori, non esperimenti replicati o decisioni sul futuro motore.
+
+## H. Nuova ricognizione 09: completezza per query e limiti dell'inferenza (2026-11-01)
+
+[Ricognizione integrale e ipotesi](09_COMPLETEZZA_LOCALE_E_PROVE.md). Fonti primarie **verificate documentalmente**, non replicate:
+
+- **Razniewski e Nutt (2011), PVLDB**, *Completeness of Queries over Incomplete Databases*: https://www.vldb.org/pvldb/vol4/p749-razniewski.pdf — completezza locale delle query derivata da dichiarazioni di completezza di tabelle/parziali.
+- **Darari et al. (2018), ACM Transactions on the Web**, *Completeness Management for RDF Data Sources*: https://doi.org/10.1145/3196248 — annotare basi RDF parzialmente complete e risposte a query; scheda https://research.uniroma1.it/en/pubblicazioni/53908 .
+- **Darari et al. (2020), Semantic Web**, *Completeness and Soundness Guarantees for Conjunctive SPARQL Queries*: https://doi.org/10.3233/SW-190344 — open world e negazioni; prove locali da completeness statements.
+- **Biometrics (2024)**, *The central role of the identifying assumption in population size estimation*: https://academic.oup.com/biometrics/article/80/1/ujad028/7624336 — senza assunzioni identificative adeguate, stime della popolazione assente non giustificate.
+- **Chao e Jost (2012), Ecology**, *Coverage-based rarefaction and extrapolation*: https://doi.org/10.1890/11-1952.1 — sample coverage **non è** frazione degli URL del Web.
+- **Chao et al. (2014), Ecological Monographs**: https://doi.org/10.1890/13-0133.1 — estrapolazioni limitate dalla diversità e dal campionamento.
+- **Apache Flink docs**, https://nightlies.apache.org/flink/flink-docs-master/docs/learn-flink/streaming_analytics/ — eventi tardivi/watermark come segnale e trade-off, non certezza universale.
+- **Debezium DDD-8**, https://github.com/debezium/debezium-design-documents/blob/main/DDD-8.md — incremental snapshot, collision resolution e dependence da transaction logs.
+- **SHACL W3C** https://www.w3.org/TR/shacl/ e **DQV** https://www.w3.org/TR/vocab-dqv/ — conformance e qualità, non completezza popolazione.
+- **ExtractBench 1 (Ferguson et al., febbraio 2026)** https://arxiv.org/abs/2602.12247 ; codice https://github.com/ContextualAI/extract-bench — 35 PDF/12.867 campi.
+- **ExtractBench 2 (Zhang et al., luglio 2026)** https://arxiv.org/abs/2607.29677 ; codice https://github.com/run-llama/ExtractBench — 370 documenti/4.869 pagine; rubriche completezza liste/grounding/costo. **Non unire le due classifiche.**
