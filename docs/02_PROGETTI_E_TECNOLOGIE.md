@@ -167,3 +167,15 @@ Vedi [12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](12_GENEALOGIE_BENCHMARK_E_ABSTENT
 ## Ricognizione 13 — baseline e dataset di diffusione, nessuno adottato
 
 La [ricognizione 13](13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md) verifica **Stanford NETINF** https://snap.stanford.edu/netinf/ (implementazione storica, output di relazioni inferite), **MemeTracker** https://snap.stanford.edu/data/memetracker9.html (corpus storico con URL/timestamp/quote/link, grandezza dichiarata dal publisher), **NIFTY** https://snap.stanford.edu/nifty/about.html (clustering frasi a scala elevata), **Diffusion Source Identification with Statistical Confidence** https://proceedings.mlr.press/v139/dawkins21a.html (insiemi di possibili sorgenti) e **SelectiveNet** https://proceedings.mlr.press/v97/geifman19a.html (reject option). Non tutti sono programmi candidati da installare: alcuni sono paper, dati, modelli o metodologie. Memetracker/NETINF non costituiscono gold truth della copia causale. Versione, disponibilità, licenze dei dati/codice e adeguatezza del task richiedono una verifica prima di test.
+
+## Ricognizione 14 — baseline pratiche e teorie della scelta adattiva (NON adottate)
+
+Vedi [14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md](14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md).
+- **FIRE**, paper https://aclanthology.org/2025.findings-naacl.158/ e codice riportato dagli autori https://github.com/mbzuai-nlp/fire : agent search/verify/STOP; va benchmarkato nel proprio perimetro (fact-checking, non prova genealogia).
+- **AVeriTeC**, https://fever.ai/dataset/averitec.html : 4568 claim con evidenze/QA e classi di insufficienza/conflitto, non dataset completo di source copying.
+- **IJCAI 2026 AFA survey**, https://ijcai.org/proceedings/2026/860 : decisioni adattive cost-aware, myopic/nonmyopic, POMDP e metodi model-based/model-free/ibridi.
+- **Golovin/Krause JAIR**, https://ocs.aaai.org/Library/JAIR/Vol42/jair42-012.php : basi teoriche delle garanzie greedy sotto ipotesi adaptive submodularity.
+- **Sloman et al. 2024**, https://link.springer.com/article/10.3758/s13428-024-02410-7 : prior errato e rischio di rinforzo di modello sbagliato.
+- **Off-policy evaluation con dati adattivi**, https://proceedings.mlr.press/v283/madhow25a.html : benchmark solo se le azioni controfattuali hanno supporto valutabile.
+
+La verifica dei paper è documentale; nessuna libreria o corpus scaricato/installato, nessuna licenza delle dipendenze del codice FIRE approvata.
