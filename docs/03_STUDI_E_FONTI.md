@@ -284,3 +284,29 @@ Leggere [16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md]
 - AT Protocol Sync: https://atproto.com/specs/sync , repository https://atproto.com/specs/repository , blob https://atproto.com/specs/blob — CAR + firehose + signed commits, blob separati; **intero repository filtrato da relay non necessariamente rilevabile**.
 
 **Avvertenza metodologica:** record metadata ≠ file, DOI ≠ download, legge ≠ URL, dataflow/DSD ≠ serie storica di valori, sync del repo ≠ copertura completa dei blob. Non trattare la disponibilità di API come licenza automatica per raccolta massiva.
+
+## P. Ricognizione 17 — brevetti, genomica, patrimonio, preservazione (2026-11-02)
+
+[Documento 17 completo](17_BREVETTI_BIOLOGIA_AUDIOVISIVI_CONSERVAZIONE.md). Tutti i riferimenti seguenti sono pagine **primarie di ente/standard (V-doc o V-spec)**; non sono test f3tcher.
+
+**Brevetti EPO**
+- EPO **OPS** https://www.epo.org/en/searching-for-patents/data/web-services/ops ; fair-use https://www.epo.org/en/service-support/ordering/fair-use ; bulk FAQ https://www.epo.org/en/service-support/faq/searching-patents/open-patent-services/general-information/does-ops-permit-bulk — REST/XML OAuth, 4 GB/settimana free, REST bulk max 100 documenti; non mass crawling di Espacenet.
+- **European Publication Server** https://www.epo.org/en/searching-for-patents/data/web-services/publication-server — XML/HTML/TIFF/PDF/A e 5 GB per finestra mobile di 7 giorni/IP.
+- **DOCDB** https://www.epo.org/en/searching-for-patents/data/bulk-data-sets/docdb — bulk licenziato metadati ST.36, famiglie semplici, abstract/citazioni, **non full text o immagini**.
+
+**Genomica**
+- **ENA APIs** https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html ; https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/advanced-search.html ; overview EMBL-EBI https://www.ebi.ac.uk/training/online/courses/ena-quick-tour/searching-and-visualising-data-ena/ — Portal API, Browser API, download files separati, limite default 100k risultati e raccomandazione ≤10 ricerche simultanee; rapportare record a raw assets.
+- **NCBI E-utilities** https://eutilities.github.io/site/API_Key/usageandkey/ ; https://www.ncbi.nlm.nih.gov/books/NBK25497/ — default 3 richieste/s senza key, 10/s con key, batch via History; **NCBI Datasets** https://www.ncbi.nlm.nih.gov/datasets/docs/v2/api/api-keys/ — default **5** richieste/s, 10 con key. Distinguere i servizi.
+
+**Audiovisivi e cultura**
+- **Europeana APIs** https://www.europeana.eu/eu/apis ; https://europeana.atlassian.net/wiki/spaces/EF/pages/2360508417 — Search/Record/IIIF/SPARQL/OAI, metadata CC0 ma **media con diritti separati**; richieste con API key per search.
+- **EBUCore v1.10** https://tech.ebu.ch/publications/tech3293?categoryFilter=presentations ; schema https://www.ebu.ch/metadata/schemas/EBUCore/documentation/ebucore.indexListcomp.html — metadata A/V/segmenti/timed text.
+- **W3C WebVTT** https://www.w3.org/TR/webvtt1/ — Candidate Recommendation Draft (20 maggio 2026), sottotitoli e metadata temporali.
+
+**Archivi e pacchetti**
+- **METS** https://loc.gov/standards/mets/METSOverview.v3_en.html — fileSec/structMap, logical/physical maps, puntatori ad altri files/METS.
+- **PREMIS 3.0** https://www.loc.gov/standards/premis/v3/ — Objects/Events/Rights/Agents, non autenticità garantita.
+- **E-ARK** https://digital-strategy.ec.europa.eu/en/policies/earchiving-specifications — CSIP/SIP/AIP/DIP e Content Information Type Specifications; DIP potenzialmente parziale rispetto all'AIP.
+- **BagIt RFC 8493** https://www.rfc-editor.org/rfc/rfc8493.html — *complete* vs *valid* con manifest e checksum, `fetch.txt` remoto opzionale e security consideration per path traversal; non prova della copertura esterna.
+
+**Research gap:** *compound-object acquisition*: un record indicizzato può non rappresentare tutti i componenti, le versioni, le tracce, i diritti o i bytes; resta un'ipotesi di benchmark e non una nuova architettura.
