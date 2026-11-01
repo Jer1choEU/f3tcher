@@ -27,6 +27,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/10_INVENTARI_E_GARANZIE.md](docs/10_INVENTARI_E_GARANZIE.md) | Inventari e checksum reali (Wikimedia), bulk/delta/retention (Crossref, OpenAlex, GBIF), OAI-PMH, ResourceSync e limiti delle prove crittografiche |
 | [docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md](docs/11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md) | Dipendenze/copia fra fonti, provenance, TUF, witness, SCITT e prove crittografiche circoscritte |
 | [docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md](docs/12_GENEALOGIE_BENCHMARK_E_ABSTENTION.md) | Corpus METER/COUNTER/USTRC/NewsEdits/PAN 2025-2026, provenienza multilivello, casi di incertezza e diritti |
+| [docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md](docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md) | Stanford NETINF/MemeTracker, inferenza delle origini da cascades, confidence sets, astensione calibrata, limiti e nuove ipotesi |
 
 ## Avvertenze di metodo
 
