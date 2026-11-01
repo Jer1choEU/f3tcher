@@ -1,6 +1,6 @@
 # 00 — Stato, decisioni e perimetro
 
-**Ultimo consolidamento:** 2026-11-01. **Fase:** ricerca esplorativa, nessuna implementazione approvata. **Account GitHub:** `Jer1choEU` (non `EUJer1cho`). **Repository:** https://github.com/Jer1choEU/f3tcher — pubblico.
+**Ultimo consolidamento:** 2026-11-02. **Fase:** ricerca esplorativa generale **consolidata documentalmente** in [23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md](23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md); validazione empirica NON avviata, nessuna implementazione approvata. **Account GitHub:** `Jer1choEU` (non `EUJer1cho`). **Repository:** https://github.com/Jer1choEU/f3tcher — pubblico.
 
 ## Decisioni dell'utente (confermate)
 
@@ -19,6 +19,10 @@
 - Le architetture descritte in conversazione erano **schemi concettuali**, non decisioni. Cloudflare/Turso/R2, Crawlee, Scrapy, Playwright, ecc. sono **candidati**, non stack fissato.
 - Nessun benchmark misurato da noi. I numeri riportati nelle fonti sono di autori e fornitori, con condizioni e limiti specifici.
 - Nessun profilo selezionabile. Possibili policy operative interne automatiche **non** equivalgono a profili utente.
+
+## Sintesi scientifica 23 — valutazione, non nuova decisione dell'utente (2026-11-02)
+
+La documentazione da 00 a 22 è stata ricondotta a un'unica sintesi scientifica: [23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md](23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md). **La valutazione dell'assistente** è che la ricognizione bibliografica generale sia sufficientemente ampia per parlare di un'eventuale validazione sperimentale, **ma l'utente NON ha ancora deciso di terminare la ricerca, implementare o avviare benchmark**. Tutte le decisioni 1–7 qui sopra restano in vigore. Nessun risultato nuovo di f3tcher è stato misurato. Rischi principali aperti: adoption bias, incompletezza condivisa fra due canali, version drift, costi e diritti per singolo asset. Prima di qualunque cambio di fase serve autorizzazione esplicita. Se l'utente chiede altra ricerca, cercare solo prove discriminanti sulle lacune evidenziate in 23, non ricominciare un inventario generalista.
 
 ## Obiettivo: misura del successo
 
