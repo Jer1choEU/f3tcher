@@ -1,6 +1,6 @@
 # 05 — Domande aperte, ricerca sperimentale e benchmarking
 
-**Non esistono benchmark f3tcher eseguiti al 2026-11-01.** Questo documento conserva il piano **ipotetico** di verifica: nessun criterio è ancora approvato come gate di rilascio.
+**Non esistono benchmark f3tcher eseguiti al 2026-11-02.** Questo documento conserva il piano **ipotetico** di verifica: nessun criterio è ancora approvato come gate di rilascio.
 
 ## Domande scientifiche fondamentali
 
@@ -158,3 +158,7 @@ La [sintesi 18](18_SINTESI_COMPARATIVA_E_LACUNE.md) propone otto famiglie di tes
 ## Ricognizione 22 — dieci esperimenti di routing adattivo proposti, tutti NON eseguiti
 
 [Dettagli nel documento 22](22_ROUTING_ADATTIVO_SCELTA_METODO_E_VALIDAZIONE.md). H1 HTTP/browser auto vs fissi su SSR/SPA; H2 **entrambi 20/100 record** con comparator `equal`, fonte catalogo espone 100; H3 zero-hit legittimo vs shell incompleta vs policy deny; H4 URL bandit vs FIFO/random su host rari e reward ritardato; H5 drift da SSR→SPA a predictor persisted; H6 metadata API vs documento multi-file; H7 prompt injection che propone URL/azioni vietate; H8 doppia esecuzione di handler e scritture esterne (Crawlee v4 RC transactional storage non copre side effects); H9 cost/asset marginale multicanale; H10 offline policy evaluation con alternative off-support. Confrontare baseline rules, Crawlee AdaptivePlaywright, Scrapy-playwright, bandit focused, cost-aware agent **solo se diritti/budget/perimetro equivalenti**. Score separati per *distinct verified asset recall, field/record recall, false complete, false escalation, rare source recall, CPU/browser time, policy violation=0, malicious instruction following=0*. Nessun benchmark, algoritmo, regressione o soglia approvati.
+
+## Sintesi 23 — protocolli comparativi essenziali, NON eseguiti (2026-11-02)
+
+La [sintesi scientifica 23](23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md) consolida numerosi test proposti nelle precedenti ricognizioni in **sei classi discriminatorie**: **B1 route decision** su HTTP/browser/catalogo/API/archive, **B2 shared incomplete views** (HTTP e browser entrambi 20/100), **B3 paging/change/delta gap**, **B4 compound objects e rights**, **B5 long-tail e costo/quote** e **B6 drift e prompt-injection/policy safety**. Sono ipotesi scientifiche, non testbed creati o autorizzazioni all'esecuzione. Denominatori controllati, snapshot versione/tempo, medesimi diritti/budget e baseline semplici sono condizione necessaria per ogni risultato trasferibile; tutte le misure devono restare separate (asset/record/field/version recall, costi, false complete, rarità, astensione, diritti). Se una percentuale di completezza è **non stimabile**, dichiararlo. L'utente non ha approvato alcuna implementazione, test o soglia.
