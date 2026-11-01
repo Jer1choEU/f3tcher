@@ -157,3 +157,19 @@ Dettagli e gradi di evidenza: [08_ADOZIONE_CONSISTENZA_E_LONG_TAIL.md](08_ADOZIO
 - RFC 9162, [Certificate Transparency v2](https://www.rfc-editor.org/rfc/rfc9162.html): inclusion/consistency proofs di un log, **non** censimento del mondo; RFC sperimentale, attenzione a viste incoerenti.
 
 **Nuova distinzione:** «referenziabile», «i byte sono disponibili», «integro rispetto a manifest», «copia dello stato corrente» e «storia degli eventi completa» non sono sinonimi. Le cinque famiglie di test nel documento 10 sono **ipotesi**; nessuna prova f3tcher eseguita.
+
+## J. Ricognizione 11 — copia, provenienza e attestazioni verificabili (2026-11-01)
+
+Dettagli, limiti e ipotesi in [11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md](11_INDIPENDENZA_FONTI_E_ATTESTAZIONI.md). Tutte **fonti primarie consultate (V)**, **nessun risultato replicato** o test f3tcher:
+- **Dong, Berti-Equille, Srivastava (2009), PVLDB**, *Truth Discovery and Copying Detection in a Dynamic World* — https://www.vldb.org/pvldb/vol2/vldb09-335.pdf : copying dependence e qualità/freschezza temporale; risultati specifici agli scenari studiati.
+- **Berti-Equille, Dong, Hu, Srivastava (2010), PVLDB**, *Global Detection of Complex Copying Relationships Between Sources* — https://vldb.org/pvldb/vol3/R120.pdf : co-copying e copying transitivo; inferire un rapporto diretto da somiglianze a coppie può essere fuorviante.
+- **Dong et al., Data Fusion: Resolving Conflicts from Multiple Sources** — https://research.google.com/pubs/archive/41657.pdf : accordi/errori condivisi come indizi di copia, non prova; alcune fonti copiano solo parte dei dati.
+- **W3C PROV-O** https://www.w3.org/TR/prov-o/ e **PROV Constraints** https://www.w3.org/TR/prov-constraints/ : derivazione, attribuzione, revisione e vincoli di consistenza. *Grafo formalmente valido non significa fonte vera*.
+- **Cheney, Chiticariu, Tan, Provenance in Databases: Why, How, and Where** — https://research.ibm.com/publications/provenance-in-databases-why-how-and-where : nozioni distinte di provenance nelle query.
+- **Green, Karvounarakis, Tannen (2007), PODS, Provenance Semirings** — https://web.cs.ucdavis.edu/~green/papers/pods07.pdf : annotazioni per tracciare contributi alle query, senza obbligo di adottarle nel progetto.
+- **The Update Framework / TUF** https://theupdateframework.org/docs/metadata/ ; specifiche https://theupdateframework.github.io/specification/ : root/targets/snapshot/timestamp, versioni, firme, rollback e scadenze, in repository compatibili.
+- **C2SP Transparency Log Witness Protocol v1.1.0** https://c2sp.org/tlog-witness@v1.1.0 ; **trust policy** https://c2sp.org/tlog-policy : cosignature dei checkpoint che verificano continuità del *log*, non verità del dato.
+- **RFC 9942 (giugno 2026), COSE Receipts** https://www.rfc-editor.org/rfc/rfc9942 : prove per strutture verificabili, anche non-inclusione per strutture che la supportano; mai assenza universale.
+- **RFC 9943 (2026), SCITT Architecture** https://www.rfc-editor.org/rfc/rfc9943 : statements firmati + receipts di un servizio trasparente; trasparenza non impedisce a un emittente disonesto di fare dichiarazioni false.
+
+Attenzione alla polisemia di **indipendenza**: fonti indipendenti come origine fattuale, verificatori indipendenti di un log e chiavi indipendenti per una firma sono proprietà differenti.
