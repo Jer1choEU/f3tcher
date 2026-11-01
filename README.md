@@ -1,6 +1,6 @@
 # f3tcher — archivio della ricerca (non implementato)
 
-> **Stato al 2026-11-01:** progetto in fase di **ricerca e ricognizione**. Non esiste ancora un'architettura approvata, uno stack deciso, un motore funzionante, un benchmark eseguito o codice applicativo. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
+> **Stato al 2026-11-02:** progetto in fase di **ricerca e ricognizione**. Non esiste ancora un'architettura approvata, uno stack deciso, un motore funzionante, un benchmark eseguito o codice applicativo. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
 
 ## Obiettivo condiviso
 
@@ -30,6 +30,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md](docs/13_DIFFUSIONE_IDENTIFICABILITA_E_ASTENSIONE.md) | Stanford NETINF/MemeTracker, inferenza delle origini da cascades, confidence sets, astensione calibrata, limiti e nuove ipotesi |
 | [docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md](docs/14_ACTIVE_PROVENANCE_INFORMATION_VALUE.md) | Ricerca iterativa delle prove, FIRE, AFA/POMDP, rischio del prior errato, feedback e valutazione off-policy |
 | [docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md](docs/15_ACQUISIZIONE_UNIVERSALE_PROTOCOLLI_E_CRAWLER.md) | Scoperta e acquisizione multiprotocollo: DCAT/DCAT-AP, STAC, OGC, IIIF, CKAN, WebSub, crawler e agenti |
+| [docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md](docs/16_ACQUISIZIONE_SPECIALISTICA_RICERCA_LEGGI_STATISTICHE_FEDERAZIONE.md) | OpenAIRE, DataCite, arXiv, Europe PMC, Normattiva, Cellar, Europarl, Eurostat/Istat SDMX e ActivityPub/ATProto |
 
 ## Avvertenze di metodo
 
@@ -39,6 +40,6 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 - **Niente specifiche definitive per ora.** La preferenza dell'utente è continuare a cercare e confrontare prima di fissare architettura, stack o roadmap di sviluppo.
 - **Quando riprendi:** leggi prima [docs/06_RIPRESA_NUOVA_CHAT.md](docs/06_RIPRESA_NUOVA_CHAT.md) e [docs/00_STATO_E_DECISIONI.md](docs/00_STATO_E_DECISIONI.md).
 
-Aggiornato con una nuova ricognizione di fonti primarie il **1 novembre 2026**, senza sviluppo o benchmark eseguiti.
+Aggiornato con ricognizioni di fonti primarie fino al **2 novembre 2026**, senza sviluppo o benchmark eseguiti.
 
 Creato come archivio della ricerca concordata fino al **1 novembre 2026**, non come promessa di originalità assoluta o fattibilità già dimostrata.
