@@ -97,3 +97,7 @@ Vedi [07_RICOGNIZIONE_2026-11-01.md](07_RICOGNIZIONE_2026-11-01.md) per fonti, c
 - **Diritti leggibili da macchina:** ODRL come *input* di un registro allow/deny/review, senza inferenze di liceità automatiche da un singolo campo.
 - **Obiettivi di acquisizione distinti:** active search di risorse rare e active surveying della prevalenza; valutare compromessi con equità verso fonti periferiche.
 - **Fixity/versioni:** BagIt e OCFL come possibili complementi di WARC/WACZ, senza confondere conservazione con diritto di conservare o copertura.
+
+## K. Ricognizione scientifica 09 — limiti delle dichiarazioni di completezza
+
+Vedi [09_COMPLETEZZA_LOCALE_E_PROVE.md](09_COMPLETEZZA_LOCALE_E_PROVE.md). **Ipotesi, non requisiti**: distinguere (1) completezza relativa a una query e un inventario versionato, (2) stima di una popolazione non osservata con ipotesi identificative, (3) completezza temporale/stato corrente vs storico di eventi, (4) omissioni nelle estrazioni di liste e campi, (5) tracciabilità e diritti. Non inferire il 100% della realtà da un inventario ufficiale o da uno schema valido; watermark locali non sono garanzia assoluta di assenza di eventi tardivi. Studiare dichiarazioni limitate, verificabili e falsificabili di completezza, con esito **non stimabile/ignoto** quando mancano basi adeguate. Per i documenti, validità JSON e correttezza/recall dei campi sono metriche differenti.
