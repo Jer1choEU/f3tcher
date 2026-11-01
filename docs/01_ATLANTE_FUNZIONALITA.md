@@ -195,3 +195,15 @@ Vedi [18_SINTESI_COMPARATIVA_E_LACUNE.md](18_SINTESI_COMPARATIVA_E_LACUNE.md). I
 ## U. Ricognizione 19 — la compatibilità dei protocolli è una proprietà osservata/versionata
 
 [Fonti e limiti nel documento 19](19_ADOZIONE_REALE_E_COMPATIBILITA_PORTALI.md). Ipotesi, non requisiti: riconoscere un endpoint con la **versione** e le classi di conformità dichiarate (Copernicus STAC 1.0.0→1.1.0, migrazione); trattare **quote/annunci decommissioning** come condizioni variabili del provider; non assumere che la stessa versione risponda agli stessi field/queryables. Riesaminare **versioning degli schemi metadata** (Rijksmuseum EDM XML 2026), **retention degli stream** (Rijksmuseum LDES latest-only), **subset esclusi dall'API** (data.gov.uk curated collections, Rijksmuseum bibliografico vs museale) e **mapping fra viste** (RNDT ISO19139→GeoDCAT→dati.gov.it). La capacità del protocollo ≠ garanzia del provider; l'esito di verifica deve distinguere **R risposta osservata**, **D documentato**, **A adottante dichiarato** e **U non verificabile con il tool**, senza percentuali di adozione inventate. Sono piste di ricerca, nessun algoritmo/router/stack deciso.
+
+## V. Ricognizione 20 — senza API documentata: stati, moduli, liste e astensione
+
+[Fonti e limiti della ricognizione 20](20_SORGENTI_DIFFICILI_MODULI_STATI_E_OMISSIONI.md). Solo **piste di ricerca**, non requisiti:
+- Riconoscere che una URL può rappresentare *molti stati* di una SPA e che una scheda/iter istituzionale può puntare a più versioni, documenti e allegati.
+- Non dedurre «nessuna API esistente» da un portale che espone ricerca form/UI; cercare solo canali dichiarati e leciti, non inventare endpoint.
+- Confrontare query-based harvesting di moduli autorizzati vs URL/sitemap/archivi, con limiti rate e *sampling bias*, evitando enumeration combinatoria invasiva.
+- Distinguerne gli esiti: HTTP 200 + vuoto, soft404, elenco solo parziale, lista virtualizzata, pulsante load more, scrolling timeout, search no-hits, blocco/403; **non** successo generico.
+- Evitare sinonimia di **readiness di rete**, **stato stabile del DOM**, **ultimo elemento caricato**, **fine dell'elenco**, **completezza del dataset**.
+- Layout semantico e script/selector drift: WebLists/SCRIBES già studiano *LLM setup + deterministic reuse*, va misurato record/field recall e costo, non solo output JSON valido.
+- Identità di record vs canonical SEO: versioni/parametri e resource graph non collassabili ciecamente.
+- Studi futuri solo su testbed autorizzato e con gold inventory, indipendenza delle fonti e registrazione diritti; nessuna configurazione o tecnologia adottata.
