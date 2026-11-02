@@ -393,3 +393,14 @@ Documento di riferimento: [23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md]
 - **Copernicus STAC migrazione 16-10-2026** https://dataspace.copernicus.eu/news/2026-10-16-new-sfeos-stac-catalogue-endpoint — vecchio endpoint previsto sostituito 12-01-2027; date e quote dichiarate dal publisher.
 
 **Criterio di stop:** nuove fonti sono rilevanti solo se cambiano una delle ipotesi o degli esperimenti del documento 23. Ulteriore bibliografia ripetitiva non è una misura di progresso. Ricognizione bibliografica generale matura, validazione ancora assente.
+
+## W. Protocollo scientifico 24 (2026-11-02): metodologia documentale, non benchmark
+
+[Protocollo 24](24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md) non è nuova letteratura su prestazioni f3tcher: formalizza scenari, baseline, ground truth, controllo dei bias e riproducibilità. Fonti metodologiche primarie ricontrollate:
+- **ACM Reproducibility and Artifact Evaluation, PADS 2026** https://sigsim.acm.org/conf/pads/2026/blog/artifact-evaluation/ — distingue *artifact functional, reusable, available* e *results reproduced*; non bastano codice o risultati degli autori per dichiarare replica indipendente.
+- **USENIX 2024 State of the Krawlers** https://www.usenix.org/conference/usenixsecurity24/presentation/stafeev — le metriche code/link/JS source non sono intercambiabili con *whole-corpus unique asset recall*; no singola configurazione migliore su tutte le prove degli autori.
+- **Crawlee `AdaptivePlaywrightCrawlerOptions`** https://crawlee.dev/js/api/playwright-crawler/interface/AdaptivePlaywrightCrawlerOptions — previsione/routing/validazione HTTP/browser già esistente, versione da congelare e nessuna garanzia automatica di completezza.
+- **RFC 9309** https://www.rfc-editor.org/rfc/rfc9309.html — robots non conferisce autorizzazione di accesso.
+- **W3C PROV-O** https://www.w3.org/TR/prov-o/ — vocabolario di provenance, possibile strumento di documentazione; **non** un algoritmo o software obbligatorio per f3tcher.
+
+**Stato:** stesura del protocollo autorizzata. Nessun testbed creato, run eseguito, soglia approvata, costo sostenuto o stack deciso.
