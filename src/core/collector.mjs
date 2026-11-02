@@ -33,7 +33,7 @@ export async function runCollector({catalog,holds={schema_version:"f3tcher-holds
         const response=await fetchBounded(source,{
           fetchImpl,validators:validators(source,startedMs)
         });
-        const extracted=await extractResponse(source,response);
+        const extracted=await extractResponse(catalogById.get(source.id),response);
         response.complete=extracted.complete;
         response.checkpoint=nextSuccess(source,response,checkedAt);
         stats.added+=await store.success({...source,
