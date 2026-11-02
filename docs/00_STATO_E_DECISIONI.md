@@ -34,6 +34,10 @@ Dopo la proposta di creare un piccolo ambiente di prova, l'utente ha risposto **
 
 **Correzione dello stato storico:** le precedenti frasi «nessun test eseguito» descrivono la fase prima del pilota; non indicano lo stato attuale della branch con doc 25. La preregistrazione completa G2 resta da definire; non dichiarare conclusa la ricerca sperimentale. L'eventuale merge di questa branch documentale/sperimentale **non implica adozione del codice come motore f3tcher**.
 
+## Secondo pilota locale 26 — confronto esplorativo realmente eseguito (2026-11-02)
+
+Dopo la richiesta di proseguire, è stato eseguito un [secondo banco di prova sintetico locale](26_PILOTA02_BASELINE_METRICHE_FALSE_COMPLETE.md): 9 tipologie di sorgente × 3 seed × 4 acquisitori = **108 valutazioni**, **4 test automatici superati**, solo su 127.0.0.1. Baseline con **stdlib urllib/HTMLParser, Requests+BeautifulSoup, Requests+lxml, Requests+BeautifulSoup+API**; **NON** sono test comparativi Scrapy/Crawlee, non installabili nell'ambiente corrente per DNS/registri non raggiungibili. Denominatori: 240 record gold non negati, 195 effettivamente pubblicati su HTML/API; i tre HTML-only recuperano 135, l'unione 195, con 78 GET anziché 42. Tre **false complete** dell'unione su 12 dichiarazioni in casi deliberatamente costruiti con `declared_total` falso. Il test ripete i tipi con seed che modificano solo ID: **NON** un gold indipendente né repliche statistiche indipendenti. Non sviluppato f3tcher né scelta una architettura. Nessun crawl esterno, nessuna spesa. G2/G3 protocollo 24 **ancora da soddisfare**. Non usare 100% del sottoinsieme raggiungibile come promessa di completezza.
+
 ## Obiettivo: misura del successo
 
 Massimizzare il volume di **informazioni lecite, pertinenti, nuove, complete, aggiornate, verificabili e utilizzabili**, non il numero grezzo di richieste o di pagine. Evitare che un 200 OK o un job “success” mascherino mancanze e contenuti errati.
