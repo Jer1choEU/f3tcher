@@ -73,9 +73,9 @@ jobs:
         with:
           name: f3tcher-pilot04-local
           path: |
-            /tmp/pilot04-*.json
-            /tmp/pilot04-*.jsonl
-            /tmp/pilot04-*.txt
+            ${{ runner.temp }}/pilot04-*.json
+            ${{ runner.temp }}/pilot04-*.jsonl
+            ${{ runner.temp }}/pilot04-*.txt
           if-no-files-found: warn
           retention-days: 1
       - name: Stop local fixture
