@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-02",
+  "kind": "synthetic feasibility pilot, NOT a third-party crawler benchmark",
+  "environment": {
+    "python": "3.13.5",
+    "network": "loopback only"
+  },
+  "gold_sha256": "2ff0d8bae6c68db47e5d33fbbf502fa86024c3cae3b5a1e49556189a45479508",
+  "cases": [
+    {
+      "method": "html",
+      "case": "html",
+      "gold": 12,
+      "verified": 12,
+      "state": "unknown",
+      "http_gets": 1
+    },
+    {
+      "method": "html",
+      "case": "api",
+      "gold": 12,
+      "verified": 0,
+      "state": "unknown",
+      "http_gets": 1
+    },
+    {
+      "method": "html",
+      "case": "mixed",
+      "gold": 18,
+      "verified": 8,
+      "state": "unknown",
+      "http_gets": 1
+    },
+    {
+      "method": "html",
+      "case": "truncated",
+      "gold": 12,
+      "verified": 4,
+      "state": "unknown",
+      "http_gets": 1
+    },
+    {
+      "method": "api",
+      "case": "html",
+      "gold": 12,
+      "verified": 0,
+      "state": "unknown",
+      "http_gets": 1
+    },
+    {
+      "method": "api",
+      "case": "api",
+      "gold": 12,
+      "verified": 12,
+      "state": "complete_within_declared_count",
+      "http_gets": 3
+    },
+    {
+      "method": "api",
+      "case": "mixed",
+      "gold": 18,
+      "verified": 12,
+      "state": "incomplete",
+      "http_gets": 3
+    },
+    {
+      "method": "api",
+      "case": "truncated",
+      "gold": 12,
+      "verified": 4,
+      "state": "incomplete",
+      "http_gets": 2
+    },
+    {
+      "method": "hybrid",
+      "case": "html",
+      "gold": 12,
+      "verified": 12,
+      "state": "unknown",
+      "http_gets": 1
+    },
+    {
+      "method": "hybrid",
+      "case": "api",
+      "gold": 12,
+      "verified": 12,
+      "state": "complete_within_declared_count",
+      "http_gets": 3
+    },
+    {
+      "method": "hybrid",
+      "case": "mixed",
+      "gold": 18,
+      "verified": 18,
+      "state": "complete_within_declared_count",
+      "http_gets": 3
+    },
+    {
+      "method": "hybrid",
+      "case": "truncated",
+      "gold": 12,
+      "verified": 4,
+      "state": "incomplete",
+      "http_gets": 2
+    }
+  ],
+  "totals": {
+    "api": {
+      "gold": 54,
+      "http_gets": 9,
+      "incomplete_flags": 2,
+      "recall": 0.518519,
+      "unknown_flags": 1,
+      "verified": 28
+    },
+    "html": {
+      "gold": 54,
+      "http_gets": 4,
+      "incomplete_flags": 0,
+      "recall": 0.444444,
+      "unknown_flags": 4,
+      "verified": 24
+    },
+    "hybrid": {
+      "gold": 54,
+      "http_gets": 9,
+      "incomplete_flags": 1,
+      "recall": 0.851852,
+      "unknown_flags": 1,
+      "verified": 46
+    }
+  },
+  "limitations": [
+    "Four toy datasets designed alongside the clients; no independent sources or holdout.",
+    "One deterministic run; no confidence intervals, CPU/RAM/latency/euro comparison.",
+    "The hybrid simply unions HTML and advertised API; this is not an adaptive agent.",
+    "Declared counts may be incorrect on real sources; status is not absolute completeness.",
+    "Chromium browser test was attempted, but blocked by environment policy (ERR_BLOCKED_BY_ADMINISTRATOR); excluded, not zero coverage.",
+    "No live external crawling, licensing analysis or real-world generalization."
+  ]
+}
