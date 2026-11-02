@@ -252,3 +252,6 @@ Non sono stati scelti runtime/linguaggi, cloud/database, crawler, parser, modell
 ---
 
 **Dichiarazione finale:** questo è un **protocollo di ricerca documentale pronto per revisione e preregistrazione futura**, non una preregistrazione già approvata, uno studio eseguito o un sistema implementato. Qualunque superiorità di f3tcher resta totalmente da dimostrare.
+## Addendum: prima prova di fattibilità locale effettivamente eseguita (2026-11-02)
+
+Il **pilota sintetico 25** è ora documentato in [25_PILOTA_SINTETICO_RISULTATI.md](25_PILOTA_SINTETICO_RISULTATI.md). `procedi` ha autorizzato il testbed locale. Tre baseline HTTP/API/union sono state eseguite su quattro fixture locali **costruite insieme ai client**, con **2 unit test** superati. **Questo NON è l'esperimento preregistrato G2 del presente documento:** gold/cliente sono stati sviluppati congiuntamente, manca holdout, la selezione dei casi favorisce intuitivamente unione e non esiste confronto con Crawlee/Scrapy/Playwright. Il primo tentativo browser è stato **bloccato dalle policy dell'ambiente**; nessuna misura browser è disponibile. Nessuna soglia di miglioramento, dimensione del campione o metodo ML approvati. **G1 vale solo per il pilota limitato e gratuito**, non per test su siti terzi o spesa. Considerare il report come **smoke test esplorativo**, non inferenza scientifica.

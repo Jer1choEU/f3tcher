@@ -1,6 +1,6 @@
 # 00 — Stato, decisioni e perimetro
 
-**Ultimo consolidamento:** 2026-11-02. **Fase:** ricerca esplorativa generale **consolidata documentalmente** in [23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md](23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md); validazione empirica NON avviata, nessuna implementazione approvata. **Account GitHub:** `Jer1choEU` (non `EUJer1cho`). **Repository:** https://github.com/Jer1choEU/f3tcher — pubblico.
+**Ultimo consolidamento:** 2026-11-02. **Fase:** ricerca esplorativa generale **consolidata documentalmente** in [23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md](23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md); **pilota locale sintetico eseguito (doc 25)**, validazione scientifica completa NON avviata e nessuna implementazione del motore approvata. **Account GitHub:** `Jer1choEU` (non `EUJer1cho`). **Repository:** https://github.com/Jer1choEU/f3tcher — pubblico.
 
 ## Decisioni dell'utente (confermate)
 
@@ -27,6 +27,12 @@ La documentazione da 00 a 22 è stata ricondotta a un'unica sintesi scientifica:
 ## Protocollo 24 — elaborazione documentale richiesta, non avvio di test (2026-11-02)
 
 L'utente ha autorizzato la **stesura** del [24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md](24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md), che definisce ipotesi H1–H6, baseline candidati, gold e perimetri, metriche, sei esperimenti concettuali, prevenzione di bias e preregistrazione futura, condizioni di report e gate G0–G4. **Questo NON è consenso a eseguire esperimenti, spendere su cloud, creare testbed o scrivere f3tcher**. Rimangono invariati i vincoli confermati di un sistema unico automatico, senza profili, rispetto delle fonti e nessun bypass. Nessun risultato o vantaggio è stato misurato. La futura scelta di campioni, MDE, seed, metriche primarie definitive, soglie e baseline esatte richiede approvazione PRIMA dell'esecuzione. La bozza può essere revisionata senza modificare l'architettura.
+
+## Primo pilota locale 25 — esperimento autorizzato limitatamente (2026-11-02)
+
+Dopo la proposta di creare un piccolo ambiente di prova, l'utente ha risposto **«procedi»**. Questo autorizza un **pilota locale controllato e gratuito**, non spese cloud, crawling di fonti reali o architettura definitiva. La descrizione esatta è in [25_PILOTA_SINTETICO_RISULTATI.md](25_PILOTA_SINTETICO_RISULTATI.md), e i file riproducibili in [../experiments/pilot01/](../experiments/pilot01/). Eseguiti **tre metodi** su **quattro dataset simulati**: HTML 24/54, API 28/54, HTML∪API 46/54; **2 test automatici superati**, 4/12 riconosciuto incomplete quando la sorgente dichiara total=12. Browser/Chromium sul loopback bloccato da policy amministrativa, quindi **non testato**. Unica esecuzione deterministica, niente holdout indipendente, nessuna stima di prestazioni fuori testbed, nessun benchmark di Crawlee/Scrapy, nessun framework o stack adottato.
+
+**Correzione dello stato storico:** le precedenti frasi «nessun test eseguito» descrivono la fase prima del pilota; non indicano lo stato attuale della branch con doc 25. La preregistrazione completa G2 resta da definire; non dichiarare conclusa la ricerca sperimentale. L'eventuale merge di questa branch documentale/sperimentale **non implica adozione del codice come motore f3tcher**.
 
 ## Obiettivo: misura del successo
 

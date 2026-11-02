@@ -174,3 +174,7 @@ In una nuova chat:
 ## Aggiornamento 2026-11-02 — il protocollo di validazione è ora documentato, non eseguito
 
 La proposta [24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md](24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md) specifica sei classi sperimentali P1–P6, metriche/denominatori, gold per asset/record/versioni/diritti, baseline, controllo dei bias e preregistrazione futura. Questo collegamento **non cambia le conclusioni scientifiche** né abilita software/test: l'utente ha autorizzato soltanto **la stesura del documento**. Se vorrà autorizzare i test, confermare prima risorse, criteri, dimensione e perimetro.
+
+## Aggiornamento — pilot01 eseguito: la validazione indipendente resta da fare
+
+Dal 2026-11-02 esiste un **harness di prova locale** con report [25](25_PILOTA_SINTETICO_RISULTATI.md) e [codice](../experiments/pilot01/README.md), creato dopo `procedi` dell'utente. Le percentuali 24/54 HTML, 28/54 API, 46/54 union si riferiscono soltanto a **quattro fixture simulate progettate insieme alle baseline**; non correggono il giudizio sulla mancanza di benchmark **indipendenti**. Sono stati superati 2 unit test; la misura browser è indisponibile per `ERR_BLOCKED_BY_ADMINISTRATOR`. Ancora nessun motore f3tcher o architettura scelta. Per qualsiasi futura prova scientifica servono preregistrazione G2, gold congelato senza leakage, tool comparabili e permessi.
