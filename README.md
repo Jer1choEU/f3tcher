@@ -1,6 +1,6 @@
 # f3tcher — archivio della ricerca (non implementato)
 
-> **Stato al 2026-11-02:** **ricerca esplorativa generale consolidata documentalmente**; restano aperte le validazioni empiriche. Non esiste ancora un'architettura approvata, uno stack deciso, un motore funzionante, un benchmark eseguito o codice applicativo. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
+> **Stato al 2026-11-02:** **ricerca esplorativa generale consolidata documentalmente**, con **protocollo di validazione proposto** (doc 24); **nessuna sperimentazione autorizzata o eseguita**. Non esiste ancora un'architettura approvata, uno stack deciso, un motore funzionante, un benchmark eseguito o codice applicativo. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
 
 ## Obiettivo condiviso
 
@@ -38,8 +38,9 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/21_SCALABILITA_COSTI_E_ACQUISIZIONE_EFFICIENTE.md](docs/21_SCALABILITA_COSTI_E_ACQUISIZIONE_EFFICIENTE.md) | **Efficienza e scala:** politeness per host/IP, Scrapy/StormCrawler, HTTP caching e Range, revisite, Crawlee, Browser Run, costi informativi e 10 confronti |
 | [docs/22_ROUTING_ADATTIVO_SCELTA_METODO_E_VALIDAZIONE.md](docs/22_ROUTING_ADATTIVO_SCELTA_METODO_E_VALIDAZIONE.md) | **Routing adattivo reale:** Crawlee AdaptivePlaywrightCrawler, regole vs ML, bandit, escalation, controlli sulle omissioni, sicurezza dell'agente |
 | [docs/23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md](docs/23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md) | **PUNTO DI PARTENZA ATTUALE:** conclusioni scientifiche 00–22, claim non sostenibili, tre ipotesi, sei confronti discriminanti, lacune e criteri per eventuale fase sperimentale |
+| [docs/24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md](docs/24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md) | **PROTOCOLLO PROPOSTO (NON ESEGUITO):** 6 famiglie di prove, baseline, gold corpus, denominatori, metriche, statistica, costi, sicurezza e gate di autorizzazione |
 
-Per una vista consolidata della ricerca leggere **prima [la sintesi scientifica 23](docs/23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md)**, quindi [la matrice comparativa 18](docs/18_SINTESI_COMPARATIVA_E_LACUNE.md) e i registri dettagliati pertinenti. La sintesi 23 **non** autorizza automaticamente architettura, benchmark o codice.
+Per una vista consolidata leggere **prima [la sintesi scientifica 23](docs/23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md)**, poi **[il protocollo di validazione proposto 24](docs/24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md)**, quindi [la matrice comparativa 18](docs/18_SINTESI_COMPARATIVA_E_LACUNE.md) e le fonti pertinenti. **Il documento 24 non è una preregistrazione definitiva e non autorizza test, architettura o codice.**
 
 ## Avvertenze di metodo
 
