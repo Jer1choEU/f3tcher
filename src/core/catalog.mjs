@@ -41,6 +41,9 @@ export function validateCatalog(value) {
         Object.keys(s.fields).some(k => !["url", "title", "published_at"].includes(k)) ||
         Object.values(s.fields).some(v => typeof v !== "string" || !/^[a-zA-Z0-9_.-]{1,120}$/.test(v))))
       throw Error("SOURCE_FIELDS_INVALID");
+    if (s.retain_payload === true && (!["json","csv"].includes(s.kind) ||
+        s.reuse_reviewed !== true || typeof s.license_reference !== "string" ||
+        !s.license_reference.trim()))throw Error("SOURCE_PAYLOAD_RIGHTS_REQUIRED");
     ids.add(s.id);
   }
   return value.sources;

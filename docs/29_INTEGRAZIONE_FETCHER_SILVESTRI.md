@@ -17,6 +17,7 @@ Si trasferiscono i **meccanismi generici**, non le fonti, i segreti, i domini pa
 | RSS/Atom, API JSON, CSV e documenti | Adattatori base | XML/CSV semplificati; PDF e binari solo hash/asset |
 | Dataset istituzionali specifici ISTAT/Eurostat/DFP/PNSL/ANBSC | Non copiati | Richiedono adattatori, tipologie e licenze specifiche |
 | Turso/libSQL, atomicità record/checkpoint | Implementato | Schema v1, da migrare/versionare nel seguito |
+| Persistenza del contenuto di dataset strutturati | Versioni JSON/CSV opt-in con licenza verificata e SHA per item | Nessuna conservazione indiscriminata di contenuti o PDF |
 | Lease per collisioni tra Cron | Implementato | TTL fisso di 20 minuti; politiche distribuite da migliorare |
 | Provenienza di assets e domini | Record, sightings, classificazione candidata | Non attesta fatti, licenze né indipendenza delle fonti |
 | Error ledger e quality health | Implementati, aggregati | Niente issue GitHub automatica o dashboard |
@@ -46,3 +47,5 @@ Si trasferiscono i **meccanismi generici**, non le fonti, i segreti, i domini pa
 ## Revisioni successive
 - Hold espliciti in `config/holds.json`, non bypassabili tramite l'abilitazione del catalogo; oltre al blocco permanente dei 403.
 - Contatore `added` derivato da `rowsAffected` delle INSERT reali, non dal numero di elementi osservati; i sightings mantengono la provenienza distinta.
+
+- Record JSON/CSV completi versionati in `record_payloads` soltanto quando `retain_payload: true`, `reuse_reviewed: true` e `license_reference` sono esplicitamente configurati. Nessun contenuto strutturato è salvato per impostazione predefinita.

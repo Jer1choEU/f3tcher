@@ -4,7 +4,7 @@
 
 ## Core sperimentale (prima integrazione Fetcher-Silvestri)
 
-Sono implementati un catalogo di fonti con revisione esplicita e hold indipendenti, fetch HTTPS limitato con timeout sul corpo, redirect controllati, RSS/Atom e risorse JSON/CSV/HTML/testo/PDF/binari (questi ultimi **solo come asset e hash**, senza estrazione del contenuto), raccolte JSON/CSV configurabili, checksum SHA-256, deduplicazione tra fonti, sightings e domini candidati, checkpoint atomici in libSQL/Turso, lease per impedire corse sovrapposte, polling equo, ETag/Last-Modified, refresh completo giornaliero, backoff con Retry-After 429/503 e disabilitazione persistente per 403, monitor di integrità/qualità, Worker Cloudflare e CLI locale. Nessuna implementazione effettua bypass di login, blocchi o robots; l'accesso è disabilitato fino a revisione umana documentata.
+Sono implementati un catalogo di fonti con revisione esplicita e hold indipendenti, fetch HTTPS limitato con timeout sul corpo, redirect controllati, RSS/Atom e risorse JSON/CSV/HTML/testo/PDF/binari (questi ultimi **solo come asset e hash**, senza estrazione del contenuto), raccolte JSON/CSV configurabili, checksum SHA-256, archiviazione opzionale di record JSON/CSV solo con licenza di riuso revisionata, deduplicazione tra fonti, sightings e domini candidati, checkpoint atomici in libSQL/Turso, lease per impedire corse sovrapposte, polling equo, ETag/Last-Modified, refresh completo giornaliero, backoff con Retry-After 429/503 e disabilitazione persistente per 403, monitor di integrità/qualità, Worker Cloudflare e CLI locale. Nessuna implementazione effettua bypass di login, blocchi o robots; l'accesso è disabilitato fino a revisione umana documentata.
 
 ```sh
 npm ci

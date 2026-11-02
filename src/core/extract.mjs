@@ -71,8 +71,14 @@ function structured(records,source) {
     const f=source.fields || {};
     const url=normalizeUrl(atPath(item,f.url || "url"),source.url);
     if (!url) continue;
+    let payload=null;
+    if (source.retain_payload === true) {
+      payload=JSON.stringify(item);
+      if (new TextEncoder().encode(payload).length>16_384)
+        throw Error("SOURCE_ITEM_TOO_LARGE");
+    }
     result.push({url, title:String(atPath(item,f.title || "title") || "").slice(0,1000),
-      published_at:dateIso(atPath(item,f.published_at || "published_at")),kind:"item"});
+      published_at:dateIso(atPath(item,f.published_at || "published_at")),kind:"item",payload});
   }
   return {records:result,available:records.length,
     examined:Math.min(records.length,MAX_ITEMS),

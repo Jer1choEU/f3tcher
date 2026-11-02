@@ -172,3 +172,22 @@ test("deduplication counts inserts, preserves distinct source sightings",async()
     assert.equal(audit.sightings,2);
   } finally {store.close();}
 });
+
+test("structured payload retention must be explicitly licensed and limited",async()=>{
+  const s={...feed(),kind:"json",url:"https://example.org/data.json",items_path:"data",
+    retain_payload:true,reuse_reviewed:true,license_reference:"public-data-license-v1"};
+  const data=JSON.stringify({data:[{url:"https://example.org/observation/2026",title:"2026 result",
+    published_at:"2026-01-01",amount:123,unit:"count"}]});
+  assert.throws(()=>validateCatalog(catalog({...s,license_reference:""})),/PAYLOAD_RIGHTS/);
+  const store=await openStore("file::memory:");
+  try {
+    const stats=await runCollector({catalog:catalog(s),store,
+      fetchImpl:async()=>respond(data)});
+    assert.equal(stats.failed,0);
+    const health=await store.health();
+    assert.equal(health.structured_payload_snapshots,1);
+    const query=await store.client.execute("SELECT data_json,license_reference FROM record_payloads");
+    assert.equal(JSON.parse(query.rows[0].data_json).amount,123);
+    assert.equal(query.rows[0].license_reference,"public-data-license-v1");
+  } finally {store.close();}
+});

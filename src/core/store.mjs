@@ -6,6 +6,7 @@ export const SCHEMA = [
   "CREATE TABLE IF NOT EXISTS host_cooldowns(host TEXT PRIMARY KEY,retry_not_before TEXT NOT NULL)",
   "CREATE TABLE IF NOT EXISTS records(id TEXT PRIMARY KEY,canonical_url TEXT NOT NULL UNIQUE,origin_source_id TEXT NOT NULL,kind TEXT NOT NULL,title TEXT,published_at TEXT,content_sha256 TEXT,first_observed_at TEXT NOT NULL,FOREIGN KEY(origin_source_id) REFERENCES sources(id))",
   "CREATE TABLE IF NOT EXISTS sightings(source_id TEXT NOT NULL,record_id TEXT NOT NULL,first_seen_at TEXT NOT NULL,last_seen_at TEXT NOT NULL,PRIMARY KEY(source_id,record_id),FOREIGN KEY(source_id) REFERENCES sources(id),FOREIGN KEY(record_id) REFERENCES records(id))",
+  "CREATE TABLE IF NOT EXISTS record_payloads(record_id TEXT NOT NULL,source_id TEXT NOT NULL,content_sha256 TEXT NOT NULL,data_json TEXT NOT NULL,license_reference TEXT NOT NULL,first_observed_at TEXT NOT NULL,PRIMARY KEY(record_id,source_id,content_sha256),FOREIGN KEY(record_id) REFERENCES records(id),FOREIGN KEY(source_id) REFERENCES sources(id))",
   "CREATE TABLE IF NOT EXISTS record_domains(record_id TEXT NOT NULL,domain_id TEXT NOT NULL,classification_status TEXT NOT NULL DEFAULT 'candidate',PRIMARY KEY(record_id,domain_id),FOREIGN KEY(record_id) REFERENCES records(id))",
   "CREATE TABLE IF NOT EXISTS source_errors(id TEXT PRIMARY KEY,source_id TEXT NOT NULL,occurred_at TEXT NOT NULL,error_code TEXT NOT NULL)",
   "CREATE TABLE IF NOT EXISTS collector_runs(id TEXT PRIMARY KEY,started_at TEXT NOT NULL,finished_at TEXT,checked INTEGER NOT NULL DEFAULT 0,added INTEGER NOT NULL DEFAULT 0,not_modified INTEGER NOT NULL DEFAULT 0,failed INTEGER NOT NULL DEFAULT 0,state TEXT NOT NULL)",
@@ -68,6 +69,14 @@ export class LibsqlStore {
         "kind,title,published_at,content_sha256,first_observed_at) VALUES (?,?,?,?,?,?,?,?)",
         args:[id,item.url,source.id,item.kind,item.title,item.published_at,
           parsed.payload_hash,checkedAt]});
+      if(item.payload !== undefined && item.payload !== null) {
+        const license=source.license_reference;
+        if(!license)throw Error("STORE_PAYLOAD_RIGHTS_REQUIRED");
+        const hash=await sha256(item.payload);
+        commands.push({sql:"INSERT OR IGNORE INTO record_payloads(record_id,source_id,content_sha256,"+
+          "data_json,license_reference,first_observed_at) VALUES (?,?,?,?,?,?)",
+          args:[id,source.id,hash,item.payload,license,checkedAt]});
+      }
       commands.push({sql:"INSERT INTO sightings(source_id,record_id,first_seen_at,last_seen_at) "+
         "VALUES (?,?,?,?) ON CONFLICT(source_id,record_id) DO UPDATE SET last_seen_at=excluded.last_seen_at",
         args:[source.id,id,checkedAt,checkedAt]});
@@ -109,17 +118,18 @@ export class LibsqlStore {
   }
   async health() {
     const get=async sql => Number((await this.client.execute(sql)).rows[0]?.n || 0);
-    const [sources,active,records,sightings,errors,runs,unlinked]=await Promise.all([
+    const [sources,active,records,sightings,errors,runs,unlinked,payloads]=await Promise.all([
       get("SELECT COUNT(*) AS n FROM sources"),
       get("SELECT COUNT(*) AS n FROM sources WHERE enabled=1"),
       get("SELECT COUNT(*) AS n FROM records"),
       get("SELECT COUNT(*) AS n FROM sightings"),
       get("SELECT COUNT(*) AS n FROM source_errors"),
       get("SELECT COUNT(*) AS n FROM collector_runs"),
-      get("SELECT COUNT(*) AS n FROM sightings s LEFT JOIN records r ON r.id=s.record_id WHERE r.id IS NULL")
+      get("SELECT COUNT(*) AS n FROM sightings s LEFT JOIN records r ON r.id=s.record_id WHERE r.id IS NULL"),
+      get("SELECT COUNT(*) AS n FROM record_payloads")
     ]);
     return {ok:true,status:runs?"ready":"awaiting_first_run",sources,active_sources:active,
-      records,sightings,error_events:errors,runs,unlinked_sightings:unlinked,
+      records,sightings,structured_payload_snapshots:payloads,error_events:errors,runs,unlinked_sightings:unlinked,
       integrity:unlinked?"gaps_detected":"consistent",
       scope:"persisted_records_not_external_coverage"};
   }
