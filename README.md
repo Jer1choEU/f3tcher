@@ -1,6 +1,6 @@
 # f3tcher — archivio della ricerca (non implementato)
 
-> **Stato al 2026-11-02:** ricerca esplorativa consolidata; protocollo di validazione documentato (24); **tre piloti locali eseguiti (25, 26 e 27); il terzo usa fixture di terzi con licenza MIT**, senza benchmark scientifico indipendente né codice del motore f3tcher. Non esiste ancora un'architettura approvata, uno stack deciso o un motore funzionante; il codice aggiunto è **esclusivamente il simulatore sperimentale**, non un benchmark confermatorio. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
+> **Stato al 2026-11-02:** ricerca esplorativa consolidata; protocollo di validazione documentato (24); **quattro piloti sperimentali eseguiti (25–28); nel quarto Scrapy e Crawlee reali sono stati confrontati su GitHub Actions**, senza benchmark scientifico indipendente né codice del motore f3tcher. Non esiste ancora un'architettura approvata, uno stack deciso o un motore funzionante; il codice aggiunto è **esclusivamente il simulatore sperimentale**, non un benchmark confermatorio. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
 
 ## Obiettivo condiviso
 
@@ -42,6 +42,7 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/25_PILOTA_SINTETICO_RISULTATI.md](docs/25_PILOTA_SINTETICO_RISULTATI.md) | **PRIMA PROVA LOCALE ESEGUITA:** 54 record sintetici, HTML 24, API 28, unione 46; browser bloccato, 2 test automatici superati, nessuna generalizzazione |
 | [docs/26_PILOTA02_BASELINE_METRICHE_FALSE_COMPLETE.md](docs/26_PILOTA02_BASELINE_METRICHE_FALSE_COMPLETE.md) | **SECONDA PROVA LOCALE ESEGUITA:** 27 casi/4 metodi, 195/195 record raggiungibili con HTML+API ma 3 false complete; 4 test automatici, senza benchmark indipendente |
 | [docs/27_PILOTA03_FIXTURE_ESTERNA_E_ROUTING_API.md](docs/27_PILOTA03_FIXTURE_ESTERNA_E_ROUTING_API.md) | **TERZA PROVA LOCALE ESEGUITA:** fixture MIT esterna identica all'originale, 12/12 HTML statico, 0/8 dinamico senza JS, 8/8 da API esplicita; 4 test superati, non blind |
+| [docs/28_PILOTA04_SCRAPY_CRAWLEE_CI.md](docs/28_PILOTA04_SCRAPY_CRAWLEE_CI.md) | **QUARTO PILOTA ESEGUITO SU ACTIONS:** Scrapy 2.19 e Crawlee 3.17 entrambi 12/12 statici e 8/8 via JSON, 0/8 senza rendering JS; run e artefatto verificati |
 
 Per una vista consolidata leggere **prima [la sintesi scientifica 23](docs/23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md)**, poi **[il protocollo di validazione proposto 24](docs/24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md)**, quindi [la matrice comparativa 18](docs/18_SINTESI_COMPARATIVA_E_LACUNE.md) e le fonti pertinenti. **Il documento 24 non è una preregistrazione definitiva e non autorizza test, architettura o codice.**
 
