@@ -1,0 +1,10 @@
+{
+  "name": "f3tcher-pilot04-crawlee",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Controlled local-only real-framework benchmark",
+  "dependencies": {
+    "crawlee": "3.17.0"
+  }
+}
