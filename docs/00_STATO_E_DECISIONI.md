@@ -24,6 +24,10 @@
 
 La documentazione da 00 a 22 è stata ricondotta a un'unica sintesi scientifica: [23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md](23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md). **La valutazione dell'assistente** è che la ricognizione bibliografica generale sia sufficientemente ampia per parlare di un'eventuale validazione sperimentale, **ma l'utente NON ha ancora deciso di terminare la ricerca, implementare o avviare benchmark**. Tutte le decisioni 1–7 qui sopra restano in vigore. Nessun risultato nuovo di f3tcher è stato misurato. Rischi principali aperti: adoption bias, incompletezza condivisa fra due canali, version drift, costi e diritti per singolo asset. Prima di qualunque cambio di fase serve autorizzazione esplicita. Se l'utente chiede altra ricerca, cercare solo prove discriminanti sulle lacune evidenziate in 23, non ricominciare un inventario generalista.
 
+## Protocollo 24 — elaborazione documentale richiesta, non avvio di test (2026-11-02)
+
+L'utente ha autorizzato la **stesura** del [24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md](24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md), che definisce ipotesi H1–H6, baseline candidati, gold e perimetri, metriche, sei esperimenti concettuali, prevenzione di bias e preregistrazione futura, condizioni di report e gate G0–G4. **Questo NON è consenso a eseguire esperimenti, spendere su cloud, creare testbed o scrivere f3tcher**. Rimangono invariati i vincoli confermati di un sistema unico automatico, senza profili, rispetto delle fonti e nessun bypass. Nessun risultato o vantaggio è stato misurato. La futura scelta di campioni, MDE, seed, metriche primarie definitive, soglie e baseline esatte richiede approvazione PRIMA dell'esecuzione. La bozza può essere revisionata senza modificare l'architettura.
+
 ## Obiettivo: misura del successo
 
 Massimizzare il volume di **informazioni lecite, pertinenti, nuove, complete, aggiornate, verificabili e utilizzabili**, non il numero grezzo di richieste o di pagine. Evitare che un 200 OK o un job “success” mascherino mancanze e contenuti errati.
