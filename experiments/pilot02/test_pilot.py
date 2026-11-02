@@ -12,7 +12,7 @@ class TestPilot02(unittest.TestCase):
         self.assertEqual(len({v for c in a for v in c.gold}),sum(len(c.gold) for c in a))
     def test_scope_restrictions(self):
         for v in ('http://evil.test/c/1','//evil.test/c/1','/admin','/c/1/../../admin',
-                  '/c/1/./api','/c/1\\\\evil','/c/2/api','/c/1evil/api','#evil'):
+                  '/c/1/./api','/c/1\\evil','/c/2/api','/c/1evil/api','#evil'):
             with self.subTest(v=v):
                 with self.assertRaises(ValueError):
                     safe_url('http://127.0.0.1:1337','1',v)
