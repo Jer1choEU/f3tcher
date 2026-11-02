@@ -1,0 +1,22 @@
+{
+  "name": "f3tcher",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "test": "node --test test/core.test.mjs",
+    "build": "wrangler deploy --dry-run",
+    "dev": "wrangler dev",
+    "collect": "node scripts/run.mjs",
+    "health": "node scripts/run.mjs --health"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,6 +1,26 @@
-# f3tcher — archivio della ricerca (non implementato)
+# f3tcher — ricerca e prototipo di acquisizione
 
-> **Stato al 2026-11-02:** ricerca esplorativa consolidata; protocollo di validazione documentato (24); **quattro piloti sperimentali eseguiti (25–28); nel quarto Scrapy e Crawlee reali sono stati confrontati su GitHub Actions**, senza benchmark scientifico indipendente né codice del motore f3tcher. Non esiste ancora un'architettura approvata, uno stack deciso o un motore funzionante; il codice aggiunto è **esclusivamente il simulatore sperimentale**, non un benchmark confermatorio. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
+> **Stato dal 2 novembre 2026:** al precedente archivio scientifico e ai quattro piloti si aggiunge un **primo core sperimentale eseguibile**, derivato dalle capacità generiche di Fetcher-Silvestri. Non è un crawler universale completo, né un servizio in produzione; non sono attive fonti per impostazione predefinita. Architettura, stack definitivo e benchmark sono ancora soggetti a validazione.
+
+## Core sperimentale (prima integrazione Fetcher-Silvestri)
+
+Sono implementati un catalogo di fonti con revisione esplicita e hold indipendenti, fetch HTTPS limitato con timeout sul corpo, redirect controllati, RSS/Atom e risorse JSON/CSV/HTML/testo/PDF/binari (questi ultimi **solo come asset e hash**, senza estrazione del contenuto), raccolte JSON/CSV configurabili, checksum SHA-256, archiviazione opzionale di record JSON/CSV solo con licenza di riuso revisionata, deduplicazione tra fonti, sightings e domini candidati, checkpoint atomici in libSQL/Turso, lease per impedire corse sovrapposte, polling equo, ETag/Last-Modified, refresh completo giornaliero, backoff con Retry-After 429/503 e disabilitazione persistente per 403, monitor di integrità/qualità, Worker Cloudflare e CLI locale. Nessuna implementazione effettua bypass di login, blocchi o robots; l'accesso è disabilitato fino a revisione umana documentata.
+
+```sh
+npm ci
+npm test
+npm run build          # dry-run, nessun deploy
+npm run collect        # catalogo vuoto: nessuna richiesta esterna
+npm run health         # riepilogo locale
+```
+
+Le fonti si configurano in `config/sources.json` usando `config/sources.example.json`; gli hold indipendenti sono in `config/holds.json`.  e restano disabilitate fino a revisione. Il Worker richiede `TURSO_URL`, `TURSO_AUTH_TOKEN` e (per `POST /admin/run`) `ADMIN_TOKEN` come secret, mai nel repository; `GET /health` espone solo aggregati. Il Cron è una configurazione non ancora distribuita. Vedi [documentazione della migrazione](docs/29_INTEGRAZIONE_FETCHER_SILVESTRI.md) per confini, prove e funzionalità non ancora trasferite.
+
+---
+
+## Archivio storico della ricerca
+
+> **Stato dei piloti prima del core:** ricerca esplorativa consolidata; protocollo di validazione documentato (24); **quattro piloti sperimentali eseguiti (25–28); nel quarto Scrapy e Crawlee reali sono stati confrontati su GitHub Actions**, senza benchmark scientifico indipendente né codice del motore f3tcher. All'epoca dei piloti non esistevano ancora architettura approvata, stack deciso o motore funzionante; il codice aggiunto è **esclusivamente il simulatore sperimentale**, non un benchmark confermatorio. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
 
 ## Obiettivo condiviso
 
