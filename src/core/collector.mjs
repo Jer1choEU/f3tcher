@@ -36,7 +36,9 @@ export async function runCollector({catalog,holds={schema_version:"f3tcher-holds
         const extracted=await extractResponse(source,response);
         response.complete=extracted.complete;
         response.checkpoint=nextSuccess(source,response,checkedAt);
-        stats.added+=await store.success(source,response,extracted,checkedAt);
+        stats.added+=await store.success({...source,
+          license_reference:catalogById.get(source.id)?.license_reference || null},
+          response,extracted,checkedAt);
         if(response.not_modified)stats.not_modified++;
       } catch(error) {
         const code=responseErrorCode(error);
