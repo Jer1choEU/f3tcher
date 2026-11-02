@@ -1,6 +1,6 @@
 # f3tcher — archivio della ricerca (non implementato)
 
-> **Stato al 2026-11-02:** ricerca esplorativa consolidata; protocollo di validazione documentato (24); **due piloti sintetici locali eseguiti (25 e 26)**, senza benchmark scientifico indipendente né codice del motore f3tcher. Non esiste ancora un'architettura approvata, uno stack deciso o un motore funzionante; il codice aggiunto è **esclusivamente il simulatore sperimentale**, non un benchmark confermatorio. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
+> **Stato al 2026-11-02:** ricerca esplorativa consolidata; protocollo di validazione documentato (24); **tre piloti locali eseguiti (25, 26 e 27); il terzo usa fixture di terzi con licenza MIT**, senza benchmark scientifico indipendente né codice del motore f3tcher. Non esiste ancora un'architettura approvata, uno stack deciso o un motore funzionante; il codice aggiunto è **esclusivamente il simulatore sperimentale**, non un benchmark confermatorio. Questo repository conserva le conoscenze emerse dalle conversazioni di ricerca e permette di riprendere il lavoro in una nuova chat.
 
 ## Obiettivo condiviso
 
@@ -41,13 +41,14 @@ Il motore dovrà scegliere **automaticamente** i metodi più adatti alla fonte, 
 | [docs/24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md](docs/24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md) | **PROTOCOLLO PROPOSTO (NON ESEGUITO):** 6 famiglie di prove, baseline, gold corpus, denominatori, metriche, statistica, costi, sicurezza e gate di autorizzazione |
 | [docs/25_PILOTA_SINTETICO_RISULTATI.md](docs/25_PILOTA_SINTETICO_RISULTATI.md) | **PRIMA PROVA LOCALE ESEGUITA:** 54 record sintetici, HTML 24, API 28, unione 46; browser bloccato, 2 test automatici superati, nessuna generalizzazione |
 | [docs/26_PILOTA02_BASELINE_METRICHE_FALSE_COMPLETE.md](docs/26_PILOTA02_BASELINE_METRICHE_FALSE_COMPLETE.md) | **SECONDA PROVA LOCALE ESEGUITA:** 27 casi/4 metodi, 195/195 record raggiungibili con HTML+API ma 3 false complete; 4 test automatici, senza benchmark indipendente |
+| [docs/27_PILOTA03_FIXTURE_ESTERNA_E_ROUTING_API.md](docs/27_PILOTA03_FIXTURE_ESTERNA_E_ROUTING_API.md) | **TERZA PROVA LOCALE ESEGUITA:** fixture MIT esterna identica all'originale, 12/12 HTML statico, 0/8 dinamico senza JS, 8/8 da API esplicita; 4 test superati, non blind |
 
 Per una vista consolidata leggere **prima [la sintesi scientifica 23](docs/23_SINTESI_SCIENTIFICA_FINALE_RICERCA_ESPLORATIVA.md)**, poi **[il protocollo di validazione proposto 24](docs/24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md)**, quindi [la matrice comparativa 18](docs/18_SINTESI_COMPARATIVA_E_LACUNE.md) e le fonti pertinenti. **Il documento 24 non è una preregistrazione definitiva e non autorizza test, architettura o codice.**
 
 ## Avvertenze di metodo
 
 - **Ricerca ≠ implementazione.** Nessun tool o studio citato implica che f3tcher possieda già quella funzionalità.
-- **Risultati esterni ≠ benchmark di f3tcher.** I numeri di studi terzi appartengono agli autori. I numeri del **piloti locali 25/26** sono nostri ma soltanto su quattro sorgenti sintetiche progettate insieme ai client, senza validazione indipendente.
+- **Risultati esterni ≠ benchmark di f3tcher.** I numeri di studi terzi appartengono agli autori. I numeri dei **piloti 25/26/27** sono nostri ma soltanto su quattro sorgenti sintetiche progettate insieme ai client, senza validazione indipendente.
 - **Verifica dei riferimenti.** Parte dei link è stata controllata direttamente su documentazione primaria il 2026-11-01; altri sono **piste emerse nelle chat precedenti da riverificare**. Il registro indica la distinzione.
 - **Niente specifiche definitive per ora.** La preferenza dell'utente è continuare a cercare e confrontare prima di fissare architettura, stack o roadmap di sviluppo.
 - **Quando riprendi:** leggi prima [docs/06_RIPRESA_NUOVA_CHAT.md](docs/06_RIPRESA_NUOVA_CHAT.md) e [docs/00_STATO_E_DECISIONI.md](docs/00_STATO_E_DECISIONI.md).
