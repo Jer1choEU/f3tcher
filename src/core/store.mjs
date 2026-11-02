@@ -24,7 +24,7 @@ export class LibsqlStore {
         "hold_reason=excluded.hold_reason,enabled=CASE WHEN sources.last_error='SOURCE_HTTP_403' "+
         "OR excluded.hold_reason IS NOT NULL THEN 0 ELSE excluded.enabled END,"+
         "interval_minutes=excluded.interval_minutes,priority=excluded.priority",
-        args:[s.id,s.url,s.kind,JSON.stringify(s.domains),Number(s.enabled),
+        args:[s.id,s.url,s.kind,JSON.stringify(s.domains),Number(s.enabled && !policy.has(s.id)),
           s.interval_minutes,s.priority || 0,policy.get(s.id) || null]});
     }
   }
