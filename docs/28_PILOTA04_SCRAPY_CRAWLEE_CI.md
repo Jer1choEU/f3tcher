@@ -2,7 +2,7 @@
 
 **Data:** 2026-11-02. **Stato:** **ESEGUITO** in GitHub Actions, su server HTTP locale, con i veri framework **Scrapy 2.19.0** e **Crawlee 3.17.0**. Si tratta di **uno smoke test comparativo circoscritto**, non di uno studio alla cieca, una prova su fonti reali, un'architettura approvata o un motore f3tcher sviluppato. Nessun browser eseguito e nessun sito terzo crawled.
 
-**Run verificata:** [GitHub Actions #41368813344](https://github.com/Jer1choEU/f3tcher/actions/runs/41368813344) — job **compare-frameworks**, **success**; Scrapy, Crawlee e valutatore sono stati effettivamente eseguiti. PR: [#4](https://github.com/Jer1choEU/f3tcher/pull/4). La configurazione Actions è [pilot04.yml](../.github/workflows/pilot04.yml), codice in [experiments/pilot04](../experiments/pilot04/README.md).
+**Run verificata più recente:** [GitHub Actions #41368927807](https://github.com/Jer1choEU/f3tcher/actions/runs/41368927807) — job **compare-frameworks**, **success** e [artefatto CI #13108123370](https://github.com/Jer1choEU/f3tcher/actions/runs/41368927807/artifacts/13108123370) creato (ZIP 2.483 byte, retention 1 giorno). La [run iniziale #41368813344](https://github.com/Jer1choEU/f3tcher/actions/runs/41368813344) era anch'essa passata, ma non aveva salvato l'artefatto; è stata corretta solo la destinazione del suo upload. PR: [#4](https://github.com/Jer1choEU/f3tcher/pull/4). Scrapy, Crawlee e valutatore sono stati effettivamente eseguiti. PR: [#4](https://github.com/Jer1choEU/f3tcher/pull/4). La configurazione Actions è [pilot04.yml](../.github/workflows/pilot04.yml), codice in [experiments/pilot04](../experiments/pilot04/README.md).
 
 ## 1. Sorgente e condizioni
 
@@ -20,7 +20,7 @@ La run avvia **solo Node server su 127.0.0.1, porta temporanea**. I tool ricevon
 
 **Valutatore indipendente dal processo di acquisizione:** [evaluate.py](../experiments/pilot04/evaluate.py) confronta i dati finali contro il gold della fixture MIT. Il gold **non è importato dagli spider**. Fallisce esplicitamente se mancano pagine, si duplicano ID, sono introdotti ID falsi o lo status non è atteso.
 
-## 3. Risultati effettivamente osservati nei log della run #41368813344
+## 3. Risultati effettivamente osservati nelle run #41368813344 e #41368927807
 
 | Criterio | Scrapy 2.19.0 | Crawlee 3.17.0 |
 |---|---:|---:|
@@ -34,7 +34,7 @@ La run avvia **solo Node server su 127.0.0.1, porta temporanea**. I tool ricevon
 
 **Non esiste un vincitore su questo campione.** La parità di copertura riguarda solo queste prove, non prova identità delle capacità dei framework. \`0/8\` sulla pagina JS è *atteso*: nessuno dei due metodi HTTP esegue il JavaScript, e gli otto ID sono recuperabili dall'API esplicita. Il recupero dell'API NON è scelta autonoma del canale, perché il percorso era già noto agli script.
 
-La **prima run valida** è passata ma **non ha caricato gli artefatti** per un errore nel pattern di percorso (\`/tmp\` anziché \`runner.temp\`). Tale problema di pubblicazione **non cambia i risultati registrati nel job log**. Il workflow è stato corretto sulla PR; considerare l'upload artefatti verificato **solo dopo una nuova run che lo attesti**.
+La **prima run valida** è passata ma **non ha caricato gli artefatti** per un errore nel pattern del percorso (\`/tmp\` anziché \`runner.temp\`). La correzione è stata verificata con la **seconda run #41368927807: success + artefatto ZIP f3tcher-pilot04-local effettivamente pubblicato**. Gli artefatti temporanei hanno retention di un giorno; i risultati e i link a entrambe le run sono conservati in questo documento.
 
 ## 4. Condizioni di validità e sicurezza
 
