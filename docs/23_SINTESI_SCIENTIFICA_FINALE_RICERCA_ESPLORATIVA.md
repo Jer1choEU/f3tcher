@@ -171,3 +171,6 @@ In una nuova chat:
 5. Conservare l'obiettivo di **un solo sistema automatico** e il divieto di aggirare protezioni. Separare rigorosamente dichiarazioni esterne, misure nostre e ipotesi.
 
 **Stato finale verificabile:** questa è una **sintesi scientifica della ricerca esplorativa**, non un prodotto, specifica di implementazione o prova di superiorità.
+## Aggiornamento 2026-11-02 — il protocollo di validazione è ora documentato, non eseguito
+
+La proposta [24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md](24_PROTOCOLLO_VALIDAZIONE_SCIENTIFICA.md) specifica sei classi sperimentali P1–P6, metriche/denominatori, gold per asset/record/versioni/diritti, baseline, controllo dei bias e preregistrazione futura. Questo collegamento **non cambia le conclusioni scientifiche** né abilita software/test: l'utente ha autorizzato soltanto **la stesura del documento**. Se vorrà autorizzare i test, confermare prima risorse, criteri, dimensione e perimetro.
