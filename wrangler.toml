@@ -1,0 +1,7 @@
+name = "f3tcher-acquisition-core"
+main = "src/worker.mjs"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[triggers]
+crons = ["*/30 * * * *"]

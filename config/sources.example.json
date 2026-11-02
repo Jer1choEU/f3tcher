@@ -1,0 +1,14 @@
+{
+  "schema_version": "f3tcher-sources-v1",
+  "sources": [{
+    "id": "example-public-feed",
+    "url": "https://example.org/feed.xml",
+    "kind": "rss",
+    "domains": ["example-domain"],
+    "enabled": false,
+    "access_reviewed": false,
+    "review_reference": "",
+    "interval_minutes": 60,
+    "priority": 0
+  }]
+}

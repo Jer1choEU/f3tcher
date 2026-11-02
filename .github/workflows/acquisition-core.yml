@@ -1,0 +1,27 @@
+name: acquisition-core
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'test/core.test.mjs'
+      - 'scripts/run.mjs'
+      - 'config/**'
+      - 'package*.json'
+      - 'wrangler.toml'
+      - '.github/workflows/acquisition-core.yml'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
