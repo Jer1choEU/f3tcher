@@ -12,7 +12,7 @@ Si trasferiscono i **meccanismi generici**, non le fonti, i segreti, i domini pa
 | Rotazione per fonte e budget per tick | Implementato (max tre fonte per ciclo predefinito) | Nessun ottimizzatore adattivo |
 | ETag, Last-Modified, full refresh | Implementato | Solo per risorse con checkpoint completi |
 | Backoff esponenziale, Retry-After, cooldown host | Implementato | Polling sequenziale, senza coda distribuita |
-| Stop permanente per HTTP 403 | Implementato e persistito | Sblocco soltanto tramite intervento sul DB dopo revisione |
+| Stop permanente per HTTP 403, hold manuali indipendenti | Implementato e persistito | Sblocco soltanto tramite intervento sul DB dopo revisione |
 | Download bounded e sicurezza redirect | Implementato | Redirect cross-host rifiutati; nessuna risoluzione DNS preventiva |
 | RSS/Atom, API JSON, CSV e documenti | Adattatori base | XML/CSV semplificati; PDF e binari solo hash/asset |
 | Dataset istituzionali specifici ISTAT/Eurostat/DFP/PNSL/ANBSC | Non copiati | Richiedono adattatori, tipologie e licenze specifiche |
@@ -42,3 +42,7 @@ Si trasferiscono i **meccanismi generici**, non le fonti, i segreti, i domini pa
 4. Benchmark con corpus indipendenti, costi e condizioni di arresto; test di carico; incident management.
 5. Astrazione adapter e scelta adattiva di metodi (HTTP/browser/API), autorizzazioni multi-tenant.
 6. Migrazioni schema, retention, API di revisione, observability e hardening per uso di produzione.
+
+## Revisioni successive
+- Hold espliciti in `config/holds.json`, non bypassabili tramite l'abilitazione del catalogo; oltre al blocco permanente dei 403.
+- Contatore `added` derivato da `rowsAffected` delle INSERT reali, non dal numero di elementi osservati; i sightings mantengono la provenienza distinta.

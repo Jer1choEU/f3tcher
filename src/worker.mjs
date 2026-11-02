@@ -1,4 +1,5 @@
 import catalog from "../config/sources.json" with {type:"json"};
+import holds from "../config/holds.json" with {type:"json"};
 import { openStore } from "./core/store.mjs";
 import { runCollector } from "./core/collector.mjs";
 import { inspectQuality } from "./core/health.mjs";
@@ -20,7 +21,7 @@ async function authorized(request,secret) {
 }
 async function run(env) {
   const store=await storeFrom(env);
-  try {return await runCollector({catalog,store});}
+  try {return await runCollector({catalog,holds,store});}
   finally {store.close();}
 }
 export default {

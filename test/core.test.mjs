@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {validateCatalog,safeUrl} from "../src/core/catalog.mjs";
+import {validateCatalog,validateHolds,safeUrl} from "../src/core/catalog.mjs";
 import {selectDueSources,nextFailure,validators,REPRESENTATION_VERSION} from "../src/core/polling.mjs";
 import {cleanEtag,parseRetryAfter,fetchBounded} from "../src/core/transport.mjs";
 import {extractResponse} from "../src/core/extract.mjs";
@@ -144,5 +144,31 @@ test("database: lease prevents overlapping runs",async()=>{
       fetchImpl:async()=>respond(xml)});
     assert.equal(result.status,"already_running");
     await store.release("owner");
+  } finally {store.close();}
+});
+
+test("independent access holds override enabled catalog sources",async()=>{
+  const store=await openStore("file::memory:");
+  const holds={schema_version:"f3tcher-holds-v1",
+    holds:[{source_id:"feed",reason:"manual_access_hold",evidence:"review ticket #123"}]};
+  try {
+    assert.equal(validateHolds(holds,[feed()]).length,1);
+    let calls=0;
+    const result=await runCollector({catalog:catalog(feed()),holds,store,
+      fetchImpl:async()=>{calls++;return respond(xml);}});
+    assert.equal(result.checked,0);assert.equal(calls,0);
+    assert.equal((await store.sources())[0].hold_reason,"manual_access_hold");
+  } finally {store.close();}
+});
+test("deduplication counts inserts, preserves distinct source sightings",async()=>{
+  const store=await openStore("file::memory:");
+  try {
+    const second={...feed(),id:"other",url:"https://other.example.net/feed.xml"};
+    const stats=await runCollector({catalog:catalog(feed(),second),store,
+      fetchImpl:async()=>respond(xml)});
+    const audit=await store.health();
+    assert.equal(stats.added,1);
+    assert.equal(audit.records,1);
+    assert.equal(audit.sightings,2);
   } finally {store.close();}
 });

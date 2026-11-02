@@ -14,15 +14,17 @@ export const SCHEMA = [
 export class LibsqlStore {
   constructor(client){this.client=client;}
   async init(){for(const sql of SCHEMA)await this.client.execute(sql);}
-  async sync(catalog) {
+  async sync(catalog,holds=[]) {
+    const policy=new Map(holds.map(x=>[x.source_id,x.reason]));
     for(const s of catalog) {
       await this.client.execute({sql:
-        "INSERT INTO sources(id,url,kind,domains,enabled,interval_minutes,priority) VALUES (?,?,?,?,?,?,?) "+
+        "INSERT INTO sources(id,url,kind,domains,enabled,interval_minutes,priority,hold_reason) VALUES (?,?,?,?,?,?,?,?) "+
         "ON CONFLICT(id) DO UPDATE SET url=excluded.url,kind=excluded.kind,domains=excluded.domains,"+
-        "enabled=CASE WHEN sources.last_error='SOURCE_HTTP_403' OR sources.hold_reason IS NOT NULL "+
-        "THEN 0 ELSE excluded.enabled END,interval_minutes=excluded.interval_minutes,priority=excluded.priority",
+        "hold_reason=excluded.hold_reason,enabled=CASE WHEN sources.last_error='SOURCE_HTTP_403' "+
+        "OR excluded.hold_reason IS NOT NULL THEN 0 ELSE excluded.enabled END,"+
+        "interval_minutes=excluded.interval_minutes,priority=excluded.priority",
         args:[s.id,s.url,s.kind,JSON.stringify(s.domains),Number(s.enabled),
-          s.interval_minutes,s.priority || 0]});
+          s.interval_minutes,s.priority || 0,policy.get(s.id) || null]});
     }
   }
   async sources() {
@@ -58,10 +60,10 @@ export class LibsqlStore {
   async success(source,response,parsed,checkedAt) {
     const next=response.checkpoint;
     const commands=[];
-    const candidates=[];
+    const insertIndexes=[];
     for(const item of parsed.records) {
       const id=await sha256(item.url);
-      candidates.push({item,id});
+      insertIndexes.push(commands.length);
       commands.push({sql:"INSERT OR IGNORE INTO records(id,canonical_url,origin_source_id,"+
         "kind,title,published_at,content_sha256,first_observed_at) VALUES (?,?,?,?,?,?,?,?)",
         args:[id,item.url,source.id,item.kind,item.title,item.published_at,
@@ -78,9 +80,15 @@ export class LibsqlStore {
       "consecutive_failures=0,last_error=NULL WHERE id=?",
       args:[checkedAt,checkedAt,next.last_body_at,next.representation_key,
         next.etag,next.last_modified,next.next_due_at,source.id]});
-    await this.client.batch(commands,"write");
-    // Idempotent record IDs avoid duplicates across different feeds.
-    return candidates.length;
+    const results=await this.client.batch(commands,"write");
+    // Count actual inserted rows, not observations of an already-known URL.
+    let added=0;
+    for(const i of insertIndexes) {
+      const n=Number(results[i]?.rowsAffected);
+      if(!Number.isSafeInteger(n)||n<0||n>1)throw Error("STORE_BATCH_RESULT_INVALID");
+      added+=n;
+    }
+    return added;
   }
   async failure(source,error,when,next) {
     const code=responseErrorCode(error);

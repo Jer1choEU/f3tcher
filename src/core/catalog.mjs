@@ -50,3 +50,18 @@ export function responseErrorCode(error) {
   return typeof code === "string" && /^(?:SOURCE|COLLECTOR|STORE)_[A-Z0-9_]{2,52}$/.test(code)
     ? code : "SOURCE_FAILED";
 }
+
+export function validateHolds(value,catalog) {
+  if(!value || value.schema_version!=="f3tcher-holds-v1" ||
+      !Array.isArray(value.holds))throw Error("SOURCE_HOLDS_INVALID");
+  const known=new Set(catalog.map(x=>x.id)),seen=new Set();
+  for(const h of value.holds) {
+    if(!h || !known.has(h.source_id) || seen.has(h.source_id) ||
+       typeof h.reason!=="string" ||
+       !/^[a-z0-9_]{5,80}$/.test(h.reason) ||
+       typeof h.evidence!=="string" || !h.evidence.trim())
+      throw Error("SOURCE_HOLD_INVALID");
+    seen.add(h.source_id);
+  }
+  return value.holds;
+}

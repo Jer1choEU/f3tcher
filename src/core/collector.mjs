@@ -1,4 +1,4 @@
-import { validateCatalog, responseErrorCode } from "./catalog.mjs";
+import { validateCatalog, validateHolds, responseErrorCode } from "./catalog.mjs";
 import { selectDueSources, validators, nextSuccess, nextFailure } from "./polling.mjs";
 import { fetchBounded } from "./transport.mjs";
 import { extractResponse } from "./extract.mjs";
@@ -7,12 +7,13 @@ import { extractResponse } from "./extract.mjs";
  * are committed in the SAME libSQL transaction, including valid HTTP 304.
  * Multi-run concurrency is controlled by a persisted lease.
  */
-export async function runCollector({catalog,store,fetchImpl=fetch,now=new Date(),limit=3}) {
+export async function runCollector({catalog,holds={schema_version:"f3tcher-holds-v1",holds:[]},store,fetchImpl=fetch,now=new Date(),limit=3}) {
   const sources=validateCatalog(catalog);
+  const policy=validateHolds(holds,sources);
   const startedAt=now.toISOString(), startedMs=now.getTime();
   if (!Number.isFinite(startedMs)) throw Error("COLLECTOR_CLOCK_INVALID");
   await store.init();
-  await store.sync(sources);
+  await store.sync(sources,policy);
   const owner=crypto.randomUUID();
   if (!await store.lease(owner,startedAt))
     return {status:"already_running",checked:0,added:0,not_modified:0,failed:0};
