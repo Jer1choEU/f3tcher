@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-02",
+  "limitations": [
+    "Clients were authored after examining this already-published fixture: source is third-party, evaluation is NOT blind.",
+    "Third-party benchmark is published by a commercial vendor, not independent of all industry interests.",
+    "HTTP-client baselines are not complete web crawling frameworks.",
+    "A literal fetch() recognizer only handles this fixture and is not an adaptive or general JS interpreter.",
+    "Chromium/Playwright blocked local navigation by ERR_BLOCKED_BY_ADMINISTRATOR: no browser score.",
+    "Scrapy and Crawlee unavailable in installed environment, so neither was scored.",
+    "No hidden data, no provider change over time, no corpus-wide completeness claim."
+  ],
+  "measured": {
+    "requests_bs4_html": {
+      "body_gold": 3,
+      "body_paragraphs_found": 3,
+      "dynamic_found": 0,
+      "dynamic_gold": 8,
+      "failure_status": 500,
+      "literal_api_discovered": null,
+      "requests": 5,
+      "response_bytes": 7724,
+      "static_found": 12,
+      "static_gold": 12,
+      "trace": [
+        {
+          "path": "/static/catalog?page=1",
+          "status": 200,
+          "bytes": 2515
+        },
+        {
+          "path": "/static/catalog?page=2",
+          "status": 200,
+          "bytes": 2457
+        },
+        {
+          "path": "/dynamic/catalog",
+          "status": 200,
+          "bytes": 1343
+        },
+        {
+          "path": "/article/1",
+          "status": 200,
+          "bytes": 1382
+        },
+        {
+          "path": "/failure/500",
+          "status": 500,
+          "bytes": 27
+        }
+      ]
+    },
+    "requests_bs4_literal_api": {
+      "body_gold": 3,
+      "body_paragraphs_found": 3,
+      "dynamic_found": 8,
+      "dynamic_gold": 8,
+      "failure_status": 500,
+      "literal_api_discovered": "/api/dynamic-products",
+      "requests": 6,
+      "response_bytes": 8440,
+      "static_found": 12,
+      "static_gold": 12,
+      "trace": [
+        {
+          "path": "/static/catalog?page=1",
+          "status": 200,
+          "bytes": 2515
+        },
+        {
+          "path": "/static/catalog?page=2",
+          "status": 200,
+          "bytes": 2457
+        },
+        {
+          "path": "/dynamic/catalog",
+          "status": 200,
+          "bytes": 1343
+        },
+        {
+          "path": "/api/dynamic-products",
+          "status": 200,
+          "bytes": 716
+        },
+        {
+          "path": "/article/1",
+          "status": 200,
+          "bytes": 1382
+        },
+        {
+          "path": "/failure/500",
+          "status": 500,
+          "bytes": 27
+        }
+      ]
+    },
+    "urllib_html": {
+      "body_gold": 3,
+      "body_paragraphs_found": 3,
+      "dynamic_found": 0,
+      "dynamic_gold": 8,
+      "failure_status": 500,
+      "literal_api_discovered": null,
+      "requests": 5,
+      "response_bytes": 7724,
+      "static_found": 12,
+      "static_gold": 12,
+      "trace": [
+        {
+          "path": "/static/catalog?page=1",
+          "status": 200,
+          "bytes": 2515
+        },
+        {
+          "path": "/static/catalog?page=2",
+          "status": 200,
+          "bytes": 2457
+        },
+        {
+          "path": "/dynamic/catalog",
+          "status": 200,
+          "bytes": 1343
+        },
+        {
+          "path": "/article/1",
+          "status": 200,
+          "bytes": 1382
+        },
+        {
+          "path": "/failure/500",
+          "status": 500,
+          "bytes": 27
+        }
+      ]
+    }
+  },
+  "status": "exploratory local test with THIRD-PARTY FIXTURE; not a blind independent benchmark",
+  "upstream": {
+    "fixture_git_blob": "f33a3402bf8e1db6a612ae4c8f51c115430dab15",
+    "fixture_path": "tools/crawlee/fixture-server.mjs",
+    "gold_git_blob": "8b0d88367b45d84df86a110a3e282aa8647d3d92",
+    "gold_path": "tools/crawlee/results/local_fixture_ground_truth.json",
+    "license": "MIT / copyright (c) 2026 Thunderbit",
+    "repository": "thunderbit-operations/scraper-benchmark"
+  }
+}
