@@ -79,8 +79,13 @@ class Parser(HTMLParser):
 
 def fetch(base, path):
     # No client-supplied destination may escape the local fixture service.
+    p = urlparse(path)
+    if p.scheme or p.netloc or not p.path.startswith("/s/") or any(
+        segment in (".", "..") for segment in p.path.split("/")
+    ):
+        raise ValueError("non-local or out-of-scope URL")
     u = urlparse(base + path)
-    if u.hostname != "127.0.0.1" or u.port != urlparse(base).port or u.path[:3] != "/s/":
+    if u.hostname != "127.0.0.1" or u.port != urlparse(base).port:
         raise ValueError("non-local or out-of-scope URL")
     with urlopen(u.geturl(), timeout=3) as response:
         return response.read().decode()
